@@ -1,0 +1,34 @@
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+<title>Admin</title>
+<%- include('../partials/admin-nav.ejs') -%> 
+<!-- Insert admin-nav.ejs -->
+
+<div class="content-container link-styling">
+    <section class="content-container-section">
+        <h1>Admin Console Page</h1>
+    </section>
+    <section class="content-container-2"> 
+        <div class="content-container-3 card mint">
+            <a href="admin/createlog"><h2>CREATE LOG</h2></a>
+        </div>
+        <div class="content-container-3 card gold-crayola">
+            <a href="admin/readlog"><h2>READ LOG</h2></a>
+        </div>
+        <div class="content-container-3 card vivid-sky-blue">
+            <a href="admin/updatelog"><h2>UPDATE LOG</h2></a>
+        </div>
+        <div class="content-container-3 card hot-pink">
+            <a href="admin/deletelog"><h2>DELETE LOG</h2></a>
+        </div>
+    </section>
+    <section class="content-container-3">
+        <div class="center-button">
+            <button class="yellow-button link-styling" >
+                <a href="/login" role="button">Logout</a>
+            </button>
+        </div>
+    </section>
+</div>
+<!-- Insert admin-footer.ejs -->
+<%- include('../partials/admin-footer.ejs') -%> 

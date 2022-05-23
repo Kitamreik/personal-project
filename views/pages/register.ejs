@@ -1,0 +1,39 @@
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+    <title>Register</title>
+<%- include('../partials/nav') -%> 
+<!-- Insert nav.ejs -->
+<div class="content-container">
+    <section class="content-container-section">
+    <h1>Register Page</h1>
+    </section>
+    <section class="content-container-2 medium-purple">
+        <form action="/" method="post">
+            <legend>
+                <fieldset>
+                    <label for="Username">Username </label>
+                    <input type="text" name="Username" id="Username" placeholder="Username" required />
+                </fieldset>
+                <br>
+                <fieldset>
+                    <label for="Password">Password</label>
+                    <input type="Password" name="Password" id="Password" placeholder="Password" minlength="6" required />
+                </fieldset>
+                <br>
+                <section class= "center-button">
+                    <button class="yellow-button link-styling">
+                        <a href="/login" role="button">Submit</a>
+                    </button>
+                </section>
+                <br>
+                <section class= "center-button">
+                    <button class="yellow-button link-styling">
+                        <a href="/auth/google" role="button">Sign Up with Google</a>
+                    </button>
+                </section>
+            </legend>
+        </form>
+    </section>
+</div>
+<!-- Insert admin-footer.ejs -->
+<%- include('../partials/admin-footer.ejs') -%> 
