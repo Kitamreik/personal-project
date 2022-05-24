@@ -139,7 +139,7 @@ header {
     border-bottom: solid 5px var(--indigo-dye);
     border-left: solid 5px var(--indigo-dye);
     background-color: var(--cosmic-latte);
-    color: var(--indigo-dye);
+    color: var(--rich-black);
 }
 
 .content-container-section {
@@ -161,7 +161,7 @@ header {
     border-bottom: solid 5px var(--indigo-dye);
     border-left: solid 5px var(--indigo-dye);
     background-color: var(--cosmic-latte);
-    color: var(--indigo-dye);
+    color: var(--rich-black);
     list-style-type: none;
     text-align: left;
     display: flex; 
