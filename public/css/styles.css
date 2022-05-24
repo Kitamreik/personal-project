@@ -36,6 +36,7 @@ body {
 
     /* Accessibility Coloring */
     --rich-black: #0D1B2A;
+    --black-chocolate: #1F1300;
     
     /* to enclose content */
     --light-steel-blue: #B8CDF8;
@@ -416,7 +417,7 @@ a.menu {
 .border > div {
     background-color: var(--blue-munsell);
     width: auto;
-    color: var(--cosmic-latte);
+    color: var(--black-chocolate);
     min-width: 420px;
     margin: auto;
     overflow: visible;
