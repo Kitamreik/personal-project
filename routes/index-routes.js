@@ -7,4 +7,7 @@ const router = express.Router();
 router.use('/', siteRoutes);
 router.use('/admin', adminRoutes);
 
+// Experimental code for the form data
+router.use('/readlog', adminRoutes);
+
 module.exports = router;

@@ -1,7 +1,6 @@
 const express = require('express');
 const data = require('../data/data');
 const User = require('../models/user-model');
-// const Footer = require('../models/footer-model');
 const passport = require('passport');
 
 module.exports = {
@@ -15,16 +14,6 @@ module.exports = {
             data: data
         });
     },
-    // create_log: (req, res) => {
-    //     res.render('pages/createlog', {
-    //         data: data
-    //     });
-    // },
-    // delete_log: (req, res) => {
-    //     res.render('pages/deletelog', {
-    //         data: data
-    //     });
-    // },
     login: (request, response) => {
         response.render('pages/login', {
             data: data
@@ -49,7 +38,7 @@ module.exports = {
     index: (request, response) => {
         response.render('pages/index');
     },
-    map: (request, response) => {
+    term_projects: (request, response) => {
         response.render('pages/map', {
             data: data
         });
@@ -81,14 +70,10 @@ module.exports = {
     tj_answers: (request, response) => {
         response.render('pages/tj-answers');
     },
-    update_log: (request, response) => {
-        response.render('pages/updatelog', {
-            data: data
-        });
-    },
     auth_google: passport.authenticate('google', { scope: ['openid', 'profile', 'email']}),
+
     index_redirect: [passport.authenticate('google', {failureRedirect: '/login'}),
-    function(req, res) {
-        res.redirect('/admin');
+    function(request, response) {
+        response.redirect('/admin');
     }]
 };

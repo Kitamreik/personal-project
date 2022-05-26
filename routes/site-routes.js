@@ -14,7 +14,7 @@ router.route('/contactus')
     .get(siteController.contact_us);
 
 router.route('/map')
-    .get(siteController.map);
+    .get(siteController.term_projects);
 
 router.route('/photogallery')
     .get(siteController.photogallery);
@@ -24,20 +24,6 @@ router.route('/tj-quiz')
 
 router.route('/tj-answers')
     .get(siteController.tj_answers); 
-
-    // works in siteCtrl, not adminCtrl --> moved successfully
-/*
-router.route('/createlog')
-    .get(siteController.create_log);
-
-router.route('/deletelog')
-    .get(siteController.delete_log);
-
-router.route('/updatelog')
-    .get(siteController.update_log);
-*/
-
-    // works in siteCtrl, not adminCtrl --> moved successfully
 
 router.route('/login')
     .get(siteController.login)
@@ -57,7 +43,7 @@ router.route('/auth/google')
 // PURPOSE: initiates Google authentication 
     .get(siteController.auth_google);
 
-router.route('/auth/google/index')
+router.route('/auth/google/admin')
     .get(siteController.index_redirect); 
 // PURPOSE: Redirect back to your site if successful or fails
 // NAME: tj-practitioner-directory ---> heroku
