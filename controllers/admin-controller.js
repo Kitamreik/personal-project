@@ -8,9 +8,9 @@ const Create = require('../models/create-model');
 module.exports = {
     admin: (request, response) => {
         // Uncomment this line of code to render the page without authentication
-        // response.render('pages/admin', {
-        //     data: data
-        // }); 
+        response.render('pages/admin', {
+            data: data
+        }); 
         if (request.isAuthenticated()) {
             response.render('pages/admin', {
                 data: data
