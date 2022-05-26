@@ -35,9 +35,9 @@ module.exports = {
     },
     create_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
-        // response.render('pages/createlog', {
-        //     data: data
-        // }); 
+        response.render('pages/createlog', {
+            data: data
+        }); 
         if (request.isAuthenticated()) {
             response.render('pages/createlog', {
                 data: data
@@ -53,9 +53,9 @@ module.exports = {
     },
     delete_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
-        // response.render('pages/deletelog', {
-        //     data: data
-        // });
+        response.render('pages/deletelog', {
+            data: data
+        });
         if (request.isAuthenticated()) {
             response.render('pages/deletelog', {
                 data: data
@@ -90,10 +90,10 @@ module.exports = {
     },
     read_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
-        // response.render('pages/readlog', {
-        //     data: data
-        //     // createData: createData
-        // });
+        response.render('pages/readlog', {
+            data: data
+            // createData: createData
+        });
         if (request.isAuthenticated()) {
             response.render('pages/readlog', {
                 data: data
@@ -104,9 +104,9 @@ module.exports = {
     },
     update_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
-        // response.render('pages/updatelog', {
-        //     data: data
-        // });
+        response.render('pages/updatelog', {
+            data: data
+        });
         if (request.isAuthenticated()) {
             response.render('pages/updatelog', {
                 data: data
