@@ -34,22 +34,14 @@ module.exports = {
         }
     },
     create_log: (request, response) => {
-        // Uncomment this line of code to render the page without authentication
-        response.render('pages/createlog', {
-            data: data
-        }); 
+        // we create data here
+    
         if (request.isAuthenticated()) {
-            response.render('pages/createlog', {
-                data: data
-            });
+            response.render('pages/createlog');
         } else {
             response.redirect('/login');
         }
-        const {firstAndLastName, Email, Phone, Synopsis} = request.body;
-
-        newSchema.save();
-
-        response.redirect('pages/readlog');
+        
     },
     delete_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
@@ -91,16 +83,22 @@ module.exports = {
     read_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
         response.render('pages/readlog', {
-            data: data
-            // createData: createData
+            data: data // --->>> this is the second part of the for of loop when rendering data on the page
         });
-        if (request.isAuthenticated()) {
-            response.render('pages/readlog', {
-                data: data
-            });
-        } else {
-            response.redirect('/login');
-        }
+        // if (request.isAuthenticated()) {
+        //     response.render('pages/readlog', {
+        //         data: data
+        //     });
+        // } else {
+        //     response.redirect('/login');
+        // }
+    },
+    read_log_post: (request, response) => {
+        const {firstAndLastName, Email, Phone, Synopsis} = request.body;
+
+        newSchema.save();
+
+        response.redirect('pages/readlog');
     },
     update_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication

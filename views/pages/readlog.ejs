@@ -14,6 +14,21 @@
                 <p>Form data here from EJS Rendering</p>
             </span>
         </div>
+        <div class="content-container-3 card gold-crayola">
+            <span>
+                <p>
+                    EJS loop
+                <% for (entry of data)  { %>
+                    <a href="/readlog/<%= entry._id %>">
+                        <p><%= entry.firstAndLastName %></p>
+                        <p><%= entry.Email %></p>
+                        <p><%= entry.Phone %></p>
+                        <p><%= entry.Synopsis %></p>
+                    </a>
+                <% } %>
+                </p>
+            </span>
+        </div>
     </section>
 </div>
 
