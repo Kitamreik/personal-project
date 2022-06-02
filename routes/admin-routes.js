@@ -17,16 +17,16 @@ router.route('/login')
 //CRUD
 // Make sure to think about the footer form to readlog
 router.route('/createlog')
-    .get(adminController.create_log)
+    .get(adminController.create_log);
 router.route('/readlog')
     .get(adminController.read_log)
-    .post(adminController.read_log);
+    
 
-// which log needs to be updated and deleted 
+// which log needs to be updated and deleted re: params
 router.route('/updatelog')
-    .get(adminController.update_log)
+    .get(adminController.update_log);
 router.route('/deletelog')
-    .get(adminController.delete_log)
+    .get(adminController.delete_log);
 
 
 module.exports = router;

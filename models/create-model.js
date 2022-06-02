@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // const data = require('../data/data');
-const createdata = require('../data/create-data');
+// const createdata = require('../data/create-data');
 
 const {Schema} = mongoose;
 

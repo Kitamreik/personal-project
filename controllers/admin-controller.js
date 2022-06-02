@@ -35,12 +35,12 @@ module.exports = {
     },
     create_log: (request, response) => {
         // we create data here
-    
-        if (request.isAuthenticated()) {
+        // response.render('pages/createlog');
+        // if (request.isAuthenticated()) {
             response.render('pages/createlog');
-        } else {
-            response.redirect('/login');
-        }
+        // } else {
+        //     response.redirect('/login');
+        // }
         
     },
     delete_log: (request, response) => {
@@ -95,10 +95,16 @@ module.exports = {
     },
     read_log_post: (request, response) => {
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
+        console.log(request.body);
+        const create = new Create ({
+            firstAndLastName: firstAndLastName,
+            Email: Email,
+            Phone: Phone,
+            Synopsis: Synopsis
+        });
+        create.save();
 
-        newSchema.save();
-
-        response.redirect('pages/readlog');
+        response.redirect('/admin/readlog');
     },
     update_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
