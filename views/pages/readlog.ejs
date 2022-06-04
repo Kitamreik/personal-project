@@ -8,9 +8,6 @@
     <section class="content-container-section">
         <h1>Read A Log</h1>
     </section>
-    <section class="content-container-2 naples-yellow">
-        
-    </section> 
     <section class="content-container-2 naples-yellow"> 
         <% for (entry of createlogArray)  { %>
             <div class="content-container-3 card gold-crayola">
@@ -22,7 +19,7 @@
                             <p><%= entry.Email %></p>
                             <p><%= entry.Phone %></p>
                             <p><%= entry.Synopsis %></p>
-                        </a>  
+                        </a>
                     </p>
                     <form action="/readlog/<%= entry._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
                         <button class="yellow-button center-button link-styling" type="submit">Delete Log</button>
@@ -31,6 +28,42 @@
             </div>
         <% } %>    
     </section>
+    <section class="content-container-2 naples-yellow">
+        <!-- Insert the beginning of for of loop -->
+        <div class="content-container-3 card gold-crayola">
+            <span>
+                <p>
+                    Update Log Entry
+                    <a href="/readlog/<%= entry._id %>">
+                        <p><%= entry. %></p>
+                            <p><%= entry. %></p>
+                            <p><%= entry. %></p>
+                            <p><%= entry. %></p>
+                    </a>
+                </p>
+                <!-- form action code for delete -->
+            </span>
+        </div>
+        <!-- end of for of loop -->
+    </section> 
+    <section class="content-container-2 naples-yellow">
+        <!-- Insert the beginning of for of loop -->
+        <div class="content-container-3 card gold-crayola">
+            <span>
+                <p>
+                    Delete Log Entry
+                    <a href="/readlog/<%= entry._id %>">
+                        <p><%= entry. %></p>
+                            <p><%= entry. %></p>
+                            <p><%= entry. %></p>
+                            <p><%= entry. %></p>
+                    </a>
+                </p>
+                <!-- form action code for delete -->
+            </span>
+        </div>
+        <!-- end of for of loop -->
+    </section> 
 </div>
 
 
