@@ -43,23 +43,17 @@
     </section> 
     <section class="content-container-2 naples-yellow">
         <!-- Insert the beginning of for of loop -->
-        <% for (entry of removelogArray)  { %>
-        <div class="content-container-3 card hot-pink">
+        <div class="content-container-3 card light-steel-blue">
             <span>
                 <p>
                     Delete Log Entry
                     <!-- psuedocode for loop -->
-                    
                 </p>
                 <!-- form action code for delete -->
-                <form action="/readlog/<%= entry._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
-                    <button class="yellow-button center-button link-styling" type="submit">Delete Log</button>
-                </form> 
             </span>
         </div>
         <!-- end of for of loop -->
-        <% } %>   
-    </section> 
+    </section>
     <section class="content-container-2 naples-yellow">
         <!-- Insert the beginning of for of loop -->
         <div class="content-container-3 card cosmic-latte">

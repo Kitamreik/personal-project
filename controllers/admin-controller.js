@@ -7,7 +7,7 @@ const User = require('../models/user-model');
 const Create = require('../models/old-create-model');
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
-// const { response } = require('express');
+const { response } = require('express');
 
 module.exports = {
     admin: (request, response) => {
@@ -138,13 +138,12 @@ module.exports = {
     },
     // Within log Ctrl
     read_log_post: (request, response) => {
-        const {firstAndLastName, Email, Phone, Synopsis} = request.body;
-        console.log(request.body);
+        const {firstAndLastNameCreate, emailCreate, phoneCreate, synopsisCreate} = request.body;
         const create = new Create ({
-            firstAndLastName: firstAndLastName,
-            Email: Email,
-            Phone: Phone,
-            Synopsis: Synopsis
+            firstAndLastNameCreate: firstAndLastNameCreate,
+            emailCreate: emailCreate,
+            phoneCreate: phoneCreate,
+            synopsisCreate: synopsisCreate
         });
         create.save();
 
