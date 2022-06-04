@@ -15,10 +15,10 @@
                     <p>
                         Create Log Entry
                         <a href="/readlog/<%= entry._id %>">
-                            <p><%= entry.firstAndLastName %></p>
-                            <p><%= entry.Email %></p>
-                            <p><%= entry.Phone %></p>
-                            <p><%= entry.Synopsis %></p>
+                            <p><%= entry.firstAndLastNameCreate %></p>
+                            <p><%= entry.emailCreate %></p>
+                            <p><%= entry.phoneCreate %></p>
+                            <p><%= entry.synopsisCreate %></p>
                         </a>
                     </p>
                     <form action="/readlog/<%= entry._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
