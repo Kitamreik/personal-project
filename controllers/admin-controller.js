@@ -43,6 +43,20 @@ module.exports = {
         // }
         
     },
+    all_delete: (request, response) => {
+        // Experimental Code for Form
+        if (request.isAuthenticated()) {
+            Delete.find({}, (error, allDelete) => {
+                if (error) {
+                    return error;
+                } else {
+                    response.render('pages/readlog', {
+                        deletelogArray: allDelete
+                    });
+                }
+            })
+        }
+    },
     delete_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
         response.render('pages/deletelog', {
@@ -80,12 +94,7 @@ module.exports = {
           });
         newSchema.save();
     },
-    // read_log: (request, response) => {
-    //     response.render('pages/readlog', {
-    //         data: data
-    //     });
-    // },
-    read_log_post: (request, response) => {
+    read_log_post_create: (request, response) => {
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
         console.log(request.body);
         const create = new Create ({
