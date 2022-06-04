@@ -4,6 +4,8 @@ const data = require('../data/data');
 const createData = require('../data/create-data');
 const User = require('../models/user-model');
 const Create = require('../models/create-model');
+const Delete = require('../models/remove-model');
+const Update = require('../models/update-model');
 
 module.exports = {
     read_log_post: (request, response) => {
@@ -17,5 +19,19 @@ module.exports = {
         create.save();
 
         response.redirect('/admin/readlog');
-    }
+    },
+    read_log_post_remove: (request, response) => {
+        const {firstAndLastName, emailRemove, phoneRemove, synopsisRemove, studentRemoveRecord} = request.body;
+        const remove = new Remove ({
+            firstAndLastNameRemove: firstAndLastNameRemove,
+            emailRemove: emailRemove,
+            phoneRemove: phoneRemove,
+            synopsisRemove: synopsisRemove,
+            studentRemoveRecord: studentRemoveRecord
+        });
+
+        remove.save();
+        response.redirect('/admin/readlog');
+    },
+    // read_log_post_update: (request, response) => {}
 }

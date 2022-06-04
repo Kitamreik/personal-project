@@ -32,7 +32,7 @@ router.route('/readlog')
 router.route('/updatelog')
     .get(adminController.update_log);
 router.route('/deletelog')
-    .get(adminController.delete_log);
+    .get(adminController.remove_log);
 
 
 module.exports = router;

@@ -4,6 +4,8 @@ const data = require('../data/data');
 const createData = require('../data/create-data');
 const User = require('../models/user-model');
 const Create = require('../models/create-model');
+const Remove = require('../models/remove-model');
+const Update = require('../models/update-model');
 
 module.exports = {
     admin: (request, response) => {
@@ -43,21 +45,21 @@ module.exports = {
         // }
         
     },
-    all_delete: (request, response) => {
+    all_remove: (request, response) => {
         // Experimental Code for Form
         if (request.isAuthenticated()) {
-            Delete.find({}, (error, allDelete) => {
+            Remove.find({}, (error, allRemove) => {
                 if (error) {
                     return error;
                 } else {
                     response.render('pages/readlog', {
-                        deletelogArray: allDelete
+                        RemovelogArray: allRemove
                     });
                 }
             })
         }
     },
-    delete_log: (request, response) => {
+    remove_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
         response.render('pages/deletelog', {
             data: data
@@ -69,7 +71,7 @@ module.exports = {
         } else {
             response.redirect('/login');
         }
-        User.deleteOne({id, id}), error => {
+        User.RemoveOne({id, id}), error => {
             if (error) {
                 return error;
             } else {
@@ -93,19 +95,6 @@ module.exports = {
             }
           });
         newSchema.save();
-    },
-    read_log_post: (request, response) => {
-        const {firstAndLastName, Email, Phone, Synopsis} = request.body;
-        console.log(request.body);
-        const create = new Create ({
-            firstAndLastName: firstAndLastName,
-            Email: Email,
-            Phone: Phone,
-            Synopsis: Synopsis
-        });
-        create.save();
-
-        response.redirect('/admin/readlog');
     },
     update_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
@@ -131,6 +120,33 @@ module.exports = {
             }
         };
     },
+    read_log_post: (request, response) => {
+        const {firstAndLastName, Email, Phone, Synopsis} = request.body;
+        console.log(request.body);
+        const create = new Create ({
+            firstAndLastName: firstAndLastName,
+            Email: Email,
+            Phone: Phone,
+            Synopsis: Synopsis
+        });
+        create.save();
+
+        response.redirect('/admin/readlog');
+    },
+    read_log_post_remove: (request, response) => {
+        const {firstAndLastName, emailRemove, phoneRemove, synopsisRemove, studentRemoveRecord} = request.body;
+        const remove = new Remove ({
+            firstAndLastNameRemove: firstAndLastNameRemove,
+            emailRemove: emailRemove,
+            phoneRemove: phoneRemove,
+            synopsisRemove: synopsisRemove,
+            studentRemoveRecord: studentRemoveRecord
+        });
+
+        remove.save();
+        response.redirect('/admin/readlog');
+    },
+    read_log_post_update: (request, response) => {}
 };
 
 /*
