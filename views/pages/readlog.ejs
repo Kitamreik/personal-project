@@ -20,10 +20,10 @@
                             <p><%= entry.phoneCreate %></p>
                             <p><%= entry.synopsisCreate %></p>
                         </a>
+                        <form action="/readlog/<%= entry._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                            <button class="yellow-button center-button link-styling" type="submit">Delete Log</button>
+                        </form> 
                     </p>
-                    <form action="/readlog/<%= entry._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
-                        <button class="yellow-button center-button link-styling" type="submit">Delete Log</button>
-                    </form> 
                 </span>
             </div>
         <% } %>    
@@ -43,7 +43,7 @@
     </section> 
     <section class="content-container-2 naples-yellow">
         <!-- Insert the beginning of for of loop -->
-        <div class="content-container-3 card light-steel-blue">
+        <div class="content-container-3 card hot-pink">
             <span>
                 <p>
                     Delete Log Entry
