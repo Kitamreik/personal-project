@@ -49,13 +49,7 @@
                 <p>
                     Delete Log Entry
                     <!-- psuedocode for loop -->
-                    <a href="/readlog/<%= remove._id %>">
-                        <p><%= remove.firstAndLastNameRemove %></p>
-                        <p><%= remove.emailRemove %></p>
-                        <p><%= remove.phoneRemove %></p>
-                        <p><%= remove.synopsisRemove %></p>
-                        <p><%= remove.studentRemoveRecord %></p>
-                    </a>
+                    
                 </p>
                 <!-- form action code for delete -->
                 <form action="/readlog/<%= entry._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
