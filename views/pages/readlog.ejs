@@ -8,18 +8,20 @@
     <section class="content-container-section">
         <h1>Read A Log</h1>
     </section>
+    <section class="content-container-2 naples-yellow">
+        
+    </section> 
     <section class="content-container-2 naples-yellow"> 
         <% for (entry of createlogArray)  { %>
             <div class="content-container-3 card gold-crayola">
                 <span>
                     <p>
-                        EJS loop
+                        Create Log Entry
                         <a href="/readlog/<%= entry._id %>">
                             <p><%= entry.firstAndLastName %></p>
                             <p><%= entry.Email %></p>
                             <p><%= entry.Phone %></p>
                             <p><%= entry.Synopsis %></p>
-                        
                         </a>  
                     </p>
                     <form action="/readlog/<%= entry._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">

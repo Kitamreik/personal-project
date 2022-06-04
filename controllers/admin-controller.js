@@ -80,6 +80,9 @@ module.exports = {
           });
         newSchema.save();
     },
+    read_log: (request, response) => {
+        response.render('pages/readlog');
+    },
     read_log_post: (request, response) => {
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
         console.log(request.body);

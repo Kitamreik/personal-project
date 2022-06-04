@@ -8,7 +8,6 @@ const Create = require('../models/create-model');
 module.exports = {
     read_log_post: (request, response) => {
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
-        // console.log(request.body);
         const create = new Create ({
             firstAndLastName: firstAndLastName,
             Email: Email,
