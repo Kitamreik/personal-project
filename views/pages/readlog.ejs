@@ -43,16 +43,25 @@
     </section> 
     <section class="content-container-2 naples-yellow">
         <!-- Insert the beginning of for of loop -->
+        <% for (removedEntry of removelogArray)  { %>
         <div class="content-container-3 card hot-pink">
             <span>
                 <p>
-                    Delete Log Entry
+                    <h2>Delete Log Entry</h2>
                     <!-- psuedocode for loop -->
+                    <a href="/readlog/<%= removedEntry._id %>">
+                        <p><%= removedEntry.firstAndLastNameRemove %></p>
+                        <p><%= removedEntry.emailRemove %></p>
+                        <p><%= removedEntry.phoneRemove %></p>
+                        <p><%= removedEntry.synopsisRemove %></p>
+                        <p><%= removedEntry.studentRemoveRecord %></p>
+                    </a>
                 </p>
                 <!-- form action code for delete -->
             </span>
         </div>
         <!-- end of for of loop -->
+        <% } %>   
     </section> 
     <section class="content-container-2 naples-yellow">
         <!-- Insert the beginning of for of loop -->

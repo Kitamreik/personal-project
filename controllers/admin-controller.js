@@ -4,9 +4,10 @@ const data = require('../data/data');
 const createData = require('../data/create-data');
 const User = require('../models/user-model');
 const Footer = require('../models/footer-model');
-const Create = require('../models/create-model');
+const Create = require('../models/old-create-model');
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
+// const { response } = require('express');
 
 module.exports = {
     admin: (request, response) => {
@@ -54,7 +55,7 @@ module.exports = {
                     return error;
                 } else {
                     response.render('pages/readlog', {
-                        RemovelogArray: allRemove
+                        removelogArray: allRemove
                     });
                 }
             })
@@ -97,6 +98,20 @@ module.exports = {
           });
         newSchema.save();
     },
+    all_update: (request, response) => {
+        // Experimental Code for Form
+        if (request.isAuthenticated()) {
+            Update.find({}, (error, allUpdate) => {
+                if (error) {
+                    return error;
+                } else {
+                    response.render('pages/readlog', {
+                        removelogArray: allUpdate
+                    });
+                }
+            })
+        }
+    },
     update_log: (request, response) => {
         // Uncomment this line of code to render the page without authentication
         response.render('pages/updatelog', {
@@ -121,6 +136,7 @@ module.exports = {
             }
         };
     },
+    // Within log Ctrl
     read_log_post: (request, response) => {
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
         console.log(request.body);
@@ -147,8 +163,31 @@ module.exports = {
         remove.save();
         response.redirect('/admin/readlog');
     },
-    read_log_post_update: (request, response) => {}
-    // read_footer: (request, response) => {}
+    read_log_post_update: (request, response) => {
+        const {firstAndLastNameUpdate, emailUpdate, phoneUpdate, synopsisUpdate, studentUpdateRecord} = request.body;
+        const update = new Update ({
+            firstAndLastNameUpdate: firstAndLastNameUpdate,
+            emailUpdate: emailUpdate,
+            phoneUpdate: phoneUpdate,
+            synopsisUpdate: synopsisUpdate,
+            studentUpdateRecord: studentUpdateRecord
+        });
+
+        update.save();
+        response.redirect('/admin/readlog');
+    },
+    read_footer: (request, response) => {
+        const {firstAndLastNameFooter, emailFooter, phoneFooter} = request.body;
+        const readfooter = new Footer ({
+            firstAndLastNameFooter: firstAndLastNameFooter,
+            emailFooter: emailFooter,
+            phoneFooter: phoneFooter
+        }); 
+
+        readfooter.save();
+        response.redirect('/admin/readlog');
+    }
+    // Within log Ctrl
 };
 
 /*
