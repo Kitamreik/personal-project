@@ -94,7 +94,7 @@ module.exports = {
           });
         newSchema.save();
     },
-    read_log_post_create: (request, response) => {
+    read_log_post: (request, response) => {
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
         console.log(request.body);
         const create = new Create ({
