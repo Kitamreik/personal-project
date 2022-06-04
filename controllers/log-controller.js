@@ -47,15 +47,15 @@ module.exports = {
         update.save();
         response.redirect('/admin/readlog');
     },
-    read_footer: (request, response) => {
-        const {firstAndLastNameFooter, emailFooter, phoneFooter} = request.body;
-        const readfooter = new Footer ({
-            firstAndLastNameFooter: firstAndLastNameFooter,
-            emailFooter: emailFooter,
-            phoneFooter: phoneFooter
-        });
+    // read_footer: (request, response) => {
+    //     const {firstAndLastNameFooter, emailFooter, phoneFooter} = request.body;
+    //     const readfooter = new Footer ({
+    //         firstAndLastNameFooter: firstAndLastNameFooter,
+    //         emailFooter: emailFooter,
+    //         phoneFooter: phoneFooter
+    //     });
         
-        readfooter.save();
-        response.redirect('/admin/readlog');
-    }
+    //     readfooter.save();
+    //     response.redirect('/admin/readlog');
+    // }
 }
