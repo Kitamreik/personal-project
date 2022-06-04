@@ -3,8 +3,9 @@ const passport = require('passport');
 const data = require('../data/data');
 const createData = require('../data/create-data');
 const User = require('../models/user-model');
+const Footer = require('../models/footer-model');
 const Create = require('../models/create-model');
-const Delete = require('../models/remove-model');
+const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
 
 module.exports = {
@@ -34,4 +35,5 @@ module.exports = {
         response.redirect('/admin/readlog');
     },
     // read_log_post_update: (request, response) => {}
+    // read_footer: (request, response) => {}
 }
