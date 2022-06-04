@@ -19,7 +19,7 @@ router.route('/login')
 router.route('/createlog')
     .get(adminController.create_log);
 router.route('/readlog')
-    .get(adminController.read_log)
+    .get(adminController.all_create);
     
 
 // which log needs to be updated and deleted re: params

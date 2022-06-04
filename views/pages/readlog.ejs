@@ -9,26 +9,21 @@
         <h1>Read A Log</h1>
     </section>
     <section class="content-container-2 naples-yellow"> 
-        <div class="content-container-3 card gold-crayola">
-            <span>
-                <p>Form data here from EJS Rendering</p>
-            </span>
-        </div>
-        <div class="content-container-3 card gold-crayola">
-            <span>
-                <p>
-                    EJS loop
-                <% for (entry of data)  { %>
-                    <a href="/readlog/<%= entry._id %>">
-                        <p><%= entry.firstAndLastName %></p>
-                        <p><%= entry.Email %></p>
-                        <p><%= entry.Phone %></p>
-                        <p><%= entry.Synopsis %></p>
-                    </a>
-                <% } %>
-                </p>
-            </span>
-        </div>
+        <% for (entry of createlogArray)  { %>
+            <div class="content-container-3 card gold-crayola">
+                <span>
+                    <p>
+                        EJS loop
+                        <a href="/readlog/<%= entry._id %>">
+                            <p><%= entry.firstAndLastName %></p>
+                            <p><%= entry.Email %></p>
+                            <p><%= entry.Phone %></p>
+                            <p><%= entry.Synopsis %></p>
+                        </a>
+                    </p>
+                </span>
+            </div>
+        <% } %>    
     </section>
 </div>
 

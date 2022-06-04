@@ -80,19 +80,6 @@ module.exports = {
           });
         newSchema.save();
     },
-    read_log: (request, response) => {
-        // Uncomment this line of code to render the page without authentication
-        response.render('pages/readlog', {
-            data: data // --->>> this is the second part of the for of loop when rendering data on the page
-        });
-        // if (request.isAuthenticated()) {
-        //     response.render('pages/readlog', {
-        //         data: data
-        //     });
-        // } else {
-        //     response.redirect('/login');
-        // }
-    },
     read_log_post: (request, response) => {
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
         console.log(request.body);
