@@ -104,6 +104,14 @@ module.exports = {
           });
         newSchema.save();
     },
+    read_log_replika: (request, response) => {
+        response.render('pages/replika-readlog');
+        if (request.isAuthenticated()) {
+            response.render('pages/replika-readlog');
+        } else {
+            response.redirect('/login');
+        }
+    },
     all_update: (request, response) => {
         // Experimental Code for Form
         if (request.isAuthenticated()) {
