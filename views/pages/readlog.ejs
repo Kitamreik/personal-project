@@ -14,7 +14,20 @@
                 <span>
                     Create Log Entry
                 </span>
-                
+                <span>
+                    <p>
+                        Create Log Entry
+                        <a href="/readlog/<%= entry._id %>">
+                            <p><%= entry.firstAndLastNameCreate %></p>
+                            <p><%= entry.emailCreate %></p>
+                            <p><%= entry.phoneCreate %></p>
+                            <p><%= entry.synopsisCreate %></p>
+                        </a>
+                        <form action="/readlog/<%= entry._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                            <button class="yellow-button center-button link-styling" type="submit">Delete Log</button>
+                        </form> 
+                    </p>
+                </span>
             </div>
         <% } %>    
     </section>
