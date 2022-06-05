@@ -4,8 +4,10 @@ const data = require('../data/data');
 const createData = require('../data/create-data');
 const User = require('../models/user-model');
 const Footer = require('../models/footer-model');
-const Create = require('../models/old-create-model');
+// in documentation/maintenance
+// const Create = require('../models/old-create-model');
 // const Create = require('../models/create-model');
+// in documentation/maintenance
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
 // const { response } = require('express');
@@ -26,20 +28,20 @@ module.exports = {
         }
     },
     // Under Maint
-    all_create: (request, response) => {
-        // Experimental Code for Form
-        if (request.isAuthenticated()) {
-            Create.find({}, (error, allCreate) => {
-                if (error) {
-                    return error;
-                } else {
-                    response.render('pages/readlog', {
-                        createlogArray: allCreate
-                    });
-                }
-            })
-        }
-    },
+    // all_create: (request, response) => {
+    //     // Experimental Code for Form
+    //     if (request.isAuthenticated()) {
+    //         Create.find({}, (error, allCreate) => {
+    //             if (error) {
+    //                 return error;
+    //             } else {
+    //                 response.render('pages/readlog', {
+    //                     createlogArray: allCreate
+    //                 });
+    //             }
+    //         })
+    //     }
+    // },
     // Under Maint
 
     create_log: (request, response) => {
@@ -140,7 +142,8 @@ module.exports = {
             }
         };
     },
-    // Within log Ctrl
+    // Within log Ctrl in documentation/maintenance
+    /*
     read_log_post: (request, response) => {
         // Old Create Model- matches log ctrl
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
@@ -151,7 +154,7 @@ module.exports = {
             Synopsis: Synopsis
         });
         create.save();
-
+        }
         response.redirect('/admin/readlog');
         // New Create Model
         /*
@@ -165,9 +168,8 @@ module.exports = {
         create.save();
 
         response.redirect('/admin/readlog');
-        */ 
-        
-    },
+    */ 
+    
     read_log_post_remove: (request, response) => {
         const {firstAndLastNameRemove, emailRemove, phoneRemove, synopsisRemove, studentRemoveRecord} = request.body;
         const remove = new Remove ({

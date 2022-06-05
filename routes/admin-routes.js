@@ -20,7 +20,7 @@ router.route('/createlog')
     .get(adminController.create_log);
 router.route('/readlog')
     .get(adminController.read_footer)
-    .get(adminController.all_create)
+    // .get(adminController.all_create)
     .get(adminController.all_update)
     .get(adminController.all_remove);
 

@@ -8,28 +8,7 @@
     <section class="content-container-section">
         <h1>Read A Log</h1>
     </section>
-    <section class="content-container-2 naples-yellow">
-        <!-- Insert the beginning of for of loop -->
-        <% for (entry of updatelogArray)  { %>
-        <div class="content-container-3 card mint">
-            <span class="link-styling">
-                <p>
-                    Create Log Entry
-                    <!-- psuedocode for loop -->
-                    <a href="/readlog/<%= entry._id %>">
-                        <p><%= entry.firstAndLastName %></p>
-                        <p><%= entry.Email %></p>
-                        <p><%= entry.Phone %></p>
-                        <p><%= entry.Synopsis %></p>
-                    </a>
-                </p>
-                <!-- form action code for delete -->
-            </span>
-        </div>
-        <!-- end of for of loop -->
-        <% } %>
-    </section> 
-    <!-- Create Log For Loop  -->
+    <!-- Create Log For Loop in documentation/maintenance -->
     <section class="content-container-2 naples-yellow">
         <!-- Insert the beginning of for of loop -->
         <% for (entry of updatelogArray)  { %>
