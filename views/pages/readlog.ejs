@@ -12,9 +12,6 @@
         <% for (entry of createlogArray)  { %>
             <div class="content-container-3 card mint">
                 <span>
-                    Create Log Entry
-                </span>
-                <span>
                     <p>
                         Create Log Entry
                         <a href="/readlog/<%= entry._id %>">
@@ -23,9 +20,7 @@
                             <p><%= entry.phoneCreate %></p>
                             <p><%= entry.synopsisCreate %></p>
                         </a>
-                        <form action="/readlog/<%= entry._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
-                            <button class="yellow-button center-button link-styling" type="submit">Delete Log</button>
-                        </form> 
+                        <!-- delete button -->
                     </p>
                 </span>
             </div>
