@@ -24,7 +24,7 @@ router.route('/readlog')
     .get(adminController.all_update)
     .get(adminController.all_remove);
 
-router.route('/readlog-replika')
+router.route('/replika-readlog')
     .get(adminController.read_log_replika);
     
 // which log needs to be updated and deleted re: params
