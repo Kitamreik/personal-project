@@ -104,6 +104,7 @@ module.exports = {
           });
         newSchema.save();
     },
+    // MVP route in admin console
     read_log_replika: (request, response) => {
         response.render('pages/replika-readlog');
         if (request.isAuthenticated()) {
@@ -112,6 +113,7 @@ module.exports = {
             response.redirect('/login');
         }
     },
+    // MVP route in admin console
     all_update: (request, response) => {
         // Experimental Code for Form
         if (request.isAuthenticated()) {
