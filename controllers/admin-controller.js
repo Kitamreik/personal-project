@@ -4,11 +4,12 @@ const data = require('../data/data');
 const createData = require('../data/create-data');
 const User = require('../models/user-model');
 const Footer = require('../models/footer-model');
-// const Create = require('../models/old-create-model');
-const Create = require('../models/create-model');
+const Create = require('../models/old-create-model');
+// const Create = require('../models/create-model');
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
-const { response } = require('express');
+// const { response } = require('express');
+// does this need to be here?!
 
 module.exports = {
     admin: (request, response) => {
@@ -24,6 +25,7 @@ module.exports = {
             response.redirect('/login');
         }
     },
+    // Under Maint
     all_create: (request, response) => {
         // Experimental Code for Form
         if (request.isAuthenticated()) {
@@ -38,15 +40,16 @@ module.exports = {
             })
         }
     },
+    // Under Maint
+
     create_log: (request, response) => {
         // we create data here
-        // response.render('pages/createlog');
-        // if (request.isAuthenticated()) {
+        response.render('pages/createlog');
+        if (request.isAuthenticated()) {
             response.render('pages/createlog');
-        // } else {
-        //     response.redirect('/login');
-        // }
-        
+        } else {
+            response.redirect('/login');
+        }
     },
     all_remove: (request, response) => {
         // Experimental Code for Form
@@ -107,7 +110,7 @@ module.exports = {
                     return error;
                 } else {
                     response.render('pages/readlog', {
-                        removelogArray: allUpdate
+                        updatelogArray: allUpdate
                     });
                 }
             })
@@ -139,6 +142,19 @@ module.exports = {
     },
     // Within log Ctrl
     read_log_post: (request, response) => {
+        // Old Create Model- matches log ctrl
+        const {firstAndLastName, Email, Phone, Synopsis} = request.body;
+        const create = new Create ({
+            firstAndLastName: firstAndLastName,
+            Email: Email,
+            Phone: Phone,
+            Synopsis: Synopsis
+        });
+        create.save();
+
+        response.redirect('/admin/readlog');
+        // New Create Model
+        /*
         const {firstAndLastNameCreate, emailCreate, phoneCreate, synopsisCreate} = request.body;
         const create = new Create ({
             firstAndLastNameCreate: firstAndLastNameCreate,
@@ -149,9 +165,11 @@ module.exports = {
         create.save();
 
         response.redirect('/admin/readlog');
+        */ 
+        
     },
     read_log_post_remove: (request, response) => {
-        const {firstAndLastName, emailRemove, phoneRemove, synopsisRemove, studentRemoveRecord} = request.body;
+        const {firstAndLastNameRemove, emailRemove, phoneRemove, synopsisRemove, studentRemoveRecord} = request.body;
         const remove = new Remove ({
             firstAndLastNameRemove: firstAndLastNameRemove,
             emailRemove: emailRemove,
@@ -177,6 +195,17 @@ module.exports = {
         response.redirect('/admin/readlog');
     },
     read_footer: (request, response) => {
+        if (request.isAuthenticated()) {
+            Footer.find({}, (error, allFooter) => {
+                if (error) {
+                    return error;
+                } else {
+                    response.render('pages/readlog', {
+                        footerArray: allFooter
+                    });
+                }
+            })
+        }
         const {firstAndLastNameFooter, emailFooter, phoneFooter} = request.body;
         const readfooter = new Footer ({
             firstAndLastNameFooter: firstAndLastNameFooter,
