@@ -9,27 +9,24 @@
         <h1>Read A Log</h1>
     </section>
     <section class="content-container-2 naples-yellow">
-         <!-- Insert the beginning of for of loop -->
-         <% for (entry of createlogArray)  { %>
-         <div class="content-container-3 card mint">
+        <!-- Insert the beginning of for of loop -->
+        <div class="content-container-3 card mint">
             <span>
                 <p>
-                    (Old Create) Log Entry
+                    (New) Create Log Entry
                     <!-- psuedocode for loop -->
                     <a href="/readlog/<%= entry._id %>">
-                        <p><%= entry.firstAndLastName %></p>
-                        <p><%= entry.Email %></p>
-                        <p><%= entry.Phone %></p>
-                        <p><%= entry.Synopsis %></p>
+                        <p><%= entry.firstAndLastNameCreate %></p>
+                        <p><%= entry.emailCreate %></p>
+                        <p><%= entry.phoneCreate %></p>
+                        <p><%= entry.synopsisCreate %></p>
                     </a>
-                    <!-- delete button -->
                 </p>
                 <!-- form action code for delete -->
             </span>
+        </div>
         <!-- end of for of loop -->
-        <% } %>  
-         </div>
-    </section>
+    </section> 
     <section class="content-container-2 naples-yellow">
         <!-- Insert the beginning of for of loop -->
         <div class="content-container-3 card light-steel-blue">
