@@ -75,11 +75,13 @@ body {
 
 img {
     width: 100px;
+    /* height: 300px; */
 }
 
 .photo-image {
     width: 35%;
     padding: 0%;
+    height: 20%;
 }
 
 header {

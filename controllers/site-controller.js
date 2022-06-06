@@ -32,8 +32,10 @@ module.exports = {
        });
     },
     logout: (request, response) => {
-        request.logout()
-        response.redirect('/login');
+        req.logout(function(err) {
+            if (err) { return next(err); }
+            res.redirect('/login');
+          });
     },
     index: (request, response) => {
         response.render('pages/index');
