@@ -6,7 +6,7 @@ const User = require('../models/user-model');
 const Footer = require('../models/footer-model');
 // in documentation/maintenance
 // const Create = require('../models/old-create-model');
-const Create = require('../models/create-model');
+// const Create = require('../models/create-model');
 // in documentation/maintenance
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
@@ -28,6 +28,7 @@ module.exports = {
         }
     },
     // Under Maint
+    /*
     all_create: (request, response) => {
         // Experimental Code for Form
         if (request.isAuthenticated()) {
@@ -42,6 +43,7 @@ module.exports = {
             })
         }
     },
+    */ 
     // Under Maint
 
     create_log: (request, response) => {

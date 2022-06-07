@@ -6,14 +6,13 @@ const User = require('../models/user-model');
 const Footer = require('../models/footer-model');
 // in documentation/maintenance
 // const Create = require('../models/old-create-model');
-const Create = require('../models/create-model');
+// const Create = require('../models/create-model');
 // in documentation/maintenance
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
 
 module.exports = {
     /*
-    */ 
     read_log_post: (request, response) => {
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
         const create = new Create ({
@@ -26,6 +25,7 @@ module.exports = {
 
         response.redirect('/admin/readlog');
     },
+    */ 
     read_log_post_remove: (request, response) => {
         const {firstAndLastNameRemove, emailRemove, phoneRemove, synopsisRemove, studentRemoveRecord} = request.body;
         const remove = new Remove ({

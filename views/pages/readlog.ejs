@@ -18,27 +18,7 @@
             </span>
         </div>
     </section>
-    <section class="content-container-2 naples-yellow">
-        <!-- Insert the beginning of for of loop -->
-        <% for (entry of updatelogArray)  { %>
-        <div class="content-container-3 card mint">
-            <span class="link-styling">
-                <p>
-                    Create Log Entry
-                    <!-- psuedocode for loop -->
-                    <a href="/readlog/<%= entry._id %>">
-                        <p><%= entry.firstAndLastNameCreate %></p>
-                        <p><%= entry.emailCreate %></p>
-                        <p><%= entry.phoneCreate %></p>
-                        <p><%= entry.synopsisCreate %></p>
-                    </a>
-                </p>
-                <!-- form action code for delete -->
-            </span>
-        </div>
-        <!-- end of for of loop -->
-        <% } %>
-    </section>
+    
     <section class="content-container-2 naples-yellow">
         <div class="content-container-3 card light-steel-blue">
             <span class="link-styling">
