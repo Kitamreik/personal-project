@@ -5,12 +5,12 @@ const createData = require('../data/create-data');
 const User = require('../models/user-model');
 const Footer = require('../models/footer-model');
 // in documentation/maintenance
-// const Create = require('../models/old-create-model');
-// const Create = require('../models/create-model');
+const Create = require('../models/old-create-model');
+const Create = require('../models/create-model');
 // in documentation/maintenance
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
-// const { response } = require('express');
+const { response } = require('express');
 // does this need to be here?!
 
 module.exports = {
@@ -28,20 +28,20 @@ module.exports = {
         }
     },
     // Under Maint
-    // all_create: (request, response) => {
-    //     // Experimental Code for Form
-    //     if (request.isAuthenticated()) {
-    //         Create.find({}, (error, allCreate) => {
-    //             if (error) {
-    //                 return error;
-    //             } else {
-    //                 response.render('pages/readlog', {
-    //                     createlogArray: allCreate
-    //                 });
-    //             }
-    //         })
-    //     }
-    // },
+    all_create: (request, response) => {
+        // Experimental Code for Form
+        if (request.isAuthenticated()) {
+            Create.find({}, (error, allCreate) => {
+                if (error) {
+                    return error;
+                } else {
+                    response.render('pages/readlog', {
+                        createlogArray: allCreate
+                    });
+                }
+            })
+        }
+    },
     // Under Maint
 
     create_log: (request, response) => {
