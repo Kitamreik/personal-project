@@ -19,6 +19,9 @@ router.route('/map')
 router.route('/photogallery')
     .get(siteController.photogallery);
 
+router.route('/juneteenth-showcase')
+    .get(siteController.june_showcase);
+
 router.route('/tj-quiz')
     .get(siteController.tj_quiz);
 

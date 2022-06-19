@@ -66,6 +66,9 @@ module.exports = {
           };
         });
     },
+    june_showcase: (request, response) => {
+        response.render('pages/juneteenth-showcase');
+    },
     tj_quiz: (request, response) => {
         response.render('pages/tj-quiz');
     },
