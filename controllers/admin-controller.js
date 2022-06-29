@@ -4,14 +4,9 @@ const data = require('../data/data');
 const createData = require('../data/create-data');
 const User = require('../models/user-model');
 const Footer = require('../models/footer-model');
-// in documentation/maintenance
-// const Create = require('../models/old-create-model');
-// const Create = require('../models/create-model');
-// in documentation/maintenance
+const Create = require('../models/old-create-model');
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
-const { response } = require('express');
-// does this need to be here?!
 
 module.exports = {
     admin: (request, response) => {
@@ -23,12 +18,22 @@ module.exports = {
             response.render('pages/admin', {
                 data: data
             }); 
+            // auth2 is initialized with gapi.auth2.init() and a user is signed in.
+            // experimental ID tracking
+            if (auth2.isSignedIn.get()) {
+                var profile = auth2.currentUser.get().getBasicProfile();
+                console.log('ID: ' + profile.getId());
+                console.log('Full Name: ' + profile.getName());
+                console.log('Given Name: ' + profile.getGivenName());
+                console.log('Family Name: ' + profile.getFamilyName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail());
+            }
         } else {
             response.redirect('/login');
         }
     },
-    // Under Maint
-    /*
+    
     all_create: (request, response) => {
         // Experimental Code for Form
         if (request.isAuthenticated()) {
@@ -43,8 +48,6 @@ module.exports = {
             })
         }
     },
-    */ 
-    // Under Maint
 
     create_log: (request, response) => {
         // we create data here
@@ -106,6 +109,7 @@ module.exports = {
           });
         newSchema.save();
     },
+
     // MVP route in admin console
     read_log_replika: (request, response) => {
         response.render('pages/replika-readlog');
@@ -116,6 +120,8 @@ module.exports = {
         }
     },
     // MVP route in admin console
+
+
     all_update: (request, response) => {
         // Experimental Code for Form
         if (request.isAuthenticated()) {
@@ -155,7 +161,6 @@ module.exports = {
         };
     },
     // Within log Ctrl in documentation/maintenance
-    /*
     read_log_post: (request, response) => {
         // Old Create Model- matches log ctrl
         const {firstAndLastName, Email, Phone, Synopsis} = request.body;
@@ -166,22 +171,9 @@ module.exports = {
             Synopsis: Synopsis
         });
         create.save();
-        }
         response.redirect('/admin/readlog');
-        // New Create Model
-        /*
-        const {firstAndLastNameCreate, emailCreate, phoneCreate, synopsisCreate} = request.body;
-        const create = new Create ({
-            firstAndLastNameCreate: firstAndLastNameCreate,
-            emailCreate: emailCreate,
-            phoneCreate: phoneCreate,
-            synopsisCreate: synopsisCreate
-        });
-        create.save();
-
-        response.redirect('/admin/readlog');
-    */ 
-    
+        },
+        
     read_log_post_remove: (request, response) => {
         const {firstAndLastNameRemove, emailRemove, phoneRemove, synopsisRemove, studentRemoveRecord} = request.body;
         const remove = new Remove ({

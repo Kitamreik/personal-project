@@ -480,6 +480,7 @@ a.menu {
     flex-grow: 1;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    transition: all 0.25s ease-in-out;
   }
 .card-nudge {
     display: flex;

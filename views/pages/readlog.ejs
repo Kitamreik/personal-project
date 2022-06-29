@@ -18,7 +18,30 @@
             </span>
         </div>
     </section>
-    
+    <section class="content-container-2 naples-yellow">
+        <div class="content-container-3 card mint">
+            <span class="link-styling">
+                <p>
+                    Create Log Entry
+                    <!-- psuedocode for loop -->
+                    <% for (entry of createlogArray)  { %>
+                        <div class="content-container-3 card gold-crayola">
+                            <span>
+                                <p>
+                                    <a href="/readlog/<%= entry._id %>">
+                                        <p><%= entry.firstAndLastName %></p>
+                                        <p><%= entry.Email %></p>
+                                        <p><%= entry.Phone %></p>
+                                        <p><%= entry.Synopsis %></p>
+                                    </a>
+                                </p>
+                            </span>
+                        </div>
+                    <% } %>
+                </p>
+            </span>
+        </div>
+    </section>
     <section class="content-container-2 naples-yellow">
         <div class="content-container-3 card light-steel-blue">
             <span class="link-styling">
