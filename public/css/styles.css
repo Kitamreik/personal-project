@@ -133,6 +133,7 @@ header {
     font-weight: bold;
 }
 
+/* For the page outline */
 .content-container {
     margin: 60px;
     padding: 10px;
@@ -144,6 +145,7 @@ header {
     color: var(--rich-black);
 }
 
+/* for a section, title */
 .content-container-section {
     margin: 60px;
     padding: 10px;
@@ -155,6 +157,7 @@ header {
     color: var(--rich-black);
 }
 
+/* for a section around the content itself */
 .content-container-2 {
     margin: 30px;
     padding: 20px;

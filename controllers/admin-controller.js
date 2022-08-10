@@ -4,7 +4,7 @@ const data = require('../data/data');
 const createData = require('../data/create-data');
 const User = require('../models/user-model');
 const Footer = require('../models/footer-model');
-// const Create = require('../models/old-create-model');
+const Create = require('../models/old-create-model');
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
 
@@ -113,11 +113,11 @@ module.exports = {
     // MVP route in admin console
     read_log_replika: (request, response) => {
         response.render('pages/replika-readlog');
-        if (request.isAuthenticated()) {
-            response.render('pages/replika-readlog');
-        } else {
-            response.redirect('/login');
-        }
+        // if (request.isAuthenticated()) {
+        //     response.render('pages/replika-readlog');
+        // } else {
+        //     response.redirect('/login');
+        // }
     },
     // MVP route in admin console
 
