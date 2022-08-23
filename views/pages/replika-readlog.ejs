@@ -27,7 +27,7 @@
                 </p>
             </span>    
     </section>
-    <section class="content-container-2 naples-yellow">
+    <!-- <section class="content-container-2 naples-yellow">
         <div class="content-container-3 card light-steel-blue">
             <span class="link-styling">
                 <p>
@@ -35,7 +35,7 @@
                 </p>
             </span>
         </div>
-    </section>
+    </section> -->
     <section class="content-container-2 naples-yellow">
         <div class="content-container-3 card hot-pink">
             <span class = "link-styling">
@@ -46,28 +46,6 @@
         </div>
     </section>
     <section class="content-container-2 naples-yellow">
-        <!-- Insert the beginning of for of loop -->
-        <% for (entry of removelogArray)  { %>
-        <div class="content-container-3 card hot-pink">
-            <span>
-                <p>
-                    Delete Log Entry
-                    <!-- psuedocode for loop -->
-                    <a href="/readlog/<%= entry._id %>">
-                        <p><%= entry.firstAndLastNameRemove %></p>
-                            <p><%= entry.emailRemove %></p>
-                            <p><%= entry.phoneRemove %></p>
-                            <p><%= entry.synopsisRemove %></p>
-                            <p><%= entry.studentRemoveRecord %></p>
-                    </a>
-                </p>
-                <!-- form action code for delete -->
-            </span>
-        </div>
-        <% } %>
-        <!-- end of for of loop -->
-    </section> 
-    <section class="content-container-2 naples-yellow">
         <div class="content-container-3 card cosmic-latte">
             <span class="link-styling">
                 <p>
@@ -75,26 +53,6 @@
                 </p>
             </span>
         </div>
-    </section>
-    <section class="content-container-2 naples-yellow">
-        <!-- Insert the beginning of for of loop -->
-        <% for (entry of footerArray)  { %>
-        <div class="content-container-3 card cosmic-latte">
-            <span>
-                <p>
-                    Footer Form Entry
-                    <!-- psuedocode for loop -->
-                    <a href="/readlog/<%= entry._id %>">
-                    <p><%= entry.firstAndLastNameFooter %></p>
-                    <p><%= entry.emailFooter %></p>
-                    <p><%= entry.phoneFooter %></p>
-                    </a>
-                </p>
-                <!-- form action code for delete -->
-            </span>
-        </div>
-        <% } %>
-        <!-- end of for of loop -->
     </section>
 </div>
 
