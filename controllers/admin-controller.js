@@ -5,6 +5,7 @@ const createData = require('../data/create-data');
 const User = require('../models/user-model');
 const Footer = require('../models/footer-model');
 const Create = require('../models/old-create-model');
+const CreateDuo = require('../models/create-model');
 const Remove = require('../models/remove-model');
 const Update = require('../models/update-model');
 
@@ -173,7 +174,18 @@ module.exports = {
         create.save();
         response.redirect('/admin/readlog');
         },
-        
+    read_log_post_duo: (request, response) => {
+        const {firstAndLastNameCreate, emailCreate, phoneCreate, synopsisCreate} = request.body;
+        const createduo = new CreateDuo ({
+            firstAndLastNameCreate: firstAndLastNameCreate,
+            emailCreate: emailCreate,
+            phoneCreate: phoneCreate,
+            synopsisCreate: synopsisCreate
+        });
+        createduo.save();
+
+        response.redirect('/admin/readlog');
+    },
     read_log_post_remove: (request, response) => {
         const {firstAndLastNameRemove, emailRemove, phoneRemove, synopsisRemove, studentRemoveRecord} = request.body;
         const remove = new Remove ({

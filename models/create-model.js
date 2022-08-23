@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const {Schema} = mongoose;
 
-const createSchema = new Schema({
+const createduoSchema = new Schema({
     firstAndLastNameCreate: {
         // id: uuid(),
         type: String,
@@ -29,5 +29,5 @@ const createSchema = new Schema({
     }
 });
 
-const Create = mongoose.model('Create', createSchema);
-module.exports = Create;
+const CreateDuo = mongoose.model('CreateDuo', createduoSchema);
+module.exports = CreateDuo;
