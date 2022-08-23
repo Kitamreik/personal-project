@@ -21,23 +21,11 @@
     </section>
     <section class="content-container-2 naples-yellow">
         <div class="content-container-3 card gold-crayola">
-        <% for(entry of createlogArray) { %>
-        
-        <% } %>
-        
-            
-                <span>
-                    <p>
-                        EJS loop
-                        <a href="/readlog/<%= entry._id %>">
-                            <p><%= entry.firstAndLastName %></p>
-                            <p><%= entry.Email %></p>
-                            <p><%= entry.Phone %></p>
-                            <p><%= entry.Synopsis %></p>
-                        </a>
-                    </p>
-                </span>
-        </div>         
+            <span class="link-styling">
+                <p>
+                    Update Log Entry
+                </p>
+            </span>    
     </section>
     <section class="content-container-2 naples-yellow">
         <div class="content-container-3 card light-steel-blue">
@@ -47,28 +35,6 @@
                 </p>
             </span>
         </div>
-    </section>
-    <section class="content-container-2 naples-yellow">
-        <!-- Insert the beginning of for of loop -->
-        <% for (entry of updatelogArray) { %>
-        <div class="content-container-3 card light-steel-blue">
-            <span class="link-styling">
-                <p>
-                    Update Log Entry
-                    <!-- psuedocode for loop -->
-                    <a href="/readlog/<%= entry._id %>">
-                        <p><%= entry.firstAndLastNameUpdate %></p>
-                        <p><%= entry.emailUpdate %></p>
-                        <p><%= entry.phoneUpdate %></p>
-                        <p><%= entry.synopsisUpdate %></p>
-                        <p><%= entry.studentUpdateRecord %></p>
-                    </a>
-                </p>
-                <!-- form action code for delete -->
-            </span>
-        </div>
-        <!-- end of for of loop -->
-        <% } %>
     </section>
     <section class="content-container-2 naples-yellow">
         <div class="content-container-3 card hot-pink">
