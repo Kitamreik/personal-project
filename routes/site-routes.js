@@ -1,3 +1,4 @@
+// DO NOT TOUCH - only when adding pages
 const express = require('express');
 const router = express.Router();
 const siteController = require('../controllers/site-controller');
@@ -18,6 +19,9 @@ router.route('/map')
 
 router.route('/photogallery')
     .get(siteController.photogallery);
+
+router.route('/outreach-form')
+    .get(siteController.outreach_form);
 
 router.route('/juneteenth-showcase')
     .get(siteController.june_showcase);

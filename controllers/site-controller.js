@@ -1,23 +1,22 @@
 // DO NOT CHANGE
 const express = require('express');
-const data = require('../data/data');
-const User = require('../models/user-model');
 const passport = require('passport');
+const outreachData = require ('../data/outreach-data');
 
 module.exports = {
     about: (request, response) => {
         response.render('pages/videogallery', {
-            data: data
+            // data: data
         });
     },
     contact_us: (request, response) => {
         response.render('pages/contactus', {
-            data: data
+            // data: data
         });
     },
     login: (request, response) => {
         response.render('pages/login', {
-            data: data
+            // data: data
         });
     },
     login_post: (request, response) => {
@@ -43,12 +42,12 @@ module.exports = {
     },
     term_projects: (request, response) => {
         response.render('pages/map', {
-            data: data
+            // data: data
         });
     },
     photogallery: (request, response) => {
         response.render('pages/photogallery', {
-            data: data
+            // data: data
         });
     },
     register_get: (request, response) => {
@@ -66,6 +65,9 @@ module.exports = {
             });
           };
         });
+    },
+    outreach_form: (request, response) => {
+        response.render('pages/outreach-form');
     },
     june_showcase: (request, response) => {
         response.render('pages/juneteenth-showcase');
