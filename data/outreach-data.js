@@ -3,13 +3,13 @@ const {v4: uuid} = require('uuid');
 
 let currentDate = new Date();
 
-module.exports = [
-    {
-        // id: uuid(),
-        firstName: "",
-        lastName: "",
-        email: "",
-        phoneNumber: "",
-        reason: ""
-    }
-];
+let outreachArray = [{
+    id: uuid(),
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    reason: ""
+}]
+
+module.exports = outreachArray

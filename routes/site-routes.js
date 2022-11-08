@@ -48,10 +48,10 @@ router.route('/register')
 
 router.route('/auth/google')
 // PURPOSE: initiates Google authentication 
-    .get(siteController.auth_google);
+    .get(siteController.google_get);
 
 router.route('/auth/google/admin')
-    .get(siteController.index_redirect); 
+    .get(siteController.google_redirect_get); 
 // PURPOSE: Redirect back to your site if successful or fails
 // NAME: tj-practitioner-directory ---> heroku
     

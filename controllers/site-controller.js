@@ -78,10 +78,12 @@ module.exports = {
     tj_answers: (request, response) => {
         response.render('pages/tj-answers');
     },
-    auth_google: passport.authenticate('google', { scope: ['openid', 'profile', 'email']}),
-
-    index_redirect: [passport.authenticate('google', {failureRedirect: '/login'}),
+    
+    google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
+    google_redirect_get: [
+    passport.authenticate('google', {failureRedirect: '/login'}),
     function(request, response) {
-        response.redirect('/admin');
-    }]
+      response.redirect('/admin');
+    }
+  ]
 };

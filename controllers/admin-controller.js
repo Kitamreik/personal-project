@@ -31,11 +31,11 @@ module.exports = {
     outreach_log: (request, response) => {
         // we create data here
         response.render('pages/outreach-log');
-        if (request.isAuthenticated()) {
-            response.render('pages/admin');
-        } else {
-            response.redirect('/login');
-        }
+        // if (request.isAuthenticated()) {
+        //     response.render('pages/admin');
+        // } else {
+        //     response.redirect('/login');
+        // }
     },
     login: (request, response) => {
         response.render('pages/login', {
