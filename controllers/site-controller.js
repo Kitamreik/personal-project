@@ -1,7 +1,8 @@
 // DO NOT CHANGE
 const express = require('express');
 const passport = require('passport');
-const outreachData = require ('../data/outreach-data');
+// const outreachData = require ('../data/outreach-data');
+const User = require('../models/outreach-model');
 
 module.exports = {
     about: (request, response) => {

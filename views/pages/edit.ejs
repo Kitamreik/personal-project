@@ -1,0 +1,49 @@
+<!-- // DO NOT TOUCH -->
+
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+    <title>Edit a Client Page</title>
+<%- include('../partials/nav') -%> 
+<!-- Insert nav.ejs -->
+<div class="content-container link-styling">
+    <section class="content-container-section">
+        <h1>Edit a Client</h1>
+    </section>
+    <section class="content-container-section gold-crayola">
+        <h2 class = "mini-container">Update Entry</h2>
+        <form action="/logs/<%= foundUser._id%>?_method=PUT" method="POST" type="text">
+            <legend>
+                    <p> Note: This is to edit a client in the system. </p>
+                    <p> Please email the admin when done with the entry. Thank you :] </p>  
+            </legend>
+            <br>
+            <fieldset>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" value="<%= foundUser.firstName%>" placeholder="First Name" minlength="2" required/>
+            </fieldset>
+            <fieldset>
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" value="<%= foundUser.lastName%>" 
+                placeholder="Last Name" minlength="2" required />
+            </fieldset>
+            <fieldset>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" value="<%= foundUser.email%>" placeholder="Email Address" minlength="10" required/>
+            </fieldset>
+            <fieldset>
+                <label for="phoneNumber">Phone Number</label>
+                <input type="number" name="phoneNumber" id="phoneNumber" value="<%= foundUser.phoneNumber%>" placeholder="Phone Number" minlength="10" required/>
+            </fieldset>
+            <fieldset>
+                <label for="reason">Reason:</label>
+                <input type="text" name="reason" id="reason" value="<%= foundUser.reason%>" placeholder="Reason">
+            </fieldset>
+            <section class= "center-button">
+                <input type="submit" value="Submit" class="yellow-button link-styling">
+            </section>
+        </form>
+    </section>
+</div>
+<!-- Insert footer.ejs -->
+<%- include('../partials/footer') -%> 
+

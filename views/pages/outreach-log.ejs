@@ -3,9 +3,35 @@
 <title>Admin</title>
 <%- include('../partials/admin-nav.ejs') -%> 
 <!-- Insert admin-nav.ejs -->
-<div>
-    ENTRIES
-</div>
+<section class="content-container">
+    <h1>Entries from the Outreach Form</h1>
+
+    <!-- start for..of loop -->
+    <% for (user of foundUser) { %>
+    <div class="content-container-2">
+        <h2>Clients</h2>
+
+        <div class="content-container-3"> <!-- where the data renders -->
+           <span>
+            <a href="/outreach-log/<%= user._id%>">
+                <h3><%= user.firstName %> <%= user.lastName %></h3> <!-- for the client name -->
+                    <p><%= user.email %></p>
+                    <p><%= user.phoneNumber %></p>
+                    <p><%= user.reason %></p>
+            </a>
+           </span>
+            
+            <input type="submit" value="Submit" class="yellow-button link-styling"><a href=".<%user._id%>/edit" role="button">Edit the Client</a></input>
+            <form action="./edit/<%=user._id%>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                <input type="submit" value="Submit" class="yellow-button link-styling">Delete the Client</input>
+            </form> <!-- delete the entry -->
+        </div>
+    </div>
+    <% } %>
+    <!-- end of for..of loop -->
+
+</section>
+
 
 
 

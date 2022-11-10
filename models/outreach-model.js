@@ -6,7 +6,6 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const {Schema} = mongoose;
 let GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
-const outreachData = require ('../data/outreach-data');
 
 const userSchema = new Schema ({
     firstName: {

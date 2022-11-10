@@ -10,8 +10,13 @@ router.route('/')
 
 // CRUD
 router.route('/outreach-log')
-    .get(adminController.outreach_log)
-    .post(adminController.outreach_log);
-// outreach_log
+    .get(adminController.all_clients)
+    .get(adminController.outreach_log);
+
+router.route('/edit')
+    .get(adminController.edit);
+
+router.route('/:_id/edit')
+    .put(adminController.update_outreach_get);
 
 module.exports = router;
