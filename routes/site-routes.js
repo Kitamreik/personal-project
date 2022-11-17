@@ -3,6 +3,22 @@ const express = require('express');
 const router = express.Router();
 const siteController = require('../controllers/site-controller');
 
+// add new routes here:
+
+router.route('/class_interest')
+    .get(siteController.class_interest);
+
+
+router.route('/client_relations')
+    .get(siteController.client_relations);
+
+
+router.route('/summer-projects')
+    .get(siteController.summer_projects);
+
+
+  // do NOT edit
+
 router.route('/')
     .get(siteController.index)
     .post(siteController.index);
