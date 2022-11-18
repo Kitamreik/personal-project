@@ -309,6 +309,11 @@ footer {
     font-family: 'Fredericka the Great', cursive;
 }
 
+/* for disabled buttons- maintenance */
+.block-button {
+    background-color: var(--cosmic-latte);
+}
+
 .yellow-button {
     background-color: var(--medium-champagne);
 }
