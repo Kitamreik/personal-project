@@ -22,6 +22,12 @@ hamburgerIcon.addEventListener("click", () => {
 // alert (currentDate);
 
 // Post-Grad Button Functionality
+// 11/18/2022: https://www.w3schools.com/JSREF/prop_pushbutton_disabled.asp
+// disable button to block entry
+function blockedButton() {document.getElementById("blocked-button").disabled = true; 
+}
+// figure this out 
+
 //Get the button
 let scrollbutton = document.getElementById("scroll-button");
 

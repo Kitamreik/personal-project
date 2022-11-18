@@ -5,6 +5,27 @@ const passport = require('passport');
 const User = require('../models/outreach-model');
 
 module.exports = {
+  // add new pages here:
+  class_interest: (request, response) => {
+    response.render('pages/class-interest', {
+        // data: data
+    });
+  },
+
+  client_relations: (request, response) => {
+    response.render('pages/client-relations', {
+        // data: data
+    });
+  },
+
+  summer_projects: (request, response) => {
+    response.render('pages/summer-projects', {
+        // data: data
+    });
+  },
+
+
+  // do NOT edit
     about: (request, response) => {
         response.render('pages/videogallery', {
             // data: data

@@ -84,6 +84,13 @@ img {
     height: 20%;
 }
 
+.photo-image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 header {
     background-color: var(--naples-yellow);
     width: auto;
@@ -302,6 +309,11 @@ footer {
     font-family: 'Fredericka the Great', cursive;
 }
 
+/* for disabled buttons- maintenance */
+.block-button {
+    background-color: var(--cosmic-latte);
+}
+
 .yellow-button {
     background-color: var(--medium-champagne);
 }
@@ -323,8 +335,8 @@ footer {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: var(--medium-champagne);
-    color: var(--medium-purple);
+    background-color: var(--electric-blue);
+    color: var(--rich-black);
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;

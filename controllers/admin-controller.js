@@ -4,7 +4,13 @@ const express = require('express');
 const User = require('../models/outreach-model');
 
 module.exports = {
-    // accept into admin console or redirect to register
+    // add new code here
+    junk_code: (request, response) => {
+        // we create data here
+        response.render('pages/junk-code');
+    },
+
+    // DO NOT TOUCH
     admin: (request, response) => {
         // Uncomment this line of code to render the page without authentication
         response.render('pages/admin', {

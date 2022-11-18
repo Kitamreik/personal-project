@@ -2,7 +2,11 @@
 const express = require('express');
 const adminController = require('../controllers/admin-controller');
 const router = express.Router();
+// make new routes here
+router.route('/junk-code')
+    .get(adminController.junk_code);
 
+// DO NOT TOUCH
 router.route('/')
 // formerly '/admin'
     .get(adminController.admin)
