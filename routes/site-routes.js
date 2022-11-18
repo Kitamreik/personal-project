@@ -5,11 +5,11 @@ const siteController = require('../controllers/site-controller');
 
 // add new routes here:
 
-router.route('/class_interest')
+router.route('/class-interest')
     .get(siteController.class_interest);
 
 
-router.route('/client_relations')
+router.route('/client-relations')
     .get(siteController.client_relations);
 
 
