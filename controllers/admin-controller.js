@@ -4,6 +4,13 @@ const passport = require('passport');
 const outreachData = require ('../data/outreach-data');
 
 module.exports = {
+    // add new code here
+    junk_code: (request, response) => {
+        // we create data here
+        response.render('pages/junk-code');
+    },
+
+    // DO NOT TOUCH
     admin: (request, response) => {
         // Uncomment this line of code to render the page without authentication
         response.render('pages/admin', {
