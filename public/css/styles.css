@@ -64,6 +64,10 @@ body {
     color: var(--vivid-sky-blue);
 }
 
+.blue-munsell-text {
+    color: var(--blue-munsell)
+}
+
 .hot-pink-text {
     color: var(--hot-pink);
 }
@@ -511,6 +515,10 @@ a.menu {
 /* Card Colors */
 .mint {
     background-color: var(--magic-mint);
+}
+
+.medium-champagne {
+    background-color: var(--medium-champagne);
 }
 
 .emerald {
