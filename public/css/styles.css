@@ -1,5 +1,15 @@
 /* General --> then media query */
  /* the LAST thing is enforced --> cascading */
+
+/* 11/18/2022: CSS Directory */
+/* 
+
+
+
+
+
+*/
+
 /* General/For Everything */
 .mobile-container > .nav-bar li {
     /* max-width: 768px; */
