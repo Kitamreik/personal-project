@@ -118,6 +118,11 @@ header {
     font-weight: bold;
 }
 
+.link-styling-header a:hover {
+    color: var(--medium-champagne);
+    font-weight: bold;
+}
+
 .link-styling a:active {
     color: var(--cosmic-latte);
     background-color: var(--hot-pink);
