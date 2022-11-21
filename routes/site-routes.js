@@ -16,6 +16,11 @@ router.route('/client-relations')
 router.route('/summer-projects')
     .get(siteController.summer_projects);
 
+router.route('/mentor-features')
+    .get(siteController.mentor_features);
+
+router.route('/holiday-feature')
+    .get(siteController.holiday_features)
 
   // do NOT edit
 

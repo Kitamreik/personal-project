@@ -23,6 +23,17 @@ module.exports = {
     });
   },
 
+  mentor_features: (request, response) => {
+    response.render('pages/mentor-features', {
+        // data: data
+    });
+  },
+
+  holiday_features: (request, response) => {
+    response.render('pages/holiday-feature', {
+        // data: data
+    });
+  },
 
   // do NOT edit
     about: (request, response) => {
