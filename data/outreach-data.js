@@ -1,15 +1,35 @@
 // DO NOT TOUCH
 const {v4: uuid} = require('uuid');
 
-let currentDate = new Date();
+// START outreach mod exports array
+module.exports = [
+    {
+        _id: uuid(),
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        reason: ""
+    },
+    {
+        _id: uuid(),
+        firstName: "Test",
+        lastName: "Database Log",
+        email: "kit.tjclasses@gmail.com",
+        phoneNumber: "5555555555",
+        reason: "This is a fail-safe, hard coded entry to allow the database to capture the data here :]"
+    }
+];
 
-let outreachArray = [{
-    id: uuid(),
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    reason: ""
-}]
+// let currentDate = new Date(); 
 
-module.exports = outreachArray;
+// CB
+/*
+let date = new Date();
+
+module.exports = {
+  userName: 'CodeSquader',
+  year: date.getFullYear(),
+  signedIn: true
+}
+*/
