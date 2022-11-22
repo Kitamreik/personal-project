@@ -8,10 +8,8 @@ const siteController = require('../controllers/site-controller');
 router.route('/class-interest')
     .get(siteController.class_interest);
 
-
 router.route('/client-relations')
     .get(siteController.client_relations);
-
 
 router.route('/summer-projects')
     .get(siteController.summer_projects);
@@ -22,7 +20,7 @@ router.route('/mentor-features')
 router.route('/holiday-feature')
     .get(siteController.holiday_features)
 
-  // do NOT edit
+// do NOT edit
 
 router.route('/')
     .get(siteController.index)
@@ -74,9 +72,8 @@ router.route('/auth/google')
 router.route('/auth/google/admin')
     .get(siteController.google_redirect_get); 
 // PURPOSE: Redirect back to your site if successful or fails
-// NAME: tj-practitioner-directory ---> heroku
+// NAME: tj-practitioner-directory ---> CYCLIC- Nov 2022
     
-
 module.exports = router;
 
 

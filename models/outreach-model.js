@@ -31,7 +31,7 @@ const outreachSchema = new Schema ({
   }
 });
 
-const Outreach = mongoose.model('Outreach', userSchema);
+const Outreach = mongoose.model('Outreach', outreachSchema);
 
 // end
 module.exports = Outreach;
