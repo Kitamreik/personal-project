@@ -12,4 +12,4 @@ let outreachArray = [{
     reason: ""
 }]
 
-module.exports = outreachArray
+module.exports = outreachArray;
