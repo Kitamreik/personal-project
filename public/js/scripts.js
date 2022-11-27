@@ -1,7 +1,5 @@
 // Hamburger Menu
 
-const { addListener } = require("../../models/outreach-model");
-
 // alert("OMG- Are you ready to see what's going on in this realm of cosmic deliciousness? If you're ready, click ok!");
 // console.log("You're doing a great job, Kit");
 

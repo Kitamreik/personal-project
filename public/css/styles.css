@@ -1,10 +1,8 @@
 /* General --> then media query */
  /* the LAST thing is enforced --> cascading */
 
-/* 11/18/2022: CSS Directory */
+ /* 11/18/2022: CSS Directory */
 /* 
-
-
 
 
 
@@ -74,10 +72,6 @@ body {
     color: var(--vivid-sky-blue);
 }
 
-.blue-munsell-text {
-    color: var(--blue-munsell)
-}
-
 .hot-pink-text {
     color: var(--hot-pink);
 }
@@ -111,7 +105,6 @@ header {
     padding-left: 25px; 
     border-bottom: solid 5px var(--rich-black);
     font-family: 'Fredericka the Great', cursive;
-    
 }
 
 .link-styling {
@@ -130,11 +123,6 @@ header {
 
 .link-styling a:hover {
     color: var(--blue-munsell);
-    font-weight: bold;
-}
-
-.link-styling-header a:hover {
-    color: var(--medium-champagne);
     font-weight: bold;
 }
 
@@ -322,13 +310,10 @@ footer {
 
 .nav.bar li {
     list-style-type: none;
-    display: inline-block; 
+    display: inline-block;
     margin: 10px 20px;
     padding: 10px 20px;
     text-align: center;
-    position:fixed;
-    top:0; left:0; right:0;
-    z-index: 1000;
     font-family: 'Fredericka the Great', cursive;
 }
 
@@ -432,11 +417,7 @@ a.menu {
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
 header {
-    /* display: block; */
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
+    display: block;
 }  
 header .header-wrapper {
     display: flex;
@@ -538,10 +519,6 @@ a.menu {
 /* Card Colors */
 .mint {
     background-color: var(--magic-mint);
-}
-
-.medium-champagne {
-    background-color: var(--medium-champagne);
 }
 
 .emerald {
