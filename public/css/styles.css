@@ -111,6 +111,7 @@ header {
     padding-left: 25px; 
     border-bottom: solid 5px var(--rich-black);
     font-family: 'Fredericka the Great', cursive;
+    
 }
 
 .link-styling {
@@ -321,11 +322,19 @@ footer {
 
 .nav.bar li {
     list-style-type: none;
-    display: inline-block;
+    display: inline-block; 
     margin: 10px 20px;
     padding: 10px 20px;
     text-align: center;
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
     font-family: 'Fredericka the Great', cursive;
+}
+
+/* delete alert buttons */
+.delete-button {
+    background-color: var(--hot-pink);
 }
 
 /* for disabled buttons- maintenance */
@@ -423,7 +432,11 @@ a.menu {
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
 header {
-    display: block;
+    /* display: block; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }  
 header .header-wrapper {
     display: flex;

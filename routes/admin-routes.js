@@ -18,7 +18,8 @@ router.route('/outreach-form')
 
 // read
 router.route('/admin/outreach-log')
-    .get(adminController.outreach_log);
+    .get(adminController.outreach_log)
+    .post(adminController.outreach_log);
 
 // update
 router.route('/:_id/update-form')

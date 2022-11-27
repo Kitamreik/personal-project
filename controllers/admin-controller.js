@@ -37,7 +37,6 @@ module.exports = {
         response.render('pages/admin', {
         }); 
     },
-   
     // as an admin, manage all of the logs you see
     outreach_log: (request, response) => {
       if(request.isAuthenticated()){
@@ -45,7 +44,7 @@ module.exports = {
           if(error){
             return error;
           } else {
-            response.render('pages/admin/outreach-log', {
+            response.render('/admin/outreach-log', {
             //   pull from the controllers
               outreachArray: outreachArray
             });
@@ -57,7 +56,10 @@ module.exports = {
         
         // Uncomment this line of code to render the page without authentication
         // we create data here
-        response.render('pages/admin/outreach-log');
+        response.render('/admin/outreach-log', {
+          //   pull from the controllers
+            outreachArray: outreachArray
+          });
       
     },
     // create a record from the form
@@ -70,7 +72,7 @@ module.exports = {
           response.redirect('/login')
         }
         // without auth
-        response.render('pages/outreach-form');
+        // response.render('pages/outreach-form');
     },
     // be able to get the updates from the update form
     author_update_get: (request, response) => {
@@ -80,7 +82,7 @@ module.exports = {
             if(error) {
               return error;
             } else {
-              response.render('pages/admin/update-form', {
+              response.render('pages/update-form', {
                 // copyrightYear: siteData.year,
                 foundOutreach: foundOutreach
               });

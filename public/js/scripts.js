@@ -1,5 +1,7 @@
 // Hamburger Menu
 
+const { addListener } = require("../../models/outreach-model");
+
 // alert("OMG- Are you ready to see what's going on in this realm of cosmic deliciousness? If you're ready, click ok!");
 // console.log("You're doing a great job, Kit");
 
@@ -22,6 +24,16 @@ hamburgerIcon.addEventListener("click", () => {
 // alert (currentDate);
 
 // Post-Grad Button Functionality
+// 11/26/2022: alert when delete
+let deleteButton = document.getElementById("delete-button");
+function deleteAlert() {
+  let warning;
+  if (confirm("Are you sure you want to delete me?")) {
+    alert(warning = "Pressing OK means this will be deleted. If unsure, message Kit for help.");
+  } else {
+    alert(warning = "You've decided to cancel this action.");
+  }
+}
 // 11/18/2022: https://www.w3schools.com/JSREF/prop_pushbutton_disabled.asp
 // disable button to block entry
 function blockedButton() {document.getElementById("blocked-button").disabled = true; 
