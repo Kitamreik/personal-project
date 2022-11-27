@@ -2,7 +2,7 @@
 
 <%- include('../partials/head') -%> 
 <!-- Insert header.ejs -->
-    <title>Index Page</title>
+    <title>Outreach Form</title>
 <%- include('../partials/nav') -%> 
 <!-- Insert nav.ejs -->
 <div class="content-container link-styling">
@@ -37,12 +37,13 @@
             </fieldset>
             <fieldset>
                 <label for="reason">Reason:</label>
-                <input type="text" name="reason" id="reason" placeholder="Reason">
+                <input type="text" name="reason" id="reason" placeholder="Reason" required/>
             </fieldset>
             <section class= "center-button">
                 <!-- for disabling the form -->
                 <input type="button" value="In Maintenance" class="block-button">
-                <!-- <input type="submit" value="Submit" class="yellow-button link-styling"> -->
+                
+                <!-- <input type="submit" value="Submit" class="yellow-button link-styling" /> -->
                 <!-- class='blocked-button' onclick="blockedButton() -->
             </section>
         </form>

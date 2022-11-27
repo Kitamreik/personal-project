@@ -1,0 +1,50 @@
+<!-- // DO NOT TOUCH -->
+
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+    <title>Update Form</title>
+<%- include('../partials/nav') -%> 
+<!-- Insert nav.ejs -->
+<div class="content-container link-styling">
+    <section class="content-container-section">
+        <h1>Update Outreach Form</h1>
+    </section>
+    <section class="content-container-section gold-crayola">
+        <h2 class = "mini-container">For Trained Admin Usage Only</h2>
+        <form action="/logs/<%= foundOutreach._id %>?_method=PUT" method="POST" type="text">
+            <legend>
+                    <p class="mini-expansion">The site admin is working on capturing data correctly for this to work, so please come back later. You can email the developer in the footer of the site, at the bottom of the page if you need more immediate assistance.</p>
+            </legend>
+            <br>
+            <fieldset>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" value="<%= foundOutreach.firstName %>"/>
+            </fieldset>
+            <fieldset>
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" value="<%= foundOutreach.lastName %>"/>
+            </fieldset>
+            <fieldset>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" value="<%= foundOutreach.email %>"/>
+            </fieldset>
+            <fieldset>
+                <label for="phoneNumber">Phone Number</label>
+                <input type="number" name="phoneNumber" id="phoneNumber" value="<%= foundOutreach.phoneNumber %>"/>
+            </fieldset>
+            <fieldset>
+                <label for="reason">Reason:</label>
+                <input type="text" name="reason" id="reason" value="<%= foundOutreach.reason %>"/>
+            </fieldset>
+            <section class= "center-button">
+                <!-- for disabling the form -->
+                <input type="button" value="In Maintenance" class="block-button">
+                <input type="submit" value="Submit" class="yellow-button link-styling" />
+                <!-- class='blocked-button' onclick="blockedButton() -->
+            </section>
+        </form>
+    </section>
+</div>
+<!-- Insert footer.ejs -->
+<%- include('../partials/footer') -%> 
+
