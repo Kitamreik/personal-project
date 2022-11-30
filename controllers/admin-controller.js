@@ -12,27 +12,27 @@ module.exports = {
     },
     // DO NOT TOUCH
     admin: (request, response) => {
-      if (request.isAuthenticated()) {
-        response.render('pages/admin', {
-        //   copyrightYear: siteData.year
-        }); 
+    //   if (request.isAuthenticated()) {
+    //     response.render('pages/admin', {
+    //     //   copyrightYear: siteData.year
+    //     }); 
         
-        // experimental ID tracking
-        /*
-        // auth2 is initialized with gapi.auth2.init() and a user is signed in.
-        if (auth2.isSignedIn.get()) {
-            var profile = auth2.currentUser.get().getBasicProfile();
-            console.log('ID: ' + profile.getId());
-            console.log('Full Name: ' + profile.getName());
-            console.log('Given Name: ' + profile.getGivenName());
-            console.log('Family Name: ' + profile.getFamilyName());
-            console.log('Image URL: ' + profile.getImageUrl());
-            console.log('Email: ' + profile.getEmail());
-        }
-        */
-    } else {
-        response.redirect('/login');
-    }
+    //     // experimental ID tracking
+    //     /*
+    //     // auth2 is initialized with gapi.auth2.init() and a user is signed in.
+    //     if (auth2.isSignedIn.get()) {
+    //         var profile = auth2.currentUser.get().getBasicProfile();
+    //         console.log('ID: ' + profile.getId());
+    //         console.log('Full Name: ' + profile.getName());
+    //         console.log('Given Name: ' + profile.getGivenName());
+    //         console.log('Family Name: ' + profile.getFamilyName());
+    //         console.log('Image URL: ' + profile.getImageUrl());
+    //         console.log('Email: ' + profile.getEmail());
+    //     }
+    //     */
+    // } else {
+    //     response.redirect('/login');
+    // }
         // Uncomment this line of code to render the page without authentication
         response.render('pages/admin', {
         }); 

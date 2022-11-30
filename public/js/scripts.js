@@ -1,8 +1,6 @@
+// EXPLORE: https://stackoverflow.com/questions/63681387/how-do-i-transfer-data-from-console-log-to-a-json-file 
+
 // Hamburger Menu
-
-// alert("OMG- Are you ready to see what's going on in this realm of cosmic deliciousness? If you're ready, click ok!");
-// console.log("You're doing a great job, Kit");
-
 // DOM Event Steps:
 
 // 1. select hamburger icon --> event target
