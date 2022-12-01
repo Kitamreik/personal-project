@@ -326,11 +326,16 @@ footer {
 .block-button {
     background-color: var(--cosmic-latte);
 }
+/* 404 */
+.error-button {
+    background-color: var(--electric-blue);
+}
 
 .yellow-button {
     background-color: var(--medium-champagne);
 }
 
+/* for the section containing the button */
 .center-button {
     display: flex; 
     flex-direction: row;

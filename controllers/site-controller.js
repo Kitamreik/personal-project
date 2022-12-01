@@ -5,19 +5,33 @@ const passport = require('passport');
 // const outreachData = require ('../data/outreach-data');
 
 module.exports = {
-  // add new pages here:
+  // Deployed
+  summer_projects: (request, response) => {
+    response.render('pages/summer-projects', {
+        // data: data
+    });
+  },
+  // disabled until March 2023
+  // 404
   class_interest: (request, response) => {
     response.render('pages/class-interest', {
         // data: data
     });
   },
-  client_relations: (request, response) => {
-    response.render('pages/client-relations', {
+
+  // add new pages here:
+  server_side_error: (request, response) => {
+    response.render('pages/500', {
         // data: data
     });
   },
-  summer_projects: (request, response) => {
-    response.render('pages/summer-projects', {
+  error_page: (request, response) => {
+    response.render('pages/404', {
+        // data: data
+    });
+  },
+  client_relations: (request, response) => {
+    response.render('pages/client-relations', {
         // data: data
     });
   },

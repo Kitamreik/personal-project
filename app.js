@@ -46,3 +46,4 @@ app.listen(PORT, () => {
     console.log(`Student Deployment 22-23: https://docs.google.com/document/d/1a_iW2DCEWnRKddPolTn6nRfNgbj6eQ7QIEEwYHt0iig/edit?usp=sharing`);
 });
 
+// Read: HTTP Status Codes: https://www.educative.io/answers/how-to-use-the-nodejs-httpserverresponsestatuscode-property

@@ -30,6 +30,16 @@ function deleteAlert() {
     alert(warning = "You've decided to cancel this action.");
   }
 }
+
+function errorAlert() {
+  let error;
+  if (confirm("You've been guided here from the server. Please click OK")) {
+    alert( error = "Please click the Back to Index Button");
+  } else {
+    alert("Please reach out to Kit for assistance");
+  }
+}
+
 // 11/18/2022: https://www.w3schools.com/JSREF/prop_pushbutton_disabled.asp
 // disable button to block entry
 function blockedButton() {document.getElementById("blocked-button").disabled = true; 
