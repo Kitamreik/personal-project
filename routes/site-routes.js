@@ -3,10 +3,17 @@ const express = require('express');
 const router = express.Router();
 const siteController = require('../controllers/site-controller');
 
-// add new routes here:
 
-router.route('/class-interest')
-    .get(siteController.class_interest);
+// disabled until March 2023:
+// router.route('/class-interest')
+//     .get(siteController.class_interest);
+
+// add new routes here:
+router.route('/404')
+    .get(siteController.error_page);
+
+router.route('/500')
+    .get(siteController.server_side_error);
 
 router.route('/client-relations')
     .get(siteController.client_relations);

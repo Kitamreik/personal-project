@@ -11,15 +11,24 @@ module.exports = {
         // data: data
     });
   },
-  // disabled until March
-  // class interest
-  class_interest: (request, response) => {
-    response.render('pages/class-interest', {
+  // disabled until March 2023
+  // class_interest: (request, response) => {
+  //   response.render('pages/class-interest', {
+  //       // data: data
+  //   });
+  // },
+
+  // add new pages here:
+  server_side_error: (request, response) => {
+    response.render('pages/500', {
         // data: data
     });
   },
-
-  // add new pages here:
+  error_page: (request, response) => {
+    response.render('pages/404', {
+        // data: data
+    });
+  },
   client_relations: (request, response) => {
     response.render('pages/client-relations', {
         // data: data
