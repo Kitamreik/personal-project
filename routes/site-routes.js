@@ -5,8 +5,8 @@ const siteController = require('../controllers/site-controller');
 
 
 // disabled until March 2023:
-// router.route('/class-interest')
-//     .get(siteController.class_interest);
+router.route('/class-interest')
+    .get(siteController.error_page);
 
 // add new routes here:
 router.route('/404')

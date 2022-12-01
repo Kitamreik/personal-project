@@ -12,11 +12,12 @@ module.exports = {
     });
   },
   // disabled until March 2023
-  // class_interest: (request, response) => {
-  //   response.render('pages/class-interest', {
-  //       // data: data
-  //   });
-  // },
+  // 404
+  class_interest: (request, response) => {
+    response.render('pages/class-interest', {
+        // data: data
+    });
+  },
 
   // add new pages here:
   server_side_error: (request, response) => {
