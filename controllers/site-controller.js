@@ -20,6 +20,11 @@ module.exports = {
   },
 
   // add new pages here:
+  new_year: (request, response) => {
+    response.render('pages/new-year', {
+        // data: data
+    });
+  },
   server_side_error: (request, response) => {
     response.render('pages/500', {
         // data: data

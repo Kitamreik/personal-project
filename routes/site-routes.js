@@ -25,7 +25,10 @@ router.route('/mentor-features')
     .get(siteController.mentor_features);
 
 router.route('/holiday-feature')
-    .get(siteController.holiday_features)
+    .get(siteController.holiday_features);
+
+router.route('/new-year')
+    .get(siteController.new_year)
 
 // do NOT edit
 
