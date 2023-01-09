@@ -13,6 +13,7 @@ module.exports = {
   },
   // disabled until March 2023
   // 404
+  // Updated for June 2023 apps
   class_interest: (request, response) => {
     response.render('pages/class-interest', {
         // data: data
@@ -20,6 +21,11 @@ module.exports = {
   },
 
   // add new pages here:
+  early_access: (request, response) => {
+    response.render('pages/early-access', {
+        // data: data
+    });
+  },
   new_year: (request, response) => {
     response.render('pages/new-year', {
         // data: data

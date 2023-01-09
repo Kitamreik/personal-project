@@ -7,8 +7,12 @@ const siteController = require('../controllers/site-controller');
 // disabled until March 2023:
 router.route('/class-interest')
     .get(siteController.error_page);
+    // .get(siteController.class_interest);
 
 // add new routes here:
+router.route('/early-access')
+    .get(siteController.early_access);
+
 router.route('/404')
     .get(siteController.error_page);
 
