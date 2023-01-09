@@ -9,19 +9,44 @@ const User = require('../models/outreach-model');
 >>>>>>> version-2
 
 module.exports = {
-  // add new pages here:
+  // Deployed
+  summer_projects: (request, response) => {
+    response.render('pages/summer-projects', {
+        // data: data
+    });
+  },
+  // disabled until March 2023
+  // 404
+  // Updated for June 2023 apps
   class_interest: (request, response) => {
     response.render('pages/class-interest', {
         // data: data
     });
   },
-  client_relations: (request, response) => {
-    response.render('pages/client-relations', {
+
+  // add new pages here:
+  early_access: (request, response) => {
+    response.render('pages/early-access', {
         // data: data
     });
   },
-  summer_projects: (request, response) => {
-    response.render('pages/summer-projects', {
+  new_year: (request, response) => {
+    response.render('pages/new-year', {
+        // data: data
+    });
+  },
+  server_side_error: (request, response) => {
+    response.render('pages/500', {
+        // data: data
+    });
+  },
+  error_page: (request, response) => {
+    response.render('pages/404', {
+        // data: data
+    });
+  },
+  client_relations: (request, response) => {
+    response.render('pages/client-relations', {
         // data: data
     });
   },

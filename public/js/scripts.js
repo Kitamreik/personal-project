@@ -1,8 +1,6 @@
+// EXPLORE: https://stackoverflow.com/questions/63681387/how-do-i-transfer-data-from-console-log-to-a-json-file 
+
 // Hamburger Menu
-
-// alert("OMG- Are you ready to see what's going on in this realm of cosmic deliciousness? If you're ready, click ok!");
-// console.log("You're doing a great job, Kit");
-
 // DOM Event Steps:
 
 // 1. select hamburger icon --> event target
@@ -32,6 +30,16 @@ function deleteAlert() {
     alert(warning = "You've decided to cancel this action.");
   }
 }
+
+function errorAlert() {
+  let error;
+  if (confirm("You've been guided here from the server. Please click OK")) {
+    alert( error = "Please click the Back to Index Button");
+  } else {
+    alert("Please reach out to Kit for assistance");
+  }
+}
+
 // 11/18/2022: https://www.w3schools.com/JSREF/prop_pushbutton_disabled.asp
 // disable button to block entry
 function blockedButton() {document.getElementById("blocked-button").disabled = true; 

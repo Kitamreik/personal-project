@@ -39,7 +39,7 @@ body {
     --hot-pink:#FF57BB;
     --rich-black:#023B58;
     /* New Colors 4-27 */
-    --cornflower--blue: #89A1EF;
+    --cornflower-blue: #89A1EF;
     --emerald: #44CF6C;
 
     /* Accessibility Coloring */
@@ -326,11 +326,16 @@ footer {
 .block-button {
     background-color: var(--cosmic-latte);
 }
+/* 404 */
+.error-button {
+    background-color: var(--electric-blue);
+}
 
 .yellow-button {
     background-color: var(--medium-champagne);
 }
 
+/* for the section containing the button */
 .center-button {
     display: flex; 
     flex-direction: row;
