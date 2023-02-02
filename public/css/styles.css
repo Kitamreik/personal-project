@@ -416,89 +416,6 @@ a.menu {
     font-size: 20px;
 }
 
-
-/* Media Query --> specific parameters for css code to operate in */
-/* Mobile Design [mobile container] */
-@media screen and (min-width: 320px) and (max-width: 768px) {
-
-header {
-    display: block;
-}  
-header .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-    
-/* this is the link for the hamburger button */
-a.menu {
-    display: block;
-    color: var(--white);
-    position: fixed;
-    right: 0;
-    top: 0;
-    padding: 0.5rem 1rem;
-}
-.mobile-container {
-    max-width: 768px;
-    margin: auto;
-    height: 150px;
-    color:var(--cosmic-latte);
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative; 
-    /* display: flex; */
-}
-.open-sesame {
-    display: none;
-}
-.mobile-container > .nav-bar {
-    display: none;
-}
-.nav-bar-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.nav-bar-list a {
-    margin: 20px 10px;
-}
-.nav-bar-list a:hover {
-    color: var(--medium-champagne);
-}
-.mobile-container > .hamburger {
-    overflow: visible;
-    position: relative;
-    padding: 14px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 120px;
-    width: auto;
-}
-.border > div {
-    background-color: var(--blue-munsell);
-    width: auto;
-    color: var(--black-chocolate);
-    min-width: 420px;
-    margin: auto;
-    overflow: visible;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-/* Table Responsiveness */
-.side-scroll-mobile {
-    display: flex;
-    overflow-y: scroll;
-    overflow-x: auto;
-    border: solid 5px var(--yellow);
-    }
-}
-
 /* PHOTO GALLERY */
 /* Cards for People */
 .card {
@@ -596,6 +513,101 @@ flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+/* Media Query --> specific parameters for css code to operate in */
+/* Mobile Design [mobile container] */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+/* header {
+    display: block;
+}   */
+header .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+/* this is the link for the hamburger button */
+a.menu {
+    display: block;
+    color: var(--white);
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 0.5rem 1rem;
+}
+
+/* Table Responsiveness */
+.side-scroll-mobile {
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: auto;
+    border: solid 5px var(--yellow);
+    }
+
+.mobile-container {
+    max-width: 768px;
+    /* margin: auto; */
+    height: 150px;
+    color:var(--cosmic-latte);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; 
+    /* display: flex; */
+}
+
+.open-sesame {
+    display: none;
+}
+
+.mobile-container > .nav-bar {
+    display: none;
+}
+
+.nav-bar-list {
+    display: flex;
+    /* make titles shorter */
+    flex-direction: row;
+    /* used to be column for longer titles */
+    align-items: flex-start;     /* items are aligned to the left */
+}
+.nav-bar-list a {
+    margin: 20px 15px;
+}
+.nav-bar-list a:hover {
+    color: var(--medium-champagne);
+}
+
+.mobile-container > .hamburger {
+    overflow: visible;
+    position: relative;
+    padding: 14px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 120px;
+    width: auto;
+}
+
+/* targets all the elements under the border */
+.border > div {
+    /* background-color: var(--blue-munsell); */
+    height: auto;
+    color: var(--black-chocolate);
+    /* min-width: 320px; */
+    min-width: fit-content;
+    margin: auto;
+    overflow: visible;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+}
+
+
   
 /* Tablet Design [hamburger] */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -605,3 +617,4 @@ flex-direction: row;
     display: none; 
     }
 }
+
