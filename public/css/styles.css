@@ -45,122 +45,7 @@ html {
 
 */
 
-/* triggers mobile responsiveness but not for head or footer */
-body {
-    width: 100%;
-    max-width: 100vw;
-    margin: 0;
-    overflow-x: hidden;
-    font-size: 1.4rem;
-    /* height: auto; */
-    background-image: linear-gradient(var(--electric-blue), var(--blue-munsell));
-    font-family: 'Roboto', sans-serif; 
-    /* addition */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-}
 
-/* affects the header and the logo */
-header {
-    background-color: var(--naples-yellow);
-    width: auto;
-    padding-left: 25px; 
-    border-bottom: solid 5px var(--rich-black);
-    font-family: 'Fredericka the Great', cursive;
-    display: flex;
-    flex-direction: column;
-}
-
-img {
-    width: 100px;
-    /* height: 300px; */
-}
-
-/* .center-text */
-h1 {
-    text-align: center;
-    margin: 10px auto;
-    padding: 0, 10px;
-    font-style: italic;
-    font-family: 'Fredericka the Great', cursive;
-} 
-
-/* .center-text */
-h2, p { 
-    text-align: center;
-    margin: 10px auto;
-    padding: 0, 10px;
-    /* font-size: 1.1rem; */
-    font-family: 'Roboto', sans-serif;
-}
-
-/* .center-text */
-/* seeing how removing p looks for formatting on all pages */
-h2 { 
-    text-align: center;
-    margin: 10px auto;
-    padding: 0, 10px;
-    /* font-size: 1.1rem; */
-    font-family: 'Roboto', sans-serif;
-}
-
-footer {
-    background-color: var(--hot-pink);
-    width: 100%;
-    height: auto;
-    color: var(--rich-black);
-    padding-left: 2.5%;
-    font-size: 1rem;
-    border-top: solid 5px var(--rich-black);
-    font-family: 'Roboto', sans-serif;
-}
-
-/* for card headers */
-h3 {
-    text-align: center;
-    margin: 10px auto;
-    padding: 0, 10px;
-    font-style: italic;
-    font-family: 'Fredericka the Great', cursive;
-    color: var(--blue-munsell);
-} 
-
-
-hr { 
-    /* display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px; */
-    border: none;
-    border-top: 3px double var(--cornflower-blue);
-    color: var(--cornflower-blue);
-    height: 5px;
-    overflow: visible;
-    text-align: center;
-} 
-
-hr::after {
-    /* background-color: var(--black-chocolate); */
-    content: '§';
-    /* Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr  */
-    padding: 0 4px;
-    position: relative;
-    top: -13px;
-}
-
-fieldset {
-    display: block;
-    /* border-color: var(--cosmic-latte); */
-    border: 0 none;
-}
-
-* {
-    box-sizing: border-box;
-}
 
 /* Container Styling Corrected 2023 *//* For the page outline */
 .content-container {
@@ -651,6 +536,122 @@ a.menu {
     font-size: 20px;
 }
 
+/* triggers mobile responsiveness but not for head or footer */
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 1.4rem;
+    /* height: auto; */
+    background-image: linear-gradient(var(--electric-blue), var(--blue-munsell));
+    font-family: 'Roboto', sans-serif; 
+    /* addition */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+/* affects the header and the logo */
+header {
+    background-color: var(--naples-yellow);
+    width: auto;
+    padding-left: 25px; 
+    border-bottom: solid 5px var(--rich-black);
+    font-family: 'Fredericka the Great', cursive;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100px;
+    /* height: 300px; */
+}
+
+/* .center-text */
+h1 {
+    text-align: center;
+    margin: 10px auto;
+    padding: 0, 10px;
+    font-style: italic;
+    font-family: 'Fredericka the Great', cursive;
+} 
+
+/* .center-text */
+h2, p { 
+    text-align: center;
+    margin: 10px auto;
+    padding: 0, 10px;
+    /* font-size: 1.1rem; */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* .center-text */
+/* seeing how removing p looks for formatting on all pages */
+h2 { 
+    text-align: center;
+    margin: 10px auto;
+    padding: 0, 10px;
+    /* font-size: 1.1rem; */
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    background-color: var(--hot-pink);
+    width: 100%;
+    height: auto;
+    color: var(--rich-black);
+    padding-left: 2.5%;
+    font-size: 1rem;
+    border-top: solid 5px var(--rich-black);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* for card headers */
+h3 {
+    text-align: center;
+    margin: 10px auto;
+    padding: 0, 10px;
+    font-style: italic;
+    font-family: 'Fredericka the Great', cursive;
+    color: var(--blue-munsell);
+} 
+
+
+hr { 
+    /* display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px; */
+    border: none;
+    border-top: 3px double var(--cornflower-blue);
+    color: var(--cornflower-blue);
+    height: 5px;
+    overflow: visible;
+    text-align: center;
+} 
+
+hr::after {
+    /* background-color: var(--black-chocolate); */
+    content: '§';
+    /* Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr  */
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+fieldset {
+    display: block;
+    /* border-color: var(--cosmic-latte); */
+    border: 0 none;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 
 /* Media Query --> specific parameters for css code to operate in */
