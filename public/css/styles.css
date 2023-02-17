@@ -141,16 +141,16 @@ input {
 
 .nav-button, input[type="submit"]{
     margin-top: 1rem;
-    /* display:inline-block; */
+    margin-left: 1rem;
+    margin-right: 1rem;
     display: flex;
     justify-content: space-evenly;
-    /* display: flex;  */
-    padding:.9rem 1.5rem;
+    padding: 1rem 3rem;
     border-radius: .5rem;
     color: var(--medium-purple);
     background-color: var(--naples-yellow);
     font-family: 'Fredericka the Great', cursive;
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
     font-weight: 500;
 }
@@ -542,6 +542,8 @@ a.menu {
     font-size: 20px;
 }
 
+/* END MEDIA QUERIES */
+
 /* triggers mobile responsiveness but not for head or footer */
 body {
     width: 100%;
@@ -607,7 +609,7 @@ footer {
     width: 100%;
     height: auto;
     color: var(--rich-black);
-    padding-left: 2.5%;
+    /* padding-left: 2.5%; */
     font-size: 1rem;
     border-top: solid 5px var(--rich-black);
     font-family: 'Roboto', sans-serif;
