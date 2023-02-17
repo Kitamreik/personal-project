@@ -682,13 +682,13 @@ a.menu {
     padding: 0.5rem 1rem;
 }
 
-/* Table Responsiveness */
+/* Mobile Responsiveness for large items, use with content-container-2 */
 .side-scroll-mobile {
     display: flex;
     overflow-y: scroll;
     overflow-x: auto;
     border: solid 5px var(--yellow);
-    }
+}
 
 .mobile-container {
     max-width: 768px;
