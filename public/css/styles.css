@@ -161,6 +161,68 @@ input {
 }
 
 /* OG 2022 */
+/* delete alert buttons */
+.delete-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding:.9rem 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--hot-pink);
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* for disabled buttons- maintenance */
+.block-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding:.9rem 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--cosmic-latte);
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+/* 404 */
+.error-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding:.9rem 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--electric-blue);
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.yellow-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding:.9rem 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--medium-champagne);
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* for the section containing the button */
+.center-button {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
 
 /* PHOTO GALLERY */
 /* Cards for People */
@@ -303,64 +365,6 @@ fa-solid {
     border: solid 5px var(--cosmic-latte);
     background-color: var(--medium-champagne);
     color: var(--rich-black);
-} 
-
-/* delete alert buttons */
-.delete-button {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    padding:.9rem 1.5rem;
-    border-radius: .5rem;
-    background-color: var(--hot-pink);
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-/* for disabled buttons- maintenance */
-.block-button {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    padding:.9rem 1.5rem;
-    border-radius: .5rem;
-    background-color: var(--cosmic-latte);
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 500;
-}
-/* 404 */
-.error-button {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    padding:.9rem 1.5rem;
-    border-radius: .5rem;
-    background-color: var(--electric-blue);
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.yellow-button {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    padding:.9rem 1.5rem;
-    border-radius: .5rem;
-    background-color: var(--medium-champagne);
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-/* for the section containing the button */
-.center-button {
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
 } 
 
 /* Scrolling */

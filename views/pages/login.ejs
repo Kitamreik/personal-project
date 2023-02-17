@@ -4,7 +4,7 @@
 <%- include('../partials/admin-nav') -%> 
 <!-- Insert admin-nav.ejs -->
 <div class="content-container">
-    <section class="content-container-section">
+    <section class="content-container-2 naples-yellow">
     <h1>Login Page</h1>
     </section>
     <section class="content-container-2 gold-crayola">
@@ -23,16 +23,18 @@
                     <input type="Password" name="Password" id="Password" placeholder="Password" minlength="6" required />
                 </fieldset>
                 <br>
-                <section class= "center-button">
+                <section class="center-button">
                     <button class="yellow-button link-styling">
-                        <a href="/admin" role="button">Submit</a>
-                        <!-- <input type="submit" value="Submit" ></input> -->
+                        <a href="/admin" role="button" type="su
+                        ">Submit</a>
                     </button>
                 </section>
                 <br>
                 <section class= "center-button">
-                    <button class="yellow-button link-styling">
-                        <a href="/auth/google" role="button">Sign In with Google</a>
+                    <!-- can add class of yellow button when operational -->
+                    <button class="block-button link-styling" id="blocked-button" onclick="blockedButton()">
+                        Sign in with Google
+                        <!-- <a href="/auth/google" role="button">Sign In with Google</a> -->
                     </button>
                 </section>
             </legend>
