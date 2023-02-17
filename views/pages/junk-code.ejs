@@ -1,17 +1,42 @@
 <%- include('../partials/head') -%> 
 <!-- Insert header.ejs -->
-<title>Admin</title>
+<title>Admin- Junk Code</title>
 <%- include('../partials/admin-nav.ejs') -%> 
 <!-- Insert admin-nav.ejs -->
 
 <div class="content-container-3 cosmic-latte">
-    <p class="mini-expansion">The site admin is working on composing this page as of November 18, 2022 for deployment ASAP. This message will disappear when the site is accessible. Thank you!</p>
+    <p class="mini-expansion">The site admin is working on composing this page as of [DATE] for deployment ASAP. This message will disappear when the page is accessible. Thank you!</p>
 </div>
 
 <!-- delete button alert -->
 <input type="button" value="Delete Me?!" id="delete-button"
 class="delete-button" onclick="deleteAlert()">
 
+<!-- psuedo button code -->
+<section>
+    <button class="nav-button link-styling">
+        <a href="/" role="button" type="submit">Page to Link To</a>
+    </button>
+</section>
+
+<!-- updated HTML/ejs DUE TO css edits-->
+<div class="content-container"> <!-- For the page outline, may have link styling -->
+    <section class="content-container-2 naples-yellow"> <!--for a section around the content itself, now mobile responsive, you need a color paired here -->
+        <h1>Header Title</h1>
+    </section>
+    <!-- Intro -->
+    <section class="content-container-2 light-steel-blue"> <!--for a section around the content itself, now mobile responsive, you need a color paired here -->
+        <div class="content-container-3 vivid-sky-blue"> <!-- for actual enclosed content, such as the index headers/links, and titles of pages, you need a color paired here -->
+            <a href="/">
+            <p>Link Title </p></a> 
+        </div>
+        <img src="/img/" class= "photo-image" alt="">
+        <div class="content-container-3 naples-yellow"> <!-- for actual enclosed content, such as the index headers/links, and titles of pages, you need a color paired here -->
+            <p>Text</p>
+            <!-- you can apply the mini-expansion and/or the expansion class here -->
+        </div>
+    </section>
+</div>
 
 <!-- Insert admin-footer.ejs -->
 <%- include('../partials/admin-footer.ejs') -%> 
