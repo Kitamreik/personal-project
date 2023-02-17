@@ -1,21 +1,40 @@
 <!-- // DO NOT TOUCH -->
 <header class="hot-pink link-styling-header">
     <div class="header-wrapper">
-        <div class = "link-styling mobile-container">
-            <a href="/"><img src ="/img/Cookie-logo.png" alt="A picture of an animal, with a cat-like smiling face with a turtle's body is the logo of this website."></a>
-            </a>
-        </div>
+        <!-- Test: no div for logo -->
+        <a href="/"><img src ="/img/Cookie-logo.png" alt="A picture of an animal, with a cat-like smiling face with a turtle's body is the logo of this website."></a>
+        
         <!-- To DO: fix so the nav bar components can be side by side -->
-        <!-- nav bar have all links and not line items, maybe tinker with that -->
-        <nav class="nav-bar link-styling open-sesame"> 
-            <ul class="nav-bar-list left-text-line-items">
+        <!-- 2/16: may cut titles in half -->
+         <nav class="nav-bar link-styling open-sesame"> 
+            <ul class="left-text-line-items">
                 <li><a href="/videogallery">About</a></li>
-                <li><a href="/tj-quiz">Take the TJ Quiz</a></li>
-                <!-- <li><a href="/class-interest">Sign Up for Jan 2023 Cohort</a></li> -->
-                <li><a href="/summer-projects">View Current Student Projects</a></li>
-                <li><a href="/login">Login for A.P. Students/Instructor</a></li>
+                <!-- <li><a href="/tj-quiz">TJ Quiz</a></li>  --> <!-- disabled for version 2 -->
+                <li><a href="/summer-projects">View Projects</a></li>
+                <li><a href="/">Site Features</a></li>
+                <!-- apply media query to button -->
+                <!-- psuedo button code -->
+                <button class="nav-button link-styling">
+                    <a href="/login" role="button" type="submit">A.P. Login     
+                        <br>
+                        <i class="fa-solid fa-computer"></i>
+                    </a>
+                </button>
+                <button class="nav-button link-styling">
+                    <a href="/register" role="button" type="submit">A.P. Registry 
+                        <br>
+                        <i class="fa-sharp fa-regular fa-address-book"></i>
+                    </a>
+                </button>
+                <!-- <button class="nav-button link-styling">
+                    <a href="/" role="button" type="submit">June '23 App </a>
+                    <br>
+                    <i class="fa-solid fa-school-flag"></i>
+                </button> -->
             </ul>
         </nav>
+        <!-- nav bar have all links side by side - desktop/tablet media query -->
+        
         <div class = "link-styling mobile-container">
             <button class = "hamburger">
                 <a href="javascript:void(0);" class="menu" for="open-sesame">

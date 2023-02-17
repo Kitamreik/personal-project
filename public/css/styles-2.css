@@ -1,6 +1,7 @@
-/* General/For Everything */ /* DO NOT TOUCH THIS CSS - YOU WILL BE SAD */
 /* General --> then media query */
 /* the LAST thing is enforced --> cascading */
+
+/* THIS IS A BACKUP WITHOUT MEDIA QUERIES- COPY ONLY */
 
 :root {
     --indigo-dye:#023B58;
@@ -45,7 +46,122 @@ html {
 
 */
 
+/* triggers mobile responsiveness but not for head or footer */
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 1.4rem;
+    /* height: auto; */
+    background-image: linear-gradient(var(--electric-blue), var(--blue-munsell));
+    font-family: 'Roboto', sans-serif; 
+    /* addition */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
 
+/* affects the header and the logo */
+header {
+    background-color: var(--naples-yellow);
+    width: auto;
+    padding-left: 25px; 
+    border-bottom: solid 5px var(--rich-black);
+    font-family: 'Fredericka the Great', cursive;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100px;
+    /* height: 300px; */
+}
+
+/* .center-text */
+h1 {
+    text-align: center;
+    margin: 10px auto;
+    padding: 0, 10px;
+    font-style: italic;
+    font-family: 'Fredericka the Great', cursive;
+} 
+
+/* .center-text */
+h2, p { 
+    text-align: center;
+    margin: 10px auto;
+    padding: 0, 10px;
+    /* font-size: 1.1rem; */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* .center-text */
+/* seeing how removing p looks for formatting on all pages */
+h2 { 
+    text-align: center;
+    margin: 10px auto;
+    padding: 0, 10px;
+    /* font-size: 1.1rem; */
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    background-color: var(--hot-pink);
+    width: 100%;
+    height: auto;
+    color: var(--rich-black);
+    padding-left: 2.5%;
+    font-size: 1rem;
+    border-top: solid 5px var(--rich-black);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* for card headers */
+h3 {
+    text-align: center;
+    margin: 10px auto;
+    padding: 0, 10px;
+    font-style: italic;
+    font-family: 'Fredericka the Great', cursive;
+    color: var(--blue-munsell);
+} 
+
+
+hr { 
+    /* display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px; */
+    border: none;
+    border-top: 3px double var(--cornflower-blue);
+    color: var(--cornflower-blue);
+    height: 5px;
+    overflow: visible;
+    text-align: center;
+} 
+
+hr::after {
+    /* background-color: var(--black-chocolate); */
+    content: '§';
+    /* Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr  */
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+fieldset {
+    display: block;
+    /* border-color: var(--cosmic-latte); */
+    border: 0 none;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 /* Container Styling Corrected 2023 *//* For the page outline */
 .content-container {
@@ -93,7 +209,6 @@ html {
     border-left: solid 5px var(--indigo-dye);
     /* background-color: var(--light-steel-blue); */
     text-align: center;
-    color: var(--rich-black);
 }
 
 
@@ -104,7 +219,6 @@ html {
     margin: auto;
     padding: 10px;
     text-align: center;
-    color: var(--rich-black);
     /* margin-right: 5em; */
 }
 
@@ -141,16 +255,16 @@ input {
 
 .nav-button, input[type="submit"]{
     margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    /* display:inline-block; */
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem 3rem;
+    /* display: flex;  */
+    padding:.9rem 1.5rem;
     border-radius: .5rem;
     color: var(--medium-purple);
     background-color: var(--naples-yellow);
     font-family: 'Fredericka the Great', cursive;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     font-weight: 500;
 }
@@ -161,68 +275,6 @@ input {
 }
 
 /* OG 2022 */
-/* delete alert buttons */
-.delete-button {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    padding:.9rem 1.5rem;
-    border-radius: .5rem;
-    background-color: var(--hot-pink);
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-/* for disabled buttons- maintenance */
-.block-button {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    padding:.9rem 1.5rem;
-    border-radius: .5rem;
-    background-color: var(--cosmic-latte);
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 500;
-}
-/* 404 */
-.error-button {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    padding:.9rem 1.5rem;
-    border-radius: .5rem;
-    background-color: var(--electric-blue);
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.yellow-button {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    padding:.9rem 1.5rem;
-    border-radius: .5rem;
-    background-color: var(--medium-champagne);
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-/* for the section containing the button */
-.center-button {
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-} 
-
 
 /* PHOTO GALLERY */
 /* Cards for People */
@@ -367,6 +419,64 @@ fa-solid {
     color: var(--rich-black);
 } 
 
+/* delete alert buttons */
+.delete-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding:.9rem 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--hot-pink);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* for disabled buttons- maintenance */
+.block-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding:.9rem 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--cosmic-latte);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+/* 404 */
+.error-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding:.9rem 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--electric-blue);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.yellow-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding:.9rem 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--medium-champagne);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* for the section containing the button */
+.center-button {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
 /* Scrolling */
 .scroll-button {
     display: none;
@@ -504,267 +614,4 @@ fa-solid {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-/* end stylesheet */
-
-/* START DEBUGGING media queries - make sure that you move to the bottom re: cascading*/
-
-/* add to mobile media */
-.right-text > li {
-    list-style-type: none;
-    text-align: right;
-    padding-right: 5%;
-} 
-
-
-/* Hamburger JS outside media query - works */
-header {
-    display: flex;
-}
- 
- /* hides the menu when it's desktop */
-a.menu {
-    display: none;
-}
- 
- /* styling the hamburger menu */
-.hamburger {
-    overflow: visible;
-    position: relative;
-    padding: 14px;
-    display: flex;
-    /* display: none; */
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-end;
-    background-color: transparent;
-    border: 0;
-    color: var(--white);
-    font-size: 20px;
-}
-
-/* END MEDIA QUERIES */
-
-/* triggers mobile responsiveness but not for head or footer */
-body {
-    width: 100%;
-    max-width: 100vw;
-    margin: 0;
-    overflow-x: hidden;
-    font-size: 1.4rem;
-    /* height: auto; */
-    background-image: linear-gradient(var(--electric-blue), var(--blue-munsell));
-    font-family: 'Roboto', sans-serif; 
-    /* addition */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-}
-
-/* affects the header and the logo */
-header {
-    background-color: var(--naples-yellow);
-    width: auto;
-    padding-left: 25px; 
-    border-bottom: solid 5px var(--rich-black);
-    font-family: 'Fredericka the Great', cursive;
-    display: flex;
-    flex-direction: column;
-}
-
-img {
-    width: 100px;
-    /* height: 300px; */
-}
-
-/* .center-text */
-h1 {
-    text-align: center;
-    margin: 10px auto;
-    padding: 0, 10px;
-    font-style: italic;
-    font-family: 'Fredericka the Great', cursive;
-} 
-
-/* .center-text */
-h2, p { 
-    text-align: center;
-    margin: 10px auto;
-    padding: 0, 10px;
-    /* font-size: 1.1rem; */
-    font-family: 'Roboto', sans-serif;
-}
-
-/* .center-text */
-/* seeing how removing p looks for formatting on all pages */
-h2 { 
-    text-align: center;
-    margin: 10px auto;
-    padding: 0, 10px;
-    /* font-size: 1.1rem; */
-    font-family: 'Roboto', sans-serif;
-}
-
-footer {
-    background-color: var(--hot-pink);
-    width: 100%;
-    height: auto;
-    color: var(--rich-black);
-    /* padding-left: 2.5%; */
-    font-size: 1rem;
-    border-top: solid 5px var(--rich-black);
-    font-family: 'Roboto', sans-serif;
-}
-
-/* for card headers */
-h3 {
-    text-align: center;
-    margin: 10px auto;
-    padding: 0, 10px;
-    font-style: italic;
-    font-family: 'Fredericka the Great', cursive;
-    color: var(--blue-munsell);
-} 
-
-
-hr { 
-    /* display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px; */
-    border: none;
-    border-top: 3px double var(--cornflower-blue);
-    color: var(--cornflower-blue);
-    height: 5px;
-    overflow: visible;
-    text-align: center;
-} 
-
-hr::after {
-    /* background-color: var(--black-chocolate); */
-    content: '§';
-    /* Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr  */
-    padding: 0 4px;
-    position: relative;
-    top: -13px;
-}
-
-fieldset {
-    display: block;
-    /* border-color: var(--cosmic-latte); */
-    border: 0 none;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-
-/* Media Query --> specific parameters for css code to operate in */
-/* Mobile Design [mobile container] */
-@media screen and (min-width: 320px) and (max-width: 768px) {
-
-/* header {
-    display: block;
-}   */
-header .header-wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
-/* this is the link for the hamburger button */
-a.menu {
-    display: block;
-    color: var(--white);
-    position: fixed;
-    right: 0;
-    top: 0;
-    padding: 0.5rem 1rem;
-}
-
-/* Mobile Responsiveness for large items, use with content-container-2 */
-.side-scroll-mobile {
-    display: flex;
-    overflow-y: scroll;
-    overflow-x: auto;
-    border: solid 5px var(--yellow);
-}
-
-.mobile-container {
-    max-width: 768px;
-    /* margin: auto; */
-    height: 150px;
-    color:var(--cosmic-latte);
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative; 
-    /* display: flex; */
-}
-
-.open-sesame {
-    display: none;
-}
-
-.mobile-container > .nav-bar {
-    display: none;
-}
-
-.nav-bar-list {
-    display: flex;
-    /* make titles shorter */
-    flex-direction: row;
-    /* used to be column for longer titles */
-    align-items: flex-start;     /* items are aligned to the left */
-}
-.nav-bar-list a {
-    margin: 20px 15px;
-}
-.nav-bar-list a:hover {
-    color: var(--medium-champagne);
-}
-
-.mobile-container > .hamburger {
-    overflow: visible;
-    position: relative;
-    padding: 14px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 120px;
-    width: auto;
-}
-
-/* targets all the elements under the border */
-.border > div {
-    /* background-color: var(--blue-munsell); */
-    height: auto;
-    color: var(--black-chocolate);
-    /* min-width: 320px; */
-    min-width: fit-content;
-    margin: auto;
-    overflow: visible;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-}
-
-
-  
-/* Tablet Design [hamburger] */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-.hamburger {
-    overflow: hidden;
-    position: relative;
-    display: none; 
-    }
-}
-
-
-/* end DEBUGGING */
+/* end */

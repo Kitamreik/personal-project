@@ -42,9 +42,16 @@ function errorAlert() {
 
 // 11/18/2022: https://www.w3schools.com/JSREF/prop_pushbutton_disabled.asp
 // disable button to block entry
-function blockedButton() {document.getElementById("blocked-button").disabled = true; 
+
+// solved 2/15/2023
+function blockedButton() {
+  let block;
+  if (confirm("This is out of service. Please login with credentials Kit has given you.")) {
+    alert(block ="Thank you!")
+  }
+  document.getElementById("blocked-button").disabled = true; 
 }
-// figure this out 
+
 
 //Get the button
 let scrollbutton = document.getElementById("scroll-button");

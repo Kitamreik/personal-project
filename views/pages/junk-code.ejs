@@ -1,17 +1,68 @@
 <%- include('../partials/head') -%> 
 <!-- Insert header.ejs -->
-<title>Admin</title>
+<title>Admin- Junk Code</title>
 <%- include('../partials/admin-nav.ejs') -%> 
 <!-- Insert admin-nav.ejs -->
 
 <div class="content-container-3 cosmic-latte">
-    <p class="mini-expansion">The site admin is working on composing this page as of November 18, 2022 for deployment ASAP. This message will disappear when the site is accessible. Thank you!</p>
+    <p class="mini-expansion">The site admin is working on composing this page as of [DATE] for deployment ASAP. This message will disappear when the page is accessible. Thank you!</p>
 </div>
 
 <!-- delete button alert -->
 <input type="button" value="Delete Me?!" id="delete-button"
 class="delete-button" onclick="deleteAlert()">
 
+<!-- disable Google Auth code -->
+<section class= "center-button">
+    <!-- can add class of yellow button when operational -->
+    <button class="block-button link-styling" id="blocked-button" onclick="blockedButton()">
+        Sign in with Google
+        <!-- <a href="/auth/google" role="button">Sign In with Google</a> -->
+    </button>
+</section>
+
+<!-- psuedo button code -->
+<section class="center-button">
+    <button class="nav-button link-styling">
+        <a href="/" role="button" type="submit">Page to Link To</a>
+    </button>
+</section>
+
+<!-- updated HTML/ejs DUE TO css edits-->
+<div class="content-container"> <!-- For the page outline, may have link styling -->
+    <section class="content-container-2 naples-yellow"> <!--for a section around the content itself, now mobile responsive, you need a color paired here -->
+        <h1>Header Title</h1>
+    </section>
+    <!-- Intro -->
+    <section class="content-container-2 light-steel-blue"> <!--for a section around the content itself, now mobile responsive, you need a color paired here -->
+        <div class="content-container-3 vivid-sky-blue"> <!-- for actual enclosed content, such as the index headers/links, and titles of pages, you need a color paired here -->
+            <a href="/">
+            <p>Link Title </p></a> 
+        </div>
+        <img src="/img/" class= "photo-image" alt="">
+        <div class="content-container-3 naples-yellow"> <!-- for actual enclosed content, such as the index headers/links, and titles of pages, you need a color paired here -->
+            <p>Text</p>
+            <!-- you can apply the mini-expansion and/or the expansion class here -->
+        </div>
+    </section>
+</div>
+
+<!-- for elements that are large for mobile design -->
+<section class="content-container-2 side-scroll-mobile cosmic-latte bold link-styling">
+    Content
+</section>
+<div class="content-container-3 cosmic-latte">
+    <p>If on mobile: <a href="">click here.</a></p>
+</div>
+
+<!-- to return to admin console -->
+<section class="content-container-3 electric-blue">
+    <div class="center-button">
+        <button class="yellow-button link-styling" >
+            <a href="/admin" role="button" type="submit">Back to Admin Console</a>
+        </button>
+    </div>
+</section>
 
 <!-- Insert admin-footer.ejs -->
 <%- include('../partials/admin-footer.ejs') -%> 
