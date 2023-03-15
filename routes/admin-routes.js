@@ -11,18 +11,23 @@ router.route('/')
     .get(adminController.admin)
     .post(adminController.admin);
 
-// CRUD
 // create
 router.route('/outreach-form')
     .get(adminController.create_author);
 
 // read
-router.route('/admin/outreach-log')
-    .get(adminController.outreach_log)
-    .post(adminController.outreach_log);
+router.route('/outreach-log')
+    .get(adminController.all_entries)
+    .post(adminController.all_entries);
 
+router.route('/outreach-detail')
+    .get(adminController.log_detail);
+    
 // update
 router.route('/:_id/update-form')
-    .get(adminController.author_update_get);
+    .get(adminController.log_update_get);
+
+// CRUD
+
 
 module.exports = router;

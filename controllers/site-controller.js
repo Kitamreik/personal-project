@@ -1,8 +1,8 @@
 // DO NOT CHANGE
-// const express = require('express');
 const User = require('../models/user-model');
 const passport = require('passport');
-// const outreachData = require ('../data/outreach-data');
+
+// Debug note: the site controller should have the index, register-get, register-post, login-get, login-post, logout
 
 module.exports = {
   // Deployed
@@ -88,9 +88,8 @@ module.exports = {
       response.render('pages/photogallery', {
       });
   },
-  // LOGIN - get
   login: (request, response) => {
-    response.render('pages/login', {});
+    response.render('pages/login')
   },
   login_post: (request, response) => {
       const {username, password, googleId} = request.body;
@@ -123,12 +122,12 @@ module.exports = {
     });
   },
   register_get: (request, response) => {
-    response.render('pages/register');
+    response.render('pages/register', {});
   },
   register_post:(request, response) => {
     // added in Code Along - differs from slides
     const {username, password} = request.body;
-    User.register({username: username}, password, (error) => {
+    User.register({username: username}, password, (error, user) => {
       if (error) {
         console.log(error);
         response.redirect('/register');

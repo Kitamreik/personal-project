@@ -1,6 +1,6 @@
 // DO NOT TOUCH
-const express = require('express');
-const passport = require('passport');
+// const express = require('express');
+// const passport = require('passport');
 const outreachData = require ('../data/outreach-data');
 const Outreach = require('../models/outreach-model');
 
@@ -17,15 +17,15 @@ module.exports = {
         });
         newOutreach.save();
 
-        response.redirect('/admin/outreach-log');
+        response.redirect('pages/outreach-log');
     },
     // show all entries
     all_entries: (request, response) => {
-        Author.find({}, (error, outreachArray) => {
+        Outreach.find({}, (error, outreachArray) => {
           if(error){
             return error;
           } else {
-            response.render('/admin/outreach-log', {
+            response.render('pages/outreach-log', {
             //   copyrightYear: siteData.year,
               outreachArray: outreachArray
             });
@@ -45,7 +45,7 @@ module.exports = {
     
         newOutreach.save();
     
-        response.redirect('/admin/outreach-log'); 
+        response.redirect('pages/outreach-log'); 
     },
     // use the put method to update a log
     log_update_put: (request, response) => {
@@ -61,7 +61,7 @@ module.exports = {
             if(error) {
               return error;
             } else {
-              response.redirect('/admin/outreach-log');
+              response.redirect('pages/outreach-log');
             }
           })    
     },
@@ -72,7 +72,7 @@ module.exports = {
           if(error) {
             return error;
           } else {
-            response.redirect('/admin/outreach-log')
+            response.redirect('pages/outreach-log')
           }
         }); 
     },
@@ -83,7 +83,7 @@ module.exports = {
           if(error) {
             return error;
           } else {
-            response.render('pages/admin/outreach-detail', {
+            response.render('pages/outreach-detail', {
             // see update-get in adminCtrl and outreach-detail.ejs for more info why
             outreach: foundOutreach
             //  CB -->  author: foundAuthor
