@@ -97,6 +97,27 @@ html {
 }
 
 
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: var(--cornflower-blue);
+    height:2px;border-width:0;color:gray;background-color:gray
+  } 
+
+/* for FORMS --> */
+.mini-container-form {
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+/* for the headers in the footer */
+
 /* Regular Styling- DO NOT TOUCH */
 /* Anything above and below have been coded and are new in 2023 */
 .form-container {
@@ -162,15 +183,17 @@ input {
 
 /* OG 2022 */
 /* delete alert buttons */
-.delete-button {
+.delete-button, button[type="submit"] {
     margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     display: flex;
     justify-content: space-evenly;
     padding:.9rem 1.5rem;
     border-radius: .5rem;
     background-color: var(--hot-pink);
     font-family: 'Fredericka the Great', cursive;
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
     font-weight: 500;
 }
@@ -362,8 +385,8 @@ fa-solid {
     margin: auto;
     padding: 10px;
     text-align: center;
-    border: solid 5px var(--cosmic-latte);
-    background-color: var(--medium-champagne);
+    border: solid 5px var(--blue-munsell);
+    background-color: var(--cosmic-latte);
     color: var(--rich-black);
 } 
 

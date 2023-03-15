@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // const dotenv = require('dotenv');
 
 // removal re Mongoose timeout: https://stackoverflow.com/questions/65408618/mongooseerror-operation-users-findone-buffering-timed-out-after-10000ms
-mongoose.connect(process.env.DB_URL, (err) => {
+mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
     if(!err) {
       console.log("You have successfully connected to the MongoDB server! Hooray!");  
     }

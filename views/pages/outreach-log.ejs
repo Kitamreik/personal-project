@@ -7,21 +7,15 @@
     <section class="content-container-2 naples-yellow">
         <h1>Admin- Outreach Log</h1>
     </section>
-    <section class="content-container-2 vivid-sky-blue">
-        <h2 class = "mini-container cosmic-latte">LOG ENTRY</h2>
-        <!-- insert outreach-loop.ejs -->
-        <%- include('../partials/outreach-loop.ejs') -%> 
-       
-    </section>
-    <section class="content-container-3 electric-blue">
-        <div class="center-button">
-            <button class="yellow-button link-styling" >
-                <a href="/admin/outreach-detail" role="button" type="submit">Back to Log Details</a>
-            </button>
-        </div>
-        <!-- include admin buttons -->
-        <%- include('../partials/admin-buttons.ejs') -%> 
-    </section>
+    <h2 class = "mini-container cosmic-latte">LOG ENTRY</h2>
+   
+    <!-- insert outreach-loop.ejs -->
+    <%- include('../partials/outreach-loop.ejs') -%> 
+
+
+    <!-- include admin buttons -->
+    <%- include('../partials/admin-buttons.ejs') -%> 
+
 </div>
 
 <!-- Insert admin-footer.ejs -->

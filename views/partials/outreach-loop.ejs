@@ -1,21 +1,31 @@
+ <!-- DO NOT TOUCH, CHANGE, MODIFY AS OF MARCH 15, 2023 -->
  <!-- for..of (entry of outreachArray) -->
-        <!-- pull from the controller -->
-        <div class="content-container-3">
-            <% for (outreach of outreachArray) { %>
-                <a href="/admin/outreach-log/<%= outreach._id %>" class="content-container-3 card gold-crayola">
-                    <span class="content-container-2">
-                        <h3>Client: <%= outreach.firstName %> <%= outreach.lastName %> </h3>
-                        <span>
-                            <h4>Entry</h4>
-                            <p><strong>Field: <%= outreach.email %></strong></p>
-                            <p><strong>Field: <%= outreach.phoneNumber %></strong></p>
-                            <p><strong>Field: <%= outreach.reason %></strong></p>
-                        </span>
-                        <a href="./<%= outreach._id %>/update-form" class="yellow-button">edit</a> 
+<!-- pull from the controller -->
+<section class="content-container electric-blue">
+<% for (outreach of outreachArray) { %>
+    <a href="/admin/outreach-log/<%= outreach._id %>">
+        <span class="content-container-2 side-scroll-mobile blue-munsell">
+            <h3 class="content-container-2 naples-yellow title-tinker">Client: <%= outreach.firstName %> <%= outreach.lastName %> </h3>
+            
+            <span class="mini-container gold-crayola ">
+                <p><strong>Email: <%= outreach.email %></strong></p>
+                <p><strong>Contact Number: <%= outreach.phoneNumber %></strong></p>
+                <p><strong>Reason: <%= outreach.reason %></strong></p>
+                <section class="content-container-3 vivid-sky-blue">
+                    <div class="center-button">
+                        <button class="yellow-button">
+                            <a href="./<%= outreach._id %>/update-form" >edit/under maintenance- do not click</a> 
+                        </button>
+                    </div>
+                    <div class="center-button">    
                         <form action="/outreach-log/<%= outreach._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
-                            <button class="center-button hot-pink" type="submit">delete</button>
+                        <button value="Delete Me?!" id="delete-button" class="delete-button" type="submit" onclick="deleteAlert()">delete/under maintenance- do not click</button>
                         </form>   
-                    </span>
-                </a>
-            <% } %>
-            </div>
+                    </div>
+                </section>
+                <hr>
+            </span>
+        </span>
+    </a>
+<% } %>
+</section>
