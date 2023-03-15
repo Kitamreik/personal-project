@@ -4,42 +4,21 @@
 <%- include('../partials/admin-nav.ejs') -%> 
 <!-- Insert admin-nav.ejs -->
 <div class="content-container link-styling">
-    <section class="content-container-section">
+    <section class="content-container-2 naples-yellow">
         <h1>Admin- Outreach Detail</h1>
     </section>
     <section class="content-container-2 vivid-sky-blue">
         <h2 class = "mini-container cosmic-latte">DETAIL OF LOG</h2>
-        <div class="content-container-3">
-            <span class="content-container-2">
-                <h3>Client: <%= outreach.firstName %> <%= outreach.lastName %> </h3>
-                <span>
-                    <h4>Entry</h4>
-                    <p><strong>Field: <%= outreach.email %></strong></p>
-                    <p><strong>Field: <%= outreach.phoneNumber %></strong></p>
-                    <p><strong>Field: <%= outreach.reason %></strong></p>
-                </span>
-            </span>
-            <span class="content-container-2">
-                <h3>Client: <%= outreach.firstName %> <%= outreach.lastName %> </h3>
-                <span>
-                    <h4>Entry</h4>
-                    <p><strong>Field: <%= outreach.email %></strong></p>
-                    <p><strong>Field: <%= outreach.phoneNumber %></strong></p>
-                    <p><strong>Field: <%= outreach.reason %></strong></p>
-                </span>
-            </span>
-            <span class="content-container-2">
-                <h3>Client: <%= outreach.firstName %> <%= outreach.lastName %> </h3>
-                <span>
-                    <h4>Entry</h4>
-                    <p><strong>Field: <%= outreach.email %></strong></p>
-                    <p><strong>Field: <%= outreach.phoneNumber %></strong></p>
-                    <p><strong>Field: <%= outreach.reason %></strong></p>
-                </span>
-            </span>
+       <!-- Insert outreach-detail-part.ejs -->
+    </section>
+    <section class="content-container-3 electric-blue">
+        <div class="center-button">
+            <button class="yellow-button link-styling" >
+                <a href="/admin/outreach-log" role="button" type="submit">Back to Logs</a>
+            </button>
         </div>
-        <a href="/outreach-log">Back to Logs</a>
-        <a href="/admin">Return to Admin Landing Page</a>
+        <!-- include admin buttons -->
+        <%- include('../partials/admin-buttons.ejs') -%> 
     </section>
 </div>
 

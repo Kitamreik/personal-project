@@ -1,7 +1,7 @@
 // DO NOT TOUCH
 const express = require('express');
 const passport = require('passport');
-// const outreachData = require ('../data/outreach-data');
+const outreachData = require ('../data/outreach-data');
 const Outreach = require('../models/outreach-model');
 
 module.exports = {
@@ -12,88 +12,15 @@ module.exports = {
     },
     // DO NOT TOUCH
     admin: (request, response) => {
-    //   if (request.isAuthenticated()) {
-    //     response.render('pages/admin', {
-    //     //   copyrightYear: siteData.year
-    //     }); 
-        
-    //     // experimental ID tracking
-    //     /*
-    //     // auth2 is initialized with gapi.auth2.init() and a user is signed in.
-    //     if (auth2.isSignedIn.get()) {
-    //         var profile = auth2.currentUser.get().getBasicProfile();
-    //         console.log('ID: ' + profile.getId());
-    //         console.log('Full Name: ' + profile.getName());
-    //         console.log('Given Name: ' + profile.getGivenName());
-    //         console.log('Family Name: ' + profile.getFamilyName());
-    //         console.log('Image URL: ' + profile.getImageUrl());
-    //         console.log('Email: ' + profile.getEmail());
-    //     }
-    //     */
-    // } else {
-    //     response.redirect('/login');
-    // }
-        // Uncomment this line of code to render the page without authentication
+      response.render('pages/admin'); // bypass authentication
+      if (request.isAuthenticated()) {
         response.render('pages/admin', {
-        }); 
-    },
-    // as an admin, manage all of the logs you see
-    outreach_log: (request, response) => {
-      if(request.isAuthenticated()){
-        Outreach.find({}, (error, outreachArray) => {
-          if(error){
-            return error;
-          } else {
-            response.render('/admin/outreach-log', {
-            //   pull from the controllers
-              outreachArray: outreachArray
-            });
-          }
-        })
+          // leave empty
+        });
       } else {
         response.redirect('/login')
       }
-        
-        // Uncomment this line of code to render the page without authentication
-        // we create data here
-        response.render('/admin/outreach-log', {
-          //   pull from the controllers
-            outreachArray: outreachArray
-          });
-      
     },
-    // create a record from the form
-    create_author: (request, response) => {
-        if(request.isAuthenticated()){
-          response.render('pages/outreach-form', {
-            // copyrightYear: siteData.year,
-          });
-        } else {
-          response.redirect('/login')
-        }
-        // without auth
-        // response.render('pages/outreach-form');
-    },
-    // be able to get the updates from the update form
-    author_update_get: (request, response) => {
-        if(request.isAuthenticated()){
-          const { _id } = request.params;
-          Outreach.findOne({_id: _id}, (error, foundOutreach) => {
-            if(error) {
-              return error;
-            } else {
-              response.render('pages/update-form', {
-                // copyrightYear: siteData.year,
-                foundOutreach: foundOutreach
-              });
-            }
-          });   
-        } else {
-          response.redirect('/login')
-        }
-        // without auth
-        response.render('pages/admin/update-form');
-      },
     // save the user data when they login
     login: (request, response) => {
         response.render('pages/login', {
@@ -113,4 +40,67 @@ module.exports = {
           });
         newSchema.save();
     },
+
+    // Authentication Test
+    // register when a log is created from the form
+    create_author: (request, response) => {
+      const {firstName, lastName, email, phoneNumber, reason} = request.body;
+      const newOutreach = new Outreach ({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phoneNumber: phoneNumber,
+        reason: reason
+      });
+  
+      newOutreach.save();
+  
+      response.redirect('pages/outreach-log'); 
+  },
+  // use the put method to update a log
+  log_update_get: (request, response) => {
+    const { _id } = request.params;
+    const {firstName, lastName, email, phoneNumber, reason} = request.body;
+    Outreach.findByIdAndUpdate(_id, {$set: {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phoneNumber: phoneNumber,
+        reason: reason
+      }}, {new: true}, error => {
+        if(error) {
+          return error;
+        } else {
+          response.redirect('pages/outreach-log');
+        }
+      })    
+  },
+ // show all entries
+ all_entries: (request, response) => {
+  Outreach.find({}, (error, outreachArray) => {
+    if(error){
+      return error;
+    } else {
+      response.render('pages/outreach-log', {
+      //   copyrightYear: siteData.year,
+        outreachArray: outreachArray
+      });
+    }
+  });
+  },
+  // show the detail of a log
+  log_detail: (request, response) => {
+    const {_id} = request.params;
+    Outreach.findOne({_id: _id}, (error, foundOutreach) => {
+      if(error) {
+        return error;
+      } else {
+        response.render('pages/outreach-detail', {
+        // see update-get in adminCtrl and outreach-detail.ejs for more info why
+        outreach: foundOutreach
+        //  CB -->  author: foundAuthor
+      });
+      }
+    })
+},
 };

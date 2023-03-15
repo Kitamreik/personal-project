@@ -1,0 +1,21 @@
+ <!-- for..of (entry of outreachArray) -->
+        <!-- pull from the controller -->
+        <div class="content-container-3">
+            <% for (outreach of outreachArray) { %>
+                <a href="/admin/outreach-log/<%= outreach._id %>" class="content-container-3 card gold-crayola">
+                    <span class="content-container-2">
+                        <h3>Client: <%= outreach.firstName %> <%= outreach.lastName %> </h3>
+                        <span>
+                            <h4>Entry</h4>
+                            <p><strong>Field: <%= outreach.email %></strong></p>
+                            <p><strong>Field: <%= outreach.phoneNumber %></strong></p>
+                            <p><strong>Field: <%= outreach.reason %></strong></p>
+                        </span>
+                        <a href="./<%= outreach._id %>/update-form" class="yellow-button">edit</a> 
+                        <form action="/outreach-log/<%= outreach._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                            <button class="center-button hot-pink" type="submit">delete</button>
+                        </form>   
+                    </span>
+                </a>
+            <% } %>
+            </div>
