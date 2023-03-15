@@ -20,8 +20,9 @@ router.route('/outreach-log')
     .get(adminController.all_entries)
     .post(adminController.all_entries);
 
-router.route('/outreach-detail')
-    .get(adminController.log_detail);
+// disabled because it doesn't work
+// router.route('/outreach-detail')
+//     .get(adminController.log_detail);
     
 // update
 router.route('/:_id/update-form')

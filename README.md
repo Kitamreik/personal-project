@@ -70,5 +70,3 @@ I look forward to connecting with you! Take care and be well. <3
 Documentation of the Front End: https://docs.google.com/document/d/1JDaJV1Py9GM4K9YS7AGigw4Tec-xiyXLuGekIAYgWPM/edit?usp=sharing  
 
 Documentation of the Back End: https://docs.google.com/document/d/1-nz1wlTWDfKy-1bZMHzepnRB14c82uRvvoj7yx8obTA/edit?usp=sharing
-
-V.2 Documentation of the Back End: under development from the developer- stay tuned for release in the summertime!
