@@ -8,15 +8,6 @@ const router = express.Router();
 
 // we keep the / because the form can log the data
 router.route('/')
-<<<<<<< HEAD
-    .get(logController.all_clients)
-    .post(logController.post_outreach);
-
-router.route('/:_id')
-    .get(logController.client_detail)
-    .put(logController.update_outreach)
-    .delete(logController.client_delete);
-=======
     .get(logController.all_entries)
     .get(logController.read_outreach)
     .post(logController.create_author_log);
@@ -30,6 +21,5 @@ router.route('/:_id')
     // delete
     .delete(logController.log_delete);
 
->>>>>>> version-2
 
 module.exports = router;

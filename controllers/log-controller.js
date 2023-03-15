@@ -1,20 +1,12 @@
 // DO NOT TOUCH
 const express = require('express');
 const passport = require('passport');
-<<<<<<< HEAD
-const User = require('../models/outreach-model');
-
-module.exports = {
-    //  create - post
-    post_outreach: (request, response) => {
-=======
 const outreachData = require ('../data/outreach-data');
 const Outreach = require('../models/outreach-model');
 
 module.exports = {
     // show the entry that was created from the outreach model
     read_outreach: (request, response) => {
->>>>>>> version-2
         const {firstName, lastName, email, phoneNumber, reason} = request.body;
         const newOutreach = new Outreach ({
             firstName: firstName,
@@ -25,9 +17,6 @@ module.exports = {
         });
         newOutreach.save();
 
-<<<<<<< HEAD
-        response.redirect('/index');
-=======
         response.redirect('/admin/outreach-log');
     },
     // show all entries
@@ -101,7 +90,6 @@ module.exports = {
           });
           }
         })
->>>>>>> version-2
     },
 
     // find all of the clients - get

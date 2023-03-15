@@ -12,17 +12,6 @@ router.route('/')
     .post(adminController.admin);
 
 // CRUD
-<<<<<<< HEAD
-router.route('/outreach-log')
-    .get(adminController.all_clients)
-    .get(adminController.outreach_log);
-
-router.route('/edit')
-    .get(adminController.edit);
-
-router.route('/:_id/edit')
-    .put(adminController.update_outreach_get);
-=======
 // create
 router.route('/outreach-form')
     .get(adminController.create_author);
@@ -35,6 +24,5 @@ router.route('/admin/outreach-log')
 // update
 router.route('/:_id/update-form')
     .get(adminController.author_update_get);
->>>>>>> version-2
 
 module.exports = router;

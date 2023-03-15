@@ -21,18 +21,6 @@ module.exports = [
     }
 ];
 
-<<<<<<< HEAD
-let outreachData = [{
-    _id: uuid(),
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    reason: ""
-}];
-
-module.exports = outreachData;
-=======
 // let currentDate = new Date(); 
 
 // CB
@@ -45,4 +33,3 @@ module.exports = {
   signedIn: true
 }
 */
->>>>>>> version-2

@@ -2,11 +2,6 @@
 // schema
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
-<<<<<<< HEAD
-let GoogleStrategy = require('passport-google-oauth20').Strategy;
-const findOrCreate = require('mongoose-findorcreate');
-=======
->>>>>>> version-2
 
 // call the schema
 // mod exports start/schema call

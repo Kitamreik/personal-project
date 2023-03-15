@@ -3,10 +3,6 @@
 const User = require('../models/user-model');
 const passport = require('passport');
 // const outreachData = require ('../data/outreach-data');
-<<<<<<< HEAD
-const User = require('../models/outreach-model');
-=======
->>>>>>> version-2
 
 module.exports = {
   // Deployed
