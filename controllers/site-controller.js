@@ -21,6 +21,11 @@ module.exports = {
   },
 
   // add new pages here:
+  jan_cohort_pics: (request, response) => {
+    response.render('pages/jan-23-photogallery', {
+        // data: data
+    });
+  },
   early_access: (request, response) => {
     response.render('pages/early-access', {
         // data: data
