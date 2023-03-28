@@ -65,10 +65,12 @@ router.route('/juneteenth-showcase')
     .get(siteController.june_showcase);
 
 router.route('/tj-quiz')
-    .get(siteController.tj_quiz);
+    .get(siteController.error_page);    
+// .get(siteController.tj_quiz);
 
 router.route('/tj-answers')
-    .get(siteController.tj_answers); 
+    .get(siteController.error_page);    
+// .get(siteController.tj_answers); 
 
 router.route('/login')
     .get(siteController.login)
