@@ -8,6 +8,9 @@ router.route('/class-interest')
     .get(siteController.class_interest);
 
 // add new routes here:
+router.route('/capstone-projects')
+    .get(siteController.capstone_projects);
+
 router.route('/jan-23-photogallery')
     .get(siteController.jan_cohort_pics);
 

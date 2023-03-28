@@ -6,6 +6,12 @@ const passport = require('passport');
 
 module.exports = {
   // Deployed
+  capstone_projects: (request, response) => {
+    response.render('pages/capstone-projects', {
+        // data: data
+    });
+  },
+
   grad_projects: (request, response) => {
     response.render('pages/grad-projects', {
         // data: data
