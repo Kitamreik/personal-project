@@ -6,8 +6,8 @@ const passport = require('passport');
 
 module.exports = {
   // Deployed
-  summer_projects: (request, response) => {
-    response.render('pages/summer-projects', {
+  grad_projects: (request, response) => {
+    response.render('pages/grad-projects', {
         // data: data
     });
   },
@@ -85,7 +85,7 @@ module.exports = {
   index: (request, response) => {
     response.render('pages/index');
   },
-  term_projects: (request, response) => {
+  map: (request, response) => {
       response.render('pages/map', {
       });
   },

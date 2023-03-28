@@ -24,8 +24,8 @@ router.route('/500')
 router.route('/client-relations')
     .get(siteController.client_relations);
 
-router.route('/summer-projects')
-    .get(siteController.summer_projects);
+router.route('/grad-projects')
+    .get(siteController.grad_projects);
 
 router.route('/mentor-features')
     .get(siteController.mentor_features);
@@ -50,7 +50,7 @@ router.route('/contactus')
     .get(siteController.contact_us);
 
 router.route('/map')
-    .get(siteController.term_projects);
+    .get(siteController.map);
 
 router.route('/photogallery')
     .get(siteController.photogallery);
