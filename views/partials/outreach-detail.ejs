@@ -1,0 +1,18 @@
+ <!-- DO NOT TOUCH, CHANGE, MODIFY AS OF APRIL 2, 2023 -->
+ <!-- for..of (entry of outreachArray) -->
+<!-- pull from the controller -->
+<section class="content-container electric-blue">
+    <% for (outreach of outreachArray) { %>
+        <!-- remove the ID for student access -->
+            <span class="content-container-2 side-scroll-mobile blue-munsell">
+                <h2 class="content-container-2 cosmic-latte">Outreach Details</h2>
+                <h3 class="content-container-2 naples-yellow title-tinker">Client: <%= outreach.firstName %> <%= outreach.lastName %> </h3>
+                <span class="mini-container gold-crayola ">
+                    <p><strong>Email: <%= outreach.email %></strong></p>
+                    <p><strong>Contact Number: <%= outreach.phoneNumber %></strong></p>
+                    <p><strong>Reason: <%= outreach.reason %></strong></p>
+                    <hr>
+                </span>
+            </span>
+    <% } %>
+    </section>

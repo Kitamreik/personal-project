@@ -6,6 +6,7 @@ const passport = require('passport');
 
 module.exports = {
   // Deployed
+    // add new pages here:
   capstone_projects: (request, response) => {
     response.render('pages/capstone-projects', {
         // data: data
@@ -25,18 +26,12 @@ module.exports = {
         // data: data
     });
   },
-
-  // add new pages here:
   jan_cohort_pics: (request, response) => {
     response.render('pages/jan-23-photogallery', {
         // data: data
     });
   },
-  early_access: (request, response) => {
-    response.render('pages/early-access', {
-        // data: data
-    });
-  },
+ 
   new_year: (request, response) => {
     response.render('pages/new-year', {
         // data: data
@@ -62,11 +57,30 @@ module.exports = {
         // data: data
     });
   },
-  holiday_features: (request, response) => {
+ 
+
+  // disabled until further notice 4/2
+  /*
+   early_access: (request, response) => {
+    response.render('pages/early-access', {
+        // data: data
+    });
+  },
+   holiday_features: (request, response) => {
     response.render('pages/holiday-feature', {
         // data: data
     });
   },
+   tj_quiz: (request, response) => {
+    response.render('pages/tj-quiz');
+  },
+  tj_answers: (request, response) => {
+    response.render('pages/tj-answers');
+  },
+    june_showcase: (request, response) => {
+    response.render('pages/juneteenth-showcase');
+  },
+  */ 
 
   // do NOT edit
   about: (request, response) => {
@@ -79,15 +93,7 @@ module.exports = {
     
       });
   },
-  june_showcase: (request, response) => {
-    response.render('pages/juneteenth-showcase');
-  },
-  tj_quiz: (request, response) => {
-    response.render('pages/tj-quiz');
-  },
-  tj_answers: (request, response) => {
-    response.render('pages/tj-answers');
-  },
+
   index: (request, response) => {
     response.render('pages/index');
   },

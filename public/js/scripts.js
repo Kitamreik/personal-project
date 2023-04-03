@@ -19,6 +19,30 @@ hamburgerIcon.addEventListener("click", () => {
 // let currentDate = Date();
 // alert (currentDate);
 
+// 4-2-23: 2nd layer of auth
+let adminCredentials = document.getElementById("admin-credentials");
+function adminTrigger() {
+  let danger = "There has been an error. If you are a student having trouble logging in, please reach out to Kit. You do not have the correct credentials. This page will now render in an infinite loop.";
+  let auth = "Request authenticated. Now loading...";
+
+  if (confirm("Prompt loading...")) {
+    let confirm = prompt("Please enter the secret passcode now.");
+    let record = confirm;
+    let passcode = "cookie";
+    while (record) {
+      if (record === !passcode) {
+        alert(danger);
+      } else if (record === passcode) {
+        // once past, user can see the entries
+        alert(auth);
+        break;
+      } else {
+        alert(danger);
+      }
+    }
+    i++;
+}};
+
 // Post-Grad Button Functionality
 // 11/26/2022: alert when delete
 let deleteButton = document.getElementById("delete-button");

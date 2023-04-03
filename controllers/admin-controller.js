@@ -10,6 +10,19 @@ module.exports = {
         // we create data here
         response.render('pages/junk-code');
     },
+     // add new code here
+     admin_client_management: (request, response) => {
+      // we create data here
+      Outreach.find({}, (error, outreachArray) => {
+        if(error){
+          return error;
+        } else {
+      response.render('pages/admin-client-management', {
+        //   copyrightYear: siteData.year,
+          outreachArray: outreachArray
+        });
+    }})
+  },
     // DO NOT TOUCH
     admin: (request, response) => {
       response.render('pages/admin'); // bypass authentication
@@ -57,7 +70,7 @@ module.exports = {
   
       response.redirect('pages/outreach-log'); 
   },
-  // use the put method to update a log
+  // use the put method to update a log- you want to be able to GET ALL of the updates as the admin
   log_update_get: (request, response) => {
     const { _id } = request.params;
     const {firstName, lastName, email, phoneNumber, reason} = request.body;
@@ -71,7 +84,13 @@ module.exports = {
         if(error) {
           return error;
         } else {
-          response.redirect('pages/outreach-log');
+          response.redirect('pages/outreach-log', {
+            // see update-get in adminCtrl and outreach-detail.ejs for more info why
+            outreach: foundOutreach
+            //  CB -->  author: foundAuthor
+          }
+          
+          );
         }
       })    
   },

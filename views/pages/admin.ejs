@@ -12,21 +12,28 @@
         <div class="content-container-3 card naples-yellow">
             <p>Welcome to the Admin Console!</p>
             <img src="./img/learning.png" alt="a picture of a black and white file cabinet">
-            <p>Registered Users: Theresa, Cori</p>
-            <p>Admin/Site Manager: Kit</p>
+            <p class="yellow-button" >Registered Users: Theresa, Cori</p>
+            <p class="yellow-button" >Admin/Site Manager: Kit</p>
         </div> 
-        <!-- developments as of March 15, 2023 -->
+        <!-- developments as of April 2, 2023 -->
+        <!-- consider adding the class of yellow-button for flair to all links -->
         <div class="content-container-3 card vivid-sky-blue">
             <h2>Notes from Kit</h2></a>
             <p class="mini-expansion">Hello! This is for students to see and be able to interact with the client outreach form we have on the site.</p>
         </div>
         <div class="content-container-3 card hot-pink">
-            <a href="/admin/outreach-log">
+            <a href="/admin/outreach-log"  id="admin-credentials" class="yellow-button" onclick="adminTrigger()">
             <h2>Outreach Log Entries</h2></a>
-            <p class="mini-expansion">Notes: This link will redirect to the outreach log page that lists all of the entries from the outreach form, so students can see the incoming data. The instructor is still working on being able to clear the data accordingly. </p>
+            <p class="mini-expansion">This link will redirect to the outreach log page that lists all of the entries from the outreach form, so students can see the incoming data. </p>
+            <!-- USES the outreach-detail.ejs -->
+        </div>
+        <div class="content-container-3 card medium-purple">
+            <a href="/admin/admin-client-management" id="admin-credentials" class="yellow-button" onclick="adminTrigger()"> 
+                <h2>Database Testing</h2></a>
+                <p class="mini-expansion"> This is the admin client management for an entry. This is still under development. Do NOT touch.</p>
         </div>
         <div class="content-container-3 card mint">
-            <a href="/admin/junk-code">
+            <a href="/admin/junk-code" class="yellow-button">
             <h2>Junk Code for Site :P</h2></a>
             <p class="mini-expansion">An easter egg, if you will.</p>
         </div>

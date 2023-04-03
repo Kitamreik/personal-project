@@ -14,10 +14,6 @@ router.route('/capstone-projects')
 router.route('/jan-23-photogallery')
     .get(siteController.jan_cohort_pics);
 
-router.route('/early-access')
-    .get(siteController.error_page);
-    // .get(siteController.early_access);
-
 router.route('/404')
     .get(siteController.error_page);
 
@@ -33,12 +29,29 @@ router.route('/grad-projects')
 router.route('/mentor-features')
     .get(siteController.mentor_features);
 
-router.route('/holiday-feature')
-    .get(siteController.holiday_features);
-
 router.route('/new-year')
     .get(siteController.new_year)
 
+  // disabled until further notice 4/2
+  /*
+  router.route('/early-access')
+    .get(siteController.error_page);
+    // .get(siteController.early_access);
+
+  router.route('/holiday-feature')
+    .get(siteController.holiday_features);
+    
+  router.route('/tj-quiz')
+    .get(siteController.error_page);    
+// .get(siteController.tj_quiz);
+
+router.route('/tj-answers')
+    .get(siteController.error_page);    
+// .get(siteController.tj_answers); 
+
+router.route('/juneteenth-showcase')
+    .get(siteController.june_showcase);
+  */ 
 // do NOT edit
 
 router.route('/')
@@ -60,17 +73,6 @@ router.route('/photogallery')
 
 router.route('/outreach-form')
     .get(siteController.outreach_form);
-
-router.route('/juneteenth-showcase')
-    .get(siteController.june_showcase);
-
-router.route('/tj-quiz')
-    .get(siteController.error_page);    
-// .get(siteController.tj_quiz);
-
-router.route('/tj-answers')
-    .get(siteController.error_page);    
-// .get(siteController.tj_answers); 
 
 router.route('/login')
     .get(siteController.login)

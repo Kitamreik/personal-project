@@ -5,6 +5,9 @@ const router = express.Router();
 router.route('/junk-code')
     .get(adminController.junk_code);
 
+router.route('/admin-client-management')
+    .get(adminController.admin_client_management);
+
 // DO NOT TOUCH
 router.route('/')
 // formerly '/admin'
@@ -25,8 +28,9 @@ router.route('/outreach-log')
 //     .get(adminController.log_detail);
     
 // update
-router.route('/:_id/update-form')
-    .get(adminController.log_update_get);
+router.route('/:_id/update-form') // original
+    .get(adminController.log_update_get)
+    .post(adminController.log_update_get);
 
 // CRUD
 
