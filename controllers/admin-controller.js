@@ -71,7 +71,7 @@ module.exports = {
       response.redirect('pages/outreach-log'); 
   },
   // use the put method to update a log- you want to be able to GET ALL of the updates as the admin
-  log_update_get: (request, response) => {
+  log_update_put: (request, response) => {
     const { _id } = request.params;
     const {firstName, lastName, email, phoneNumber, reason} = request.body;
     Outreach.findByIdAndUpdate(_id, {$set: {
@@ -114,7 +114,7 @@ module.exports = {
       if(error) {
         return error;
       } else {
-        response.render('pages/outreach-detail', {
+        response.render('pages/outreach-log', {
         // see update-get in adminCtrl and outreach-detail.ejs for more info why
         outreach: foundOutreach
         //  CB -->  author: foundAuthor
@@ -122,4 +122,14 @@ module.exports = {
       }
     })
 },
+  log_delete: (request, response) => {
+    const { _id } = request.params;
+    Outreach.deleteOne({_id: _id}, error => {
+      if(error) {
+        return error;
+      } else {
+        response.redirect('pages/outreach-log')
+      }
+    }); 
+  }
 };

@@ -26,11 +26,17 @@ router.route('/outreach-log')
 // disabled because it doesn't work
 // router.route('/outreach-detail')
 //     .get(adminController.log_detail);
+
+
+// router.route('/update-form')
+//     .put(adminController.log_update_put)
     
 // update
-router.route('/:_id/update-form') // original
-    .get(adminController.log_update_get)
-    .post(adminController.log_update_get);
+router.route('/:_id') // original
+    .get(adminController.log_detail)
+    // .get(adminController.log_update_get)
+    .put(adminController.log_update_put) // updates have put methods
+    .delete(adminController.log_delete);
 
 // CRUD
 
