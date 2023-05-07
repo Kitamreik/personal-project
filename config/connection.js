@@ -19,7 +19,6 @@ mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology:
 });
 
 */
-const mongoose = require('mongoose');
 
 // NEW- VERSION 7
 main().catch(err => console.log(err));
