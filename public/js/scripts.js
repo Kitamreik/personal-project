@@ -1,5 +1,6 @@
 // EXPLORE: https://stackoverflow.com/questions/63681387/how-do-i-transfer-data-from-console-log-to-a-json-file 
 
+
 // Hamburger Menu
 // DOM Event Steps:
 
@@ -42,6 +43,15 @@ function adminTrigger() {
     }
     i++;
 }};
+
+// form confirmation
+let redirection = document.getElementById("redirect");
+function returnHomeET() {
+  if (confirm("Your form entry has been received. You will be redirected to the home page.")) {
+    // POST confirmation
+    
+  }
+}
 
 // Post-Grad Button Functionality
 // 11/26/2022: alert when delete

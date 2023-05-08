@@ -44,9 +44,10 @@ module.exports = {
         });
     
         newOutreach.save();
-    
-        response.redirect('pages/outreach-log'); 
-        // redirect and show on the outreach log page with all the data entries
+        response.render('pages/index') // yes- user experience
+
+        
+        // response.redirect('pages/outreach-log'); // NO - redirect and show on the outreach log page with all the data entries
     },
     // use the put method to update a log - the log control knows to capture the for data and update the right one
     log_update_put: (request, response) => {
