@@ -18,8 +18,9 @@ module.exports = {
         newOutreach.save();
 
         response.redirect('pages/outreach-log');
+        // ensures the data is saved to the outreach log
     },
-    // show all entries
+    // show all entries- ensures the data is saved to the outreach log
     all_entries: (request, response) => {
         Outreach.find({}, (error, outreachArray) => {
           if(error){
@@ -44,10 +45,46 @@ module.exports = {
         });
     
         newOutreach.save();
-    
-        response.redirect('pages/outreach-log'); 
+        response.render('pages/index') // yes- user experience
+
+        
+        // response.redirect('pages/outreach-log'); // NO - redirect and show on the outreach log page with all the data entries
     },
-    // use the put method to update a log
+    // delete a log
+    log_delete: (request, response) => {
+      const { _id } = request.params;
+      Outreach.deleteOne({_id: _id}, error => {
+        if(error) {
+          return error;
+        } else {
+          response.redirect('/admin') // keep to admin to allow for seamless admin-side experience
+
+
+          //a redirect to index,login works
+          // there is a log of the delete as a redirect 
+      // the entries are deleted
+        }
+      }); 
+  },
+  // show the detail of a log
+  log_detail: (request, response) => {
+      const {_id} = request.params;
+      Outreach.findOne({_id: _id}, (error, foundOutreach) => {
+        if(error) {
+          return error;
+        } else {
+          response.render('pages/update-form', {
+          // see update-get in adminCtrl and outreach-detail.ejs for more info why
+          outreach: foundOutreach
+          //  CB -->  author: foundAuthor
+        });
+        }
+      })
+  },
+
+// DO NOT TOUCH OR EDIT FOR ANY REASON 5/8/2023 ABOVE THIS POINT
+
+    // use the put method to update a log - the log control knows to capture the for data and update the right one
     log_update_put: (request, response) => {
         const { _id } = request.params;
         const {firstName, lastName, email, phoneNumber, reason} = request.body;
@@ -61,34 +98,15 @@ module.exports = {
             if(error) {
               return error;
             } else {
-              response.redirect('pages/outreach-log');
+              response.redirect('pages/update-form', {
+                // see update-get in adminCtrl and outreach-detail.ejs for more info why
+                foundOutreach: Outreach // the correct one as of May 2023
+                
+              }
+              
+              );
             }
           })    
     },
-    // delete a log
-    log_delete: (request, response) => {
-        const { _id } = request.params;
-        Outreach.deleteOne({_id: _id}, error => {
-          if(error) {
-            return error;
-          } else {
-            response.redirect('pages/outreach-log')
-          }
-        }); 
-    },
-    // show the detail of a log
-    log_detail: (request, response) => {
-        const {_id} = request.params;
-        Outreach.findOne({_id: _id}, (error, foundOutreach) => {
-          if(error) {
-            return error;
-          } else {
-            response.render('pages/outreach-detail', {
-            // see update-get in adminCtrl and outreach-detail.ejs for more info why
-            outreach: foundOutreach
-            //  CB -->  author: foundAuthor
-          });
-          }
-        })
-    },
+
 }

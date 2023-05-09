@@ -1,5 +1,6 @@
 // EXPLORE: https://stackoverflow.com/questions/63681387/how-do-i-transfer-data-from-console-log-to-a-json-file 
 
+
 // Hamburger Menu
 // DOM Event Steps:
 
@@ -18,6 +19,49 @@ hamburgerIcon.addEventListener("click", () => {
 // Date Method Test --> works 5/2
 // let currentDate = Date();
 // alert (currentDate);
+
+// 4-2-23: 2nd layer of auth
+let adminCredentials = document.getElementById("admin-credentials");
+function adminTrigger() {
+  let danger = "There has been an error. If you are a student having trouble logging in, please reach out to Kit. You do not have the correct credentials. This page will now render in an infinite loop.";
+  let auth = "Request authenticated. Now loading...";
+
+  if (confirm("Prompt loading...")) {
+    let confirm = prompt("Please enter the secret passcode now.");
+    let record = confirm;
+    let passcode = "cookie";
+    while (record) {
+      if (record === !passcode) {
+        alert(danger);
+      } else if (record === passcode) {
+        // once past, user can see the entries
+        alert(auth);
+        break;
+      } else {
+        alert(danger);
+      }
+    }
+    i++;
+}};
+
+// form confirmation
+
+
+
+let redirection = document.getElementById("redirect");
+function returnHomeET() {
+  if (confirm("Your form entry has been received. You will be redirected to the home page.")) {
+    // POST confirmation
+    
+  }
+}
+
+let erase = document.getElementById("bye-bye");
+function confirmDeleteData() {
+  if (confirm("This entry has successfully been wiped from the database. You will be redirected to the admin-console. Click ok.")) {
+    // delete confrmation
+  }
+}
 
 // Post-Grad Button Functionality
 // 11/26/2022: alert when delete
@@ -46,7 +90,7 @@ function errorAlert() {
 // solved 2/15/2023
 function blockedButton() {
   let block;
-  if (confirm("This is out of service. Please login with credentials Kit has given you.")) {
+  if (confirm("This is out of service.")) {
     alert(block ="Thank you!")
   }
   document.getElementById("blocked-button").disabled = true; 

@@ -1,45 +1,46 @@
 <!-- // DO NOT TOUCH -->
+<!-- CAPTURES THE MONGODB hard coded value -->
 
 <%- include('../partials/head') -%> 
 <!-- Insert header.ejs -->
     <title>Update Form</title>
-<%- include('../partials/nav') -%> 
+<%- include('../partials/admin-nav') -%> 
 <!-- Insert nav.ejs -->
 <div class="content-container link-styling">
-    <section class="content-container-section">
+    <section class="content-container-2 naples-yellow">
         <h1>Update Outreach Form</h1>
     </section>
-    <section class="content-container-section gold-crayola">
+    <section class="form-container gold-crayola">
         <h2 class = "mini-container">For Trained Admin Usage Only</h2>
-        <form action="/logs/<%= foundOutreach._id %>?_method=PUT" method="POST" type="text">
+        <form action="/logs/<%= outreach._id %>?_method=PUT" method="POST">
             <legend>
-                    <p class="mini-expansion">The site admin is working on capturing data correctly for this to work, so please come back later. You can email the developer in the footer of the site, at the bottom of the page if you need more immediate assistance.</p>
+                <p>The site admin is working on capturing data correctly for this to work, so please do NOT use this form until deployed.</p>
             </legend>
             <br>
             <fieldset>
                 <label for="firstName">First Name:</label>
-                <input type="text" name="firstName" id="firstName" value="<%= foundOutreach.firstName %>"/>
+                <input type="text" name="firstName" id="firstName" value="<%= outreach.firstName %>"/>
             </fieldset>
             <fieldset>
                 <label for="lastName">Last Name:</label>
-                <input type="text" name="lastName" id="lastName" value="<%= foundOutreach.lastName %>"/>
+                <input type="text" name="lastName" id="lastName" value="<%= outreach.lastName %>"/>
             </fieldset>
             <fieldset>
                 <label for="email">Email Address</label>
-                <input type="email" name="email" id="email" value="<%= foundOutreach.email %>"/>
+                <input type="email" name="email" id="email" value="<%= outreach.email %>"/>
             </fieldset>
             <fieldset>
                 <label for="phoneNumber">Phone Number</label>
-                <input type="number" name="phoneNumber" id="phoneNumber" value="<%= foundOutreach.phoneNumber %>"/>
+                <input type="number" name="phoneNumber" id="phoneNumber" value="<%= outreach.phoneNumber %>"/>
             </fieldset>
             <fieldset>
                 <label for="reason">Reason:</label>
-                <input type="text" name="reason" id="reason" value="<%= foundOutreach.reason %>"/>
+                <input type="text" name="reason" id="reason" value="<%= outreach.reason %>"/>
             </fieldset>
             <section class= "center-button">
                 <!-- for disabling the form -->
-                <input type="button" value="In Maintenance" class="block-button">
-                <input type="submit" value="Submit" class="yellow-button link-styling" />
+                <!-- <input type="button" value="In Maintenance" class="block-button"> -->
+                <input type="submit" value="Submit" class="yellow-button link-styling" onclick="returnHomeET()" />
                 <!-- class='blocked-button' onclick="blockedButton() -->
             </section>
         </form>

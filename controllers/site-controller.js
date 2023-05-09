@@ -1,10 +1,18 @@
 // DO NOT CHANGE
 const User = require('../models/user-model');
 const passport = require('passport');
+const Outreach = require('../models/outreach-model');
 
 // Debug note: the site controller should have the index, register-get, register-post, login-get, login-post, logout
 
 module.exports = {
+  update: (request, response) => {
+    response.render('pages/update-form', {
+        // works as of May 2023
+        foundOutreach: Outreach
+    });
+  },
+
   // Deployed
   capstone_projects: (request, response) => {
     response.render('pages/capstone-projects', {

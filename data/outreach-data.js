@@ -18,7 +18,15 @@ module.exports = [
         email: "kit.tjclasses@gmail.com",
         phoneNumber: "5555555555",
         reason: "This is a fail-safe, hard coded entry to allow the database to capture the data here :]"
-    }
+    },
+    {
+        _id: 001,
+        firstName: "Test",
+        lastName: "Database Log B",
+        email: "kit.tjclasses@gmail.com",
+        phoneNumber: "5555555555",
+        reason: "This is a fail-safe, hard coded entry to allow the database to capture the data here through the outreach data :D"
+    },
 ];
 
 // let currentDate = new Date(); 

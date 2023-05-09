@@ -5,6 +5,9 @@ const router = express.Router();
 router.route('/junk-code')
     .get(adminController.junk_code);
 
+router.route('/admin-client-management')
+    .get(adminController.admin_client_management);
+
 // DO NOT TOUCH
 router.route('/')
 // formerly '/admin'
@@ -20,13 +23,23 @@ router.route('/outreach-log')
     .get(adminController.all_entries)
     .post(adminController.all_entries);
 
-// disabled because it doesn't work
-// router.route('/outreach-detail')
-//     .get(adminController.log_detail);
+// for the student route without edit-delete
+router.route('/outreach-detail')
+    .get(adminController.student_log_read);
+
+
+router.route('/update-form/:_id')
+// Test: router.route('/update-form/:_id') --> maybe works?!!?! 5/9
+    .get(adminController.log_update_put)
+    .put(adminController.log_update_put) // updates have put methods
+    .post(adminController.log_update_put)
     
-// update
-router.route('/:_id/update-form')
-    .get(adminController.log_update_get);
+// update and delete the right entries
+router.route('/outreach-log/:_id') // THIS WORKS, DO NOT TOUCH
+    .get(adminController.log_detail)
+    // .get(adminController.log_update_get)
+    .post(adminController.log_delete)  // register the delete
+    .delete(adminController.log_delete);
 
 // CRUD
 

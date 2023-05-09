@@ -4,6 +4,48 @@
 <%- include('../partials/admin-nav.ejs') -%> 
 <!-- Insert admin-nav.ejs -->
 
+<!-- update form, if id is removed, will read outreach instead of foundOutreach for ALL entries, rendered the update form-->
+<div class="content-container link-styling">
+    <section class="content-container-2 naples-yellow">
+        <h1>Update Outreach Form</h1>
+    </section>
+    <section class="form-container gold-crayola">
+        <h2 class = "mini-container">For Trained Admin Usage Only</h2>
+        <form action="/logs/<%= outreach %>?_method=PUT" method="POST">
+            <legend>
+                    <p>The site admin is working on capturing data correctly for this to work, so please do NOT use this form until deployed.</p>
+            </legend>
+            <br>
+            <fieldset>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" value="<%= outreach %>"/>
+            </fieldset>
+            <fieldset>
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" value="<%= outreach %>"/>
+            </fieldset>
+            <fieldset>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" value="<%= outreach %>"/>
+            </fieldset>
+            <fieldset>
+                <label for="phoneNumber">Phone Number</label>
+                <input type="number" name="phoneNumber" id="phoneNumber" value="<%= outreach %>"/>
+            </fieldset>
+            <fieldset>
+                <label for="reason">Reason:</label>
+                <input type="text" name="reason" id="reason" value="<%= outreach %>"/>
+            </fieldset>
+            <section class= "center-button">
+                <!-- for disabling the form -->
+                <!-- <input type="button" value="In Maintenance" class="block-button"> -->
+                <input type="submit" value="Submit" class="yellow-button link-styling" onclick="returnHomeET()" />
+                <!-- class='blocked-button' onclick="blockedButton() -->
+            </section>
+        </form>
+    </section>
+</div>
+
 <!-- template for new project pages -->
  <!-- <section class="content-container-2 mint">
         <div class="content-container-3 vivid-sky-blue">

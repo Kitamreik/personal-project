@@ -3,6 +3,11 @@ const express = require('express');
 const router = express.Router();
 const siteController = require('../controllers/site-controller');
 
+router.route('/update-form')
+    .get(siteController.update)
+    // .put(siteController.update)
+    // .post(siteController.update)
+
 router.route('/class-interest')
     .get(siteController.error_page);
     // .get(siteController.class_interest);

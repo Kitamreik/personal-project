@@ -14,12 +14,12 @@ router.route('/')
 
   
 router.route('/:_id')
-    // update
-    .put(logController.log_update_put)
+   // update
+   .get(logController.log_update_put)
+   .put(logController.log_update_put)// updates have put methods
     // detail
     .get(logController.log_detail)
     // delete
     .delete(logController.log_delete);
-
-
+    
 module.exports = router;
