@@ -7,7 +7,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const {Schema} = mongoose;
 
 // have to add here so it can initialize
-let GoogleStrategy = require('passport-google-oauth20').Strategy;
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 
 const userSchema = new Schema({

@@ -11,7 +11,7 @@ const morgan = require('morgan');
 app.use(morgan('dev'));
 
 // Adding Path module and EJS to app.js 
-const path = require('path');
+const path = require('node:path');
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine','ejs');
 
@@ -67,7 +67,7 @@ app.listen(PORT, () => {
     console.log(`The server is ready and all ears on port ${PORT}!`);
     console.log(`http://localhost:${PORT}`);
     console.log(`Google Analytics: https://analytics.google.com/analytics/web/#/p318060884/reports/reportinghub?params=_u..nav%3Dmaui&collectionId=life-cycle`);
-    console.log(`MongoDB: https://account.mongodb.com/account/login?n=%2Fv2%2F6283ea2dc31b1101d771a537%23metrics%2FreplicaSet%2F6283eeed1c1b0a10f8ebf0fc%2Fexplorer%2FpersonalProject%2Fcreates%2Ffind`);
+    console.log(`MongoDB: https://cloud.mongodb.com/v2/6283ea2dc31b1101d771a537#/metrics/replicaSet/62f3348909ca555b91abfba6/explorer/personalProject/outreaches/find`);
     console.log(`Student Deployment 22-23: https://docs.google.com/document/d/1a_iW2DCEWnRKddPolTn6nRfNgbj6eQ7QIEEwYHt0iig/edit?usp=sharing`);
 });
 

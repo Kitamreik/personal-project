@@ -30,6 +30,7 @@
                 
                 <!-- delete functionality operational -->
                     <form action="/logs/<%= outreach._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                        <!-- if instead of form action -> a href will have the confirmation of the data you want to delete -->
                         <div class="center-button">    
                             <input value="Delete Me?!" id="delete-button bye-bye" class="delete-button" type="submit" onclick="confirmDeleteData()" />
                         </div>

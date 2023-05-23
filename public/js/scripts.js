@@ -21,6 +21,8 @@ hamburgerIcon.addEventListener("click", () => {
 // alert (currentDate);
 
 // 4-2-23: 2nd layer of auth
+// 5-23-23: disabing for auth, good to test locally
+/*
 let adminCredentials = document.getElementById("admin-credentials");
 function adminTrigger() {
   let danger = "There has been an error. If you are a student having trouble logging in, please reach out to Kit. You do not have the correct credentials. This page will now render in an infinite loop.";
@@ -43,6 +45,8 @@ function adminTrigger() {
     }
     i++;
 }};
+*/ 
+
 
 // form confirmation
 
