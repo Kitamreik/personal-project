@@ -45,7 +45,7 @@ module.exports = {
         });
     
         newOutreach.save();
-        response.render('pages/index') // yes- user experience
+        response.render('pages/form-submit') // yes- user experience
 
         
         // response.redirect('pages/outreach-log'); // NO - redirect and show on the outreach log page with all the data entries
@@ -98,13 +98,8 @@ module.exports = {
             if(error) {
               return error;
             } else {
-              response.redirect('pages/update-form', {
-                // see update-get in adminCtrl and outreach-detail.ejs for more info why
-                foundOutreach: Outreach // the correct one as of May 2023
-                
-              }
-              
-              );
+              // 
+              response.render('pages/form-submit')
             }
           })    
     },

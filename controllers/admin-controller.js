@@ -4,6 +4,9 @@ const passport = require('passport');
 const outreachData = require ('../data/outreach-data');
 const Outreach = require('../models/outreach-model');
 
+// NO MORE EDITS
+// Note: isAuthenticated will disable local login, however will work on the deployed site
+
 module.exports = {
     // add new code here
     junk_code: (request, response) => {
@@ -66,7 +69,22 @@ module.exports = {
         }
       });
       },
-  // show the detail of a log
+    log_delete: (request, response) => {
+      const { _id } = request.params;
+      Outreach.deleteOne({_id: _id}, error => {
+        if(error) {
+          return error;
+        } else {
+          response.redirect('/admin') // keep to admin to allow for seamless admin-side experience
+  
+  
+          //a redirect to index, login works
+          // there is a log of the delete as a redirect 
+          // the entries are deleted
+        }
+      }); 
+    },
+      // show the detail of a log
   log_detail: (request, response) => {
     const {_id} = request.params;
     Outreach.findOne({_id: _id}, (error, foundOutreach) => {
@@ -75,27 +93,14 @@ module.exports = {
       } else {
         response.render('pages/outreach-log', {
         // see update-get in adminCtrl and outreach-detail.ejs for more info why
-        outreach: foundOutreach
+        // outreach: foundOutreach
+        outreachData: outreachData
         //  CB -->  author: foundAuthor
       });
       }
     })
 },
-  log_delete: (request, response) => {
-    const { _id } = request.params;
-    Outreach.deleteOne({_id: _id}, error => {
-      if(error) {
-        return error;
-      } else {
-        response.redirect('/admin') // keep to admin to allow for seamless admin-side experience
-
-
-        //a redirect to index, login works
-        // there is a log of the delete as a redirect 
-        // the entries are deleted
-      }
-    }); 
-  },
+  
 // DO NOT TOUCH OR EDIT FOR ANY REASON 5/8/2023 ABOVE THIS POINT
 
     // OG ROUTES
@@ -129,7 +134,6 @@ module.exports = {
         newSchema.save();
     },
 
-
   // use the put method to update a log- you want to be able to GET ALL of the updates as the admin
   log_update_put: (request, response) => {
     const { _id } = request.params;
@@ -139,7 +143,7 @@ module.exports = {
         lastName: lastName,
         email: email,
         phoneNumber: phoneNumber,
-        reason: reason
+    
       }}, {new: true}, error => {
         if(error) {
           return error;

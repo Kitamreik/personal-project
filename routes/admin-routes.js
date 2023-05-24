@@ -28,8 +28,8 @@ router.route('/outreach-detail')
     .get(adminController.student_log_read);
 
 
-router.route('/update-form/:_id')
-// Test: router.route('/update-form/:_id') --> maybe works?!!?! 5/9
+router.route(':_id/update-form')
+// WORKS - router.route(':_id/update-form')- EDIT button
     .get(adminController.log_update_put)
     .put(adminController.log_update_put) // updates have put methods
     .post(adminController.log_update_put)

@@ -12,6 +12,11 @@ module.exports = {
         foundOutreach: Outreach
     });
   },
+  form_confirmation: (request, response) => {
+    response.render('pages/form-submit', {
+        // data: data
+    });
+  },
 
   // Deployed
   capstone_projects: (request, response) => {

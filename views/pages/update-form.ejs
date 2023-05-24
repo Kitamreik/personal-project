@@ -12,9 +12,10 @@
     </section>
     <section class="form-container gold-crayola">
         <h2 class = "mini-container">For Trained Admin Usage Only</h2>
-        <form action="/logs/<%= outreach._id %>?_method=PUT" method="POST">
+        <!-- when making the change, can't PUT, so removing and mocking the outreach form (?_method=PUT)-->
+        <form action="/logs/<%= outreach._id%>?_method=PUT" method="POST">
             <legend>
-                <p>The site admin is working on capturing data correctly for this to work, so please do NOT use this form until deployed.</p>
+                <p>Entries should only be edited if there has been a client error ONLY.</p>
             </legend>
             <br>
             <fieldset>
@@ -35,12 +36,13 @@
             </fieldset>
             <fieldset>
                 <label for="reason">Reason:</label>
-                <input type="text" name="reason" id="reason" value="<%= outreach.reason %>"/>
+                <input type="text" name="reason" id="reason" value="<%= outreach.reason %>" required/>
             </fieldset>
+            
             <section class= "center-button">
                 <!-- for disabling the form -->
                 <!-- <input type="button" value="In Maintenance" class="block-button"> -->
-                <input type="submit" value="Submit" class="yellow-button link-styling" onclick="returnHomeET()" />
+                <input type="submit" value="Submit" class="yellow-button link-styling" onclick="confirmUpdateData()" />
                 <!-- class='blocked-button' onclick="blockedButton() -->
             </section>
         </form>

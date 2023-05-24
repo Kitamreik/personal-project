@@ -8,6 +8,9 @@ router.route('/update-form')
     // .put(siteController.update)
     // .post(siteController.update)
 
+router.route('/form-submit')
+    .get(siteController.form_confirmation);
+
 router.route('/class-interest')
     .get(siteController.error_page);
     // .get(siteController.class_interest);

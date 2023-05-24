@@ -12,22 +12,11 @@
                 <p><strong>Email: <%= outreach.email %></strong></p>
                 <p><strong>Contact Number: <%= outreach.phoneNumber %></strong></p>
                 <p><strong>Reason: <%= outreach.reason %></strong></p>
-                
-               
                 <hr>
+                <p><strong></strong></p>
             </span>
             <!-- temporarily disabled buttons until functional 3/26, see here for highlighted code to copy https://docs.google.com/document/d/1OEsh2MZt2sd5BWJGMVbInp-zasRUxp2KtO6ZCha-Qv4/edit?usp=sharing -->
-            <section class="content-container-3 vivid-sky-blue">
-                <div class="center-button">
-                    <button class="yellow-button">
-                        <!-- does work and links to the hard coded value on MongoDB  -->
-                        <a href="/update-form/<%= outreachArray._id %>">edit</a> 
-                        <!-- TEST ASAP 5/9 -->
-                        <!--  <a href="./<%# outreach._id %>/update-form">edit</a>  -->
-                        <!--  <a href="./:_id/update-form">edit</a>  -->
-                    </button>
-                </div>
-                
+            <section class="content-container-3 hot-pink">
                 <!-- delete functionality operational -->
                     <form action="/logs/<%= outreach._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
                         <!-- if instead of form action -> a href will have the confirmation of the data you want to delete -->

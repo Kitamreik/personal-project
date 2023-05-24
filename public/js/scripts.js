@@ -49,21 +49,27 @@ function adminTrigger() {
 
 
 // form confirmation
-
-
-
+// for the outreach form
 let redirection = document.getElementById("redirect");
 function returnHomeET() {
-  if (confirm("Your form entry has been received. You will be redirected to the home page.")) {
+  if (confirm("Your form entry has been received. You will be redirected to the form submission page. Click ok.")) {
     // POST confirmation
     
+  }
+}
+
+// for the update
+let validation = document.getElementById("verify");
+function confirmUpdateData() {
+  if (confirm("This entry has successfully been updated from the database. You will be redirected to the form submission page. Click ok.")) {
+    // update conformation
   }
 }
 
 let erase = document.getElementById("bye-bye");
 function confirmDeleteData() {
   if (confirm("This entry has successfully been wiped from the database. You will be redirected to the admin-console. Click ok.")) {
-    // delete confrmation
+    // delete conformation
   }
 }
 
