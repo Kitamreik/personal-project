@@ -1,0 +1,61 @@
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+    <title>Student Update Form</title>
+<%- include('../partials/admin-nav') -%> 
+<!-- Insert nav.ejs -->
+<div class="content-container link-styling">
+    <section class="content-container-2 naples-yellow">
+        <h1>Update Student Form</h1>
+    </section>
+    <section class="form-container gold-crayola">
+        <h2 class = "mini-container">For Trained Admin Usage Only</h2>
+        <!-- when making the change, can't PUT, so removing and mocking the outreach form (?_method=PUT)-->
+        <form action="/students/<%= student._id%>?_method=PUT" method="POST">
+            <legend>
+                <p>Entries should only be edited if there has been a client error ONLY.</p>
+            </legend>
+            <br>
+            <fieldset>
+                <label for="firstName">Update First Name:</label>
+                <input type="text" name="firstName" id="firstName" value="<%= student.firstName %>"/>
+            </fieldset>
+            <fieldset>
+                <label for="lastName">Update Last Name:</label>
+                <input type="text" name="lastName" id="lastName" value="<%= student.lastName %>"/>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <label for="dateEntry">Update Date of Entry: </label>
+                    <input type="date" name="dateEntry" id="dateEntry" value="<%= student.dateEntry %>" required />
+                    <!-- min="9999" max="9999" -->
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <p>Please choose with semester you are interested in: </p>
+                    <input type="radio" id="semester1" name="semester1" value="Jan 2024">
+                    <label for="semester1">Jan 2024</label>
+                    <input type="radio" id="semester2" name="semester2" value="Jun 2024">
+                    <label for="semester2">Jun 2024</label>
+                    <input type="radio" id="semester3" name="semester3" value="Jan 2025">
+                    <label for="semester3">Jan 2025</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <label for="info">Reason:</label>
+                <input type="text" name="info" id="info" value="<%= student.info %>" required/>
+            </fieldset>
+            <fieldset>
+                <label for="question">Reason:</label>
+                <input type="text" name="question" id="question" value="<%= student.question %>" required/>
+            </fieldset>
+            
+            <section class= "center-button">
+                <input type="submit" value="Submit" class="yellow-button link-styling" onclick="confirmUpdateData()" />
+            </section>
+        </form>
+    </section>
+</div>
+<!-- Insert footer.ejs -->
+<%- include('../partials/footer') -%> 
+

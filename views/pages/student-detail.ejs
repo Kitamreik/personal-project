@@ -1,0 +1,30 @@
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+<title>Admin- Student Detail</title>
+<%- include('../partials/admin-nav.ejs') -%> 
+<!-- Insert admin-nav.ejs -->
+<div class="content-container link-styling">
+    <section class="content-container-2 naples-yellow">
+        <h1>Admin- Student Detail</h1>
+    </section>
+    <section class="content-container-2 vivid-sky-blue">
+        <h2 class = "mini-container cosmic-latte">DETAIL OF STUDENT</h2>
+    </section>
+ 
+    <!-- hard code data value from the outreach-data.js -->
+    <%- include('../partials/test-student-loop') -%> 
+   
+    <section class="content-container-3 electric-blue">
+        <div class="center-button">
+            <button class="yellow-button link-styling" >
+                <a href="/admin/admin-student-management" role="button" type="submit">Back to Student Logs</a>
+            </button>
+        </div>
+        <!-- include admin buttons -->
+        <%- include('../partials/admin-buttons.ejs') -%> 
+    </section>
+</div>
+
+
+<!-- Insert admin-footer.ejs -->
+<%- include('../partials/admin-footer.ejs') -%> 

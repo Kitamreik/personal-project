@@ -6,6 +6,12 @@ const Outreach = require('../models/outreach-model');
 // Debug note: the site controller should have the index, register-get, register-post, login-get, login-post, logout
 
 module.exports = {
+  class_reg: (request, response) => {
+    response.render('pages/course-register', {
+        // data: data
+    });
+  },
+
   update: (request, response) => {
     response.render('pages/update-form', {
         // works as of May 2023
