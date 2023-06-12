@@ -1,19 +1,18 @@
 <%- include('../partials/head') -%> 
 <!-- Insert header.ejs -->
-<title>Admin- Client Management</title>
+<title>Admin- Student Management</title>
 <%- include('../partials/admin-nav') -%> 
 <!-- Insert admin-nav.ejs -->
 <div class="content-container link-styling">
     <section class="content-container-2 naples-yellow">
-        <h1>Admin- Client Management</h1>
+        <h1>Admin- Student Management</h1>
     </section>
     <h2 class = "mini-container cosmic-latte">LOG ENTRY</h2>
    
-    <!-- insert outreach-loop.ejs functional, shows all of the entries in the database  -->
-    <%- include('../partials/outreach-loop') -%> 
+    <%- include('../partials/student-loop') -%> 
 
-    <!-- the last form entry is targeted and allowed to edit -->
-    <%- include('../partials/last-entry') -%> 
+    <!-- the last form entry is targeted and allowed to edit, keep working -->
+    <%# include('../partials/last-student-entry') -%> 
 
     <!-- include admin buttons -->
     <%- include('../partials/admin-buttons') -%> 

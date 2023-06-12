@@ -1,0 +1,30 @@
+ <!-- DO NOT TOUCH, CHANGE, MODIFY AS OF JUNE 11, 2023 -->
+<!-- pull from the controller -->
+<section class="content-container electric-blue">
+    <% for (student of studentArray) { %>
+              <span class="content-container-2 side-scroll-mobile blue-munsell">
+                <h3 class="content-container-2 naples-yellow title-tinker">Prospective Student Candidate: <%= student.firstName %> <%= student.lastName %> </h3>
+                
+                <span class="mini-container gold-crayola ">
+                    <p><strong>Date Entry: <%= student.dateEntry %></strong></p>
+                    <p><strong>Info: <%= student.info %></strong></p>
+                    <hr>
+                    <p><strong>Feedback: <%= student.question %></strong></p>
+                </span>
+                <!-- temporarily disabled buttons until functional 3/26, see here for highlighted code to copy https://docs.google.com/document/d/1OEsh2MZt2sd5BWJGMVbInp-zasRUxp2KtO6ZCha-Qv4/edit?usp=sharing -->
+                <section class="content-container-3 hot-pink">
+                    <!-- delete functionality operational -->
+                        <form action="/students/<%= student._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                            <!-- if instead of form action -> a href will have the confirmation of the data you want to delete -->
+                            <div class="center-button">    
+                                <input value="Delete Me?!" id="delete-button bye-bye" class="delete-button" type="submit" onclick="confirmDeleteData()" />
+                            </div>
+                        </form>   
+                
+                </section>
+            </span>
+        <!-- </a> -->
+    <% } %>
+    </section>
+    
+    
