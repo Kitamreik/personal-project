@@ -3,6 +3,9 @@ const express = require('express');
 const router = express.Router();
 const siteController = require('../controllers/site-controller');
 
+router.route('/course-register')
+    .get(siteController.class_reg)
+
 router.route('/update-form')
     .get(siteController.update)
     // .put(siteController.update)

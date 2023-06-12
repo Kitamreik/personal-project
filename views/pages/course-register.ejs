@@ -1,0 +1,68 @@
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+<!-- v.2: USE setTimer.ejs partial to render a welcome message after 6 seconds of loading -->
+    <title>Prospective Student Interest</title>
+<%- include('../partials/nav') -%> 
+<!-- Insert nav.ejs -->
+
+<main>
+    <div class="content-container link-styling">
+        <section class="content-container-2 naples-yellow">
+        <h1>Prospective Student Interest for Future Cycles</h1>
+        </section>
+        <span class="content-container-2">
+            <p class="mini-expansion orchid-crayola">This form is to merely denote interest, it is not a guarantee that you will be admitted. There is a interview process that will be deployed on the site when it is ready.</p>
+        </span>
+        <section class = "form-container hot-pink">
+            <form action="/authors" method="POST" type="text">
+                <legend class="cosmic-latte">
+                    <p>Once you have submitted the form, please wait for someone to reach out to you for an initial discussion with the instructor.</p>
+                    <hr />
+                </legend>
+                <br>
+                <fieldset>
+                    <div>
+                        <label for="firstName">Candidate First Name: </label>
+                        <input type="text" name="firstName" id="firstName" minlength="1" required />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <label for="lastName">Candidate Last Name: </label>
+                        <input type="text" name="lastName" id="lastName" minlength="1" required />
+                        </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <label for="dateEntry">Date of Entry: </label>
+                        <input type="date" name="dateEntry" id="dateEntry"  required />
+                        <!-- min="9999" max="9999" -->
+                    </div>
+                </fieldset>
+                    <fieldset>
+                    <div>
+                        <p>Please choose with semester you are interested in: </p>
+                        <input type="radio" id="semester1" name="semester1" value="Jan 2024">
+                        <label for="semester1">Jan 2024</label>
+                        <input type="radio" id="semester2" name="semester2" value="Jun 2024">
+                        <label for="semester2">Jun 2024</label>
+                        <input type="radio" id="semester3" name="semester3" value="Jan 2025">
+                        <label for="semester3">Jan 2025</label>
+                    </div>
+                    </fieldset>   
+                <fieldset>
+                    <div>
+                        <label for="bio">Let us know if you have questions here: </label>
+                        <textarea name="bio" id="bio" minlength="10" required></textarea>
+                    </div>
+                </fieldset>
+                <section class= "center-button">
+                    <input type="submit" value="Submit" class="yellow-button link-styling" onclick="returnHomeET()" />
+                </section>
+            </form>
+        </section>
+    </div>
+  </main>
+
+<!-- Insert footer.ejs -->
+<%- include('../partials/footer') -%> 
