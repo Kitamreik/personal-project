@@ -11,7 +11,7 @@ module.exports = {
             firstName: firstName,
             lastName: lastName,
             dateEntry: dateEntry,
-            semester: semester,
+            // semester: semester,
             info: info,
             question: question
         })
@@ -41,7 +41,7 @@ module.exports = {
             firstName: firstName,
             lastName: lastName,
             dateEntry: dateEntry,
-            semester: semester,
+            // semester: semester,
             info: info,
             question: question
         })
@@ -90,7 +90,7 @@ module.exports = {
             firstName: firstName,
             lastName: lastName,
             dateEntry: dateEntry,
-            semester: semester,
+            // semester: semester,
             info: info,
             question: question
           }}, {new: true}, error => {

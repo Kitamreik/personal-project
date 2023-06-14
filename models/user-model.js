@@ -13,6 +13,7 @@ const findOrCreate = require('mongoose-findorcreate');
 const userSchema = new Schema({
     username: {
       type: String,
+      // can add required for form validation?
     },
     password: {
       type: String,
