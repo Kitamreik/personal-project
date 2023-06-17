@@ -14,6 +14,7 @@ const userSchema = new Schema({
     username: {
       type: String,
       // can add required for form validation?
+      // unique: true, be able to restrict
     },
     password: {
       type: String,

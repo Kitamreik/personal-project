@@ -5,6 +5,9 @@ const Outreach = require('../models/outreach-model');
 
 // Debug note: the site controller should have the index, register-get, register-post, login-get, login-post, logout
 
+// load the error page?
+// response.status(500).send('Internal Server Error')
+
 module.exports = {
   class_reg: (request, response) => {
     response.render('pages/course-register', {
