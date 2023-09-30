@@ -8,3 +8,5 @@ setTimeout(() => {
     console.warn("the setTimeout function has been cleaned up")
   return clearTimeout(timeoutId);
 }, 6000); // first you wait 5 seconds --> 5000 milliseconds = 5 seconds
+
+//setTimeout is a browser API that is very commonly used in tutorials to represent async operations.
