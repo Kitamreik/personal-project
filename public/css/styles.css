@@ -678,6 +678,7 @@ h2, p {
     text-align: center;
     margin: 10px auto;
     padding: 0, 10px;
+    font-weight: bolder;
     /* font-size: 1.1rem; */
     font-family: 'Roboto', sans-serif;
 }
