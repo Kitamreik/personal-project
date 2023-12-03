@@ -64,6 +64,14 @@ html {
 
 */
 
+input {
+    color: var(--black-chocolate)
+}
+
+textarea {
+    background-color: var(--cosmic-latte);
+}
+
 /* Implementing Dark Mode */
 /* Note: Dark Mode Implementation started 4/21/2023, followed from: https://www.pullrequest.com/blog/how-to-implement-dark-mode-with-css-js/ */
 

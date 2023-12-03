@@ -25,10 +25,6 @@ router.route('/capstone-projects')
 router.route('/jan-23-photogallery')
     .get(siteController.jan_cohort_pics);
 
-router.route('/early-access')
-    .get(siteController.error_page);
-    // .get(siteController.early_access);
-
 router.route('/404')
     .get(siteController.error_page);
 
@@ -72,17 +68,6 @@ router.route('/photogallery')
 router.route('/outreach-form')
     .get(siteController.outreach_form);
 
-router.route('/juneteenth-showcase')
-    .get(siteController.june_showcase);
-
-router.route('/tj-quiz')
-    .get(siteController.error_page);    
-// .get(siteController.tj_quiz);
-
-router.route('/tj-answers')
-    .get(siteController.error_page);    
-// .get(siteController.tj_answers); 
-
 router.route('/login')
     .get(siteController.login)
     .post(siteController.login);
@@ -105,6 +90,25 @@ router.route('/auth/google/admin')
     .get(siteController.google_redirect_get); 
 // PURPOSE: Redirect back to your site if successful or fails
 // NAME: tj-practitioner-directory ---> CYCLIC- Nov 2022
+
+//Deprecated Routes 
+/*
+router.route('/juneteenth-showcase')
+    .get(siteController.june_showcase);
+
+router.route('/tj-quiz')
+    .get(siteController.error_page);    
+// .get(siteController.tj_quiz);
+
+router.route('/tj-answers')
+    .get(siteController.error_page);    
+// .get(siteController.tj_answers); 
+
+
+router.route('/early-access')
+    .get(siteController.error_page);
+    // .get(siteController.early_access);
+*/
     
 module.exports = router;
 
