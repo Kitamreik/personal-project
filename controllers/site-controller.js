@@ -9,12 +9,28 @@ const Outreach = require('../models/outreach-model');
 // response.status(500).send('Internal Server Error')
 
 module.exports = {
+  // add new pages here:
+  student_directory:  (request, response) => {
+    response.render('pages/student-directory', {
+        // data: data
+    });
+  },
+
+  project_directory: (request, response) => {
+    response.render('pages/project-directory', {
+        // data: data
+    });
+  },
+  dev_updates: (request, response) => {
+    response.render('pages/dev-updates', {
+        // data: data
+    });
+  },
   class_reg: (request, response) => {
     response.render('pages/course-register', {
         // data: data
     });
   },
-
   update: (request, response) => {
     response.render('pages/update-form', {
         // works as of May 2023
@@ -26,41 +42,23 @@ module.exports = {
         // data: data
     });
   },
-
-  // Deployed
   capstone_projects: (request, response) => {
     response.render('pages/capstone-projects', {
         // data: data
     });
   },
-
   grad_projects: (request, response) => {
     response.render('pages/grad-projects', {
         // data: data
     });
   },
-  // disabled until March 2023
-  // 404
-  // Updated for June 2023 apps
   class_interest: (request, response) => {
     response.render('pages/class-interest', {
         // data: data
     });
   },
-
-  // add new pages here:
   jan_cohort_pics: (request, response) => {
     response.render('pages/jan-23-photogallery', {
-        // data: data
-    });
-  },
-  early_access: (request, response) => {
-    response.render('pages/early-access', {
-        // data: data
-    });
-  },
-  new_year: (request, response) => {
-    response.render('pages/new-year', {
         // data: data
     });
   },
@@ -84,13 +82,8 @@ module.exports = {
         // data: data
     });
   },
-  holiday_features: (request, response) => {
-    response.render('pages/holiday-feature', {
-        // data: data
-    });
-  },
 
-  // do NOT edit
+  // do NOT edit - original
   about: (request, response) => {
       response.render('pages/videogallery', {
 
@@ -100,15 +93,6 @@ module.exports = {
       response.render('pages/contactus', {
     
       });
-  },
-  june_showcase: (request, response) => {
-    response.render('pages/juneteenth-showcase');
-  },
-  tj_quiz: (request, response) => {
-    response.render('pages/tj-quiz');
-  },
-  tj_answers: (request, response) => {
-    response.render('pages/tj-answers');
   },
   index: (request, response) => {
     response.render('pages/index');
@@ -186,4 +170,32 @@ module.exports = {
       response.redirect('/admin');
     }
   ]
+
+  //Deprecated 
+  /*
+    early_access: (request, response) => {
+    response.render('pages/early-access', {
+        // data: data
+    });
+  },
+  new_year: (request, response) => {
+    response.render('pages/new-year', {
+        // data: data
+    });
+  },
+  holiday_features: (request, response) => {
+    response.render('pages/holiday-feature', {
+        // data: data
+    });
+  },
+  june_showcase: (request, response) => {
+    response.render('pages/juneteenth-showcase');
+  },
+  tj_quiz: (request, response) => {
+    response.render('pages/tj-quiz');
+  },
+  tj_answers: (request, response) => {
+    response.render('pages/tj-answers');
+  },
+  */
 };

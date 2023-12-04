@@ -3,6 +3,16 @@ const express = require('express');
 const router = express.Router();
 const siteController = require('../controllers/site-controller');
 
+//Add new routes here:
+router.route('/student-directory')
+    .get(siteController.student_directory)
+
+router.route('/project-directory')
+    .get(siteController.project_directory)
+
+router.route('/dev-updates')
+    .get(siteController.dev_updates)
+
 router.route('/course-register')
     .get(siteController.class_reg)
 
@@ -40,20 +50,13 @@ router.route('/grad-projects')
 router.route('/mentor-features')
     .get(siteController.mentor_features);
 
-router.route('/holiday-feature')
-    .get(siteController.holiday_features);
-
-router.route('/new-year')
-    .get(siteController.new_year)
-
-// do NOT edit
-
+// do NOT edit - original
 router.route('/')
     .get(siteController.index)
     .post(siteController.index);
 // confirmation page
 
-router.route('/videogallery')
+router.route('/intro-with-kit')
     .get(siteController.about);
 
 router.route('/contactus')
@@ -62,7 +65,7 @@ router.route('/contactus')
 router.route('/map')
     .get(siteController.map);
 
-router.route('/photogallery')
+router.route('/pilot-cohort')
     .get(siteController.photogallery);
 
 router.route('/outreach-form')
@@ -108,6 +111,12 @@ router.route('/tj-answers')
 router.route('/early-access')
     .get(siteController.error_page);
     // .get(siteController.early_access);
+
+router.route('/new-year')
+    .get(siteController.new_year)
+
+router.route('/holiday-feature')
+    .get(siteController.holiday_features);
 */
     
 module.exports = router;
