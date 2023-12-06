@@ -71,7 +71,10 @@ router.route('/pilot-cohort')
 router.route('/outreach-form')
     .get(siteController.outreach_form);
 
-router.route('/login')
+router.route('/yesi')
+    .get(siteController.june_showcase);
+
+    router.route('/login')
     .get(siteController.login)
     .post(siteController.login);
     // PURPOSE: To allow Users to log in and see the admin-console
@@ -96,8 +99,6 @@ router.route('/auth/google/admin')
 
 //Deprecated Routes 
 /*
-router.route('/juneteenth-showcase')
-    .get(siteController.june_showcase);
 
 router.route('/tj-quiz')
     .get(siteController.error_page);    

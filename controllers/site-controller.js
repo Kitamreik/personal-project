@@ -161,6 +161,10 @@ module.exports = {
   outreach_form: (request, response) => {
     response.render('pages/outreach-form');
   },
+
+  june_showcase: (request, response) => {
+    response.render('pages/juneteenth-showcase');
+  },
   // do NOT TOUCH
   google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
   google_redirect_get: [
@@ -187,9 +191,6 @@ module.exports = {
     response.render('pages/holiday-feature', {
         // data: data
     });
-  },
-  june_showcase: (request, response) => {
-    response.render('pages/juneteenth-showcase');
   },
   tj_quiz: (request, response) => {
     response.render('pages/tj-quiz');
