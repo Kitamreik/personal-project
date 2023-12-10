@@ -540,6 +540,12 @@ fa-solid {
     height: 20%;
 }
 
+.photo-image-mini {
+    width: 20%;
+    padding: 0%;
+    height: 10%;
+}
+
 .photo-image-center {
     display: block;
     margin-left: auto;
