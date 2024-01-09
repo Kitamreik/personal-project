@@ -4,6 +4,7 @@
   "description": "This is the Back End for my Personal Project for CodeSquad",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
   },
