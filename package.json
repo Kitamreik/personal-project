@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Kitamreik/pp-step1#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "ejs": "^3.1.7",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
