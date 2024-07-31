@@ -60,10 +60,12 @@ ___
 ___
 ## Acknowledgements and Support <3
 `"I would like to give a warm thank you and embrace to the CodeSquad Cohort ‘22 and the Teaching Fellows there as well, especially Sonia Paulino, who really helped me grow and learn along the way."`
-___
+---
 ## Developer and Contact Info
 Kit Fenrir Amreik (they/she)
-Email: kitdamreik@gmail.com, subject: “GitHub Personal Project”
+* Email: kitdamreik@gmail.com, subject: “GitHub Personal Project”
+* [Portfolio](https://kit-fenrir-amreik-portfolio.onrender.com/)
+* [LinkedIn](https://www.linkedin.com/in/kit-amreik/)
 
 I look forward to connecting with you! Take care and be well. <3 
 
