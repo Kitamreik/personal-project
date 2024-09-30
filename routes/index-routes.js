@@ -4,6 +4,7 @@ const adminRoutes = require('./admin-routes');
 const siteRoutes = require('./site-routes');
 const logRoutes = require('./log-routes');
 const studentRoutes = require('./student-routes');
+const webRoutes = require('./web-routes')
 const router = express.Router();
 
 router.use('/', siteRoutes);
@@ -14,5 +15,7 @@ router.use('/logs', logRoutes);
 
 // EXPERIMENTAL code for the student interest form
 router.use('/students', studentRoutes);
+
+router.use('/webmaster', webRoutes)
 
 module.exports = router;

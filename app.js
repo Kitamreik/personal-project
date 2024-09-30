@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
+const expressLayouts = require('express-ejs-layouts');
 const app = express();
 // const PORT = 3000;
 const PORT = process.env.PORT || 4200;
@@ -9,6 +10,10 @@ const PORT = process.env.PORT || 4200;
 // Morgan Functionality 
 const morgan = require('morgan');
 app.use(morgan('dev'));
+
+// Set up express-ejs-layouts
+app.use(expressLayouts);
+app.set('layout', 'layout');
 
 // Adding Path module and EJS to app.js 
 const path = require('node:path');
@@ -61,6 +66,12 @@ const indexRoutes = require('./routes/index-routes');
 app.use('/', indexRoutes);
 
 require('./config/connection');
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
 
 //Server
 app.listen(PORT, () => {
