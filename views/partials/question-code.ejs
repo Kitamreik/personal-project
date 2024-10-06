@@ -1,4 +1,22 @@
+<section class="content-container-2 cosmic-latte link-styling">
+    <div class="main-container orchid-crayola">
+        <% for (data of inform) { %>
+            <span class="question-card" id="card">
+                    <span class="front">
+                        <p>Question:</p>
+                        <p><%= data.question %></p>
+                    </span>
+                    <span class="back">
+                        <p>Answer:</p>
+                        <p><%= data.answer %></p>
+                    </span> 
+            </span>
+        <% } %>
+    </div>
+</section>
 
+
+<!-- Template Code, Do NOT delete -->
 <section class="content-container-2 cosmic-latte">
     <div class="main-container orchid-crayola">
         <span class="question-card" id="card">
@@ -7,9 +25,7 @@
             </span>
             <span class="back">
                 <p>Answer:</p>
-            </span>
-           
+            </span> 
         </span>
     </div>
-        
 </section>

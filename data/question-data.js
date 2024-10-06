@@ -1,7 +1,15 @@
-// const inform = {
-//     id: "",
-//     question: "",
-//     answer: ,
-// }
+module.exports = [
+    {
+        question: "A question?",
+        answer: "The answer",
+    },
+    
 
-// module.exports = inform
+    
+    // template
+    // {
+    // id: "",
+    // question: "",
+    // answer: "",
+    // }
+]
