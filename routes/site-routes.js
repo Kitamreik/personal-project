@@ -4,6 +4,9 @@ const router = express.Router();
 const siteController = require('../controllers/site-controller');
 
 //Add new routes here:
+router.route('/frequently-asked-questions')
+    .get(siteController.questions)
+
 router.route('/student-directory')
     .get(siteController.student_directory)
 

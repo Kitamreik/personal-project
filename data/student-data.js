@@ -14,7 +14,7 @@ module.exports = [
     },
     // for the outreach detail page
     {
-        _id: 001,
+        _id: "001",
         firstName: "Test",
         lastName: "Student",
         email: "kit.tjclasses@gmail.com",

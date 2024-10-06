@@ -10,105 +10,113 @@ const Outreach = require('../models/outreach-model');
 
 module.exports = {
   // add new pages here:
-  student_directory:  (request, response) => {
+  questions: (request, response, next) => {
+    response.render('pages/faqs', {
+        
+        //inform: inform
+    });
+  },
+
+
+  student_directory: (request, response, next) => {
     response.render('pages/student-directory', {
         // data: data
     });
   },
 
-  project_directory: (request, response) => {
+  project_directory: (request, response, next) => {
     response.render('pages/project-directory', {
         // data: data
     });
   },
-  dev_updates: (request, response) => {
+  dev_updates: (request, response, next) => {
     response.render('pages/dev-updates', {
         // data: data
     });
   },
-  class_reg: (request, response) => {
+  class_reg: (request, response, next) => {
     response.render('pages/course-register', {
         // data: data
     });
   },
-  update: (request, response) => {
+  update: (request, response, next) => {
     response.render('pages/update-form', {
         // works as of May 2023
         foundOutreach: Outreach
     });
   },
-  form_confirmation: (request, response) => {
+  form_confirmation: (request, response, next) => {
     response.render('pages/form-submit', {
         // data: data
     });
   },
-  capstone_projects: (request, response) => {
+  capstone_projects: (request, response, next) => {
     response.render('pages/capstone-projects', {
         // data: data
     });
   },
-  grad_projects: (request, response) => {
+  grad_projects: (request, response, next) => {
     response.render('pages/grad-projects', {
         // data: data
     });
   },
-  class_interest: (request, response) => {
+  class_interest: (request, response, next) => {
     response.render('pages/class-interest', {
         // data: data
     });
   },
-  jan_cohort_pics: (request, response) => {
+  jan_cohort_pics: (request, response, next) => {
     response.render('pages/jan-23-photogallery', {
         // data: data
     });
   },
-  server_side_error: (request, response) => {
+  server_side_error: (request, response, next) => {
     response.render('pages/500', {
         // data: data
     });
   },
-  error_page: (request, response) => {
+  error_page: (request, response, next) => {
     response.render('pages/404', {
         // data: data
     });
   },
-  client_relations: (request, response) => {
+  client_relations: (request, response, next) => {
     response.render('pages/client-relations', {
         // data: data
     });
   },
-  mentor_features: (request, response) => {
+  mentor_features: (request, response, next) => {
     response.render('pages/mentor-features', {
         // data: data
     });
   },
 
   // do NOT edit - original
-  about: (request, response) => {
+  about: (request, response, next) => {
       response.render('pages/videogallery', {
 
       });
   },
-  contact_us: (request, response) => {
+  contact_us: (request, response, next) => {
       response.render('pages/contactus', {
     
       });
   },
-  index: (request, response) => {
+  index: (request, response, next) => {
     response.render('pages/index');
   },
-  map: (request, response) => {
+  map: (request, response, next) => {
       response.render('pages/map', {
       });
   },
-  photogallery: (request, response) => {
+  photogallery: (request, response, next) => {
       response.render('pages/photogallery', {
       });
   },
-  login: (request, response) => {
+  login: (request, response, next) => {
     response.render('pages/login')
   },
-  login_post: (request, response) => {
+  login_post: (request, response, next) => {
       const {username, password, googleId} = request.body;
      // New info
     const user = new User({
@@ -129,7 +137,7 @@ module.exports = {
     });
     // New info
   },
-  logout: (request, response) => {
+  logout: (request, response, next) => {
     // new code as of 6/2022 - the correct logout function
     request.logout(function(err) {
       // destroy the session for the user
@@ -138,10 +146,10 @@ module.exports = {
       response.redirect('/');
     });
   },
-  register_get: (request, response) => {
+  register_get: (request, response, next) => {
     response.render('pages/register', {});
   },
-  register_post:(request, response) => {
+  register_post:(request, response, next) => {
     // added in Code Along - differs from slides
     const {username, password} = request.body;
     User.register({username: username}, password, (error, user) => {
@@ -158,18 +166,18 @@ module.exports = {
       };
     });
   },
-  outreach_form: (request, response) => {
+  outreach_form: (request, response, next) => {
     response.render('pages/outreach-form');
   },
 
-  june_showcase: (request, response) => {
+  june_showcase: (request, response, next) => {
     response.render('pages/juneteenth-showcase');
   },
   // do NOT TOUCH
   google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
   google_redirect_get: [
     passport.authenticate('google', {failureRedirect: '/login'}),
-    function(request, response) {
+    function(request, response, next) {
       // Successful Authentication Authorization
       response.redirect('/admin');
     }
@@ -177,25 +185,25 @@ module.exports = {
 
   //Deprecated 
   /*
-    early_access: (request, response) => {
+    early_access: (request, response, next) => {
     response.render('pages/early-access', {
         // data: data
     });
   },
-  new_year: (request, response) => {
+  new_year: (request, response, next) => {
     response.render('pages/new-year', {
         // data: data
     });
   },
-  holiday_features: (request, response) => {
+  holiday_features: (request, response, next) => {
     response.render('pages/holiday-feature', {
         // data: data
     });
   },
-  tj_quiz: (request, response) => {
+  tj_quiz: (request, response, next) => {
     response.render('pages/tj-quiz');
   },
-  tj_answers: (request, response) => {
+  tj_answers: (request, response, next) => {
     response.render('pages/tj-answers');
   },
   */

@@ -149,3 +149,12 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+//Oct 2024 - JS for Card Flipping
+const card = document.getElementById("card")
+
+card.addEventListener("click", flipCard)
+
+function flipCard() {
+  card.classList.toggle("flipCard")
+}
