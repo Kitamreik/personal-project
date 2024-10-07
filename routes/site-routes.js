@@ -1,133 +1,132 @@
 // DO NOT TOUCH - only when adding pages
 const express = require('express');
 const router = express.Router();
-const siteController = require('../controllers/site-controller');
+const siteCtrl = require('../controllers/site-controller');
 
 //Add new routes here:
+//-----WEBMASTER (hidden routes without prefixes)-----
+
 router.route('/frequently-asked-questions')
-    .get(siteController.questions)
-
-router.route('/student-directory')
-    .get(siteController.student_directory)
-
-router.route('/project-directory')
-    .get(siteController.project_directory)
-
-router.route('/dev-updates')
-    .get(siteController.dev_updates)
-
-router.route('/course-register')
-    .get(siteController.class_reg)
+    .get(siteCtrl.questions)
 
 router.route('/update-form')
-    .get(siteController.update)
-    // .put(siteController.update)
-    // .post(siteController.update)
+    .get(siteCtrl.update)
+    // .put(siteCtrl.update)
+    // .post(siteCtrl.update)
 
 router.route('/form-submit')
-    .get(siteController.form_confirmation);
+    .get(siteCtrl.form_confirmation);
 
 router.route('/class-interest')
-    //.get(siteController.error_page);
-    .get(siteController.class_interest);
-
-// add new routes here:
-router.route('/capstone-projects')
-    .get(siteController.capstone_projects);
-
-router.route('/jan-23-photogallery')
-    .get(siteController.jan_cohort_pics);
-
-router.route('/404')
-    .get(siteController.error_page);
-
-router.route('/500')
-    .get(siteController.server_side_error);
-
-router.route('/client-relations')
-    .get(siteController.client_relations);
-
-router.route('/grad-projects')
-    .get(siteController.grad_projects);
-
-router.route('/mentor-features')
-    .get(siteController.mentor_features);
-
-// do NOT edit - original
-router.route('/')
-    .get(siteController.index)
-    .post(siteController.index);
-// confirmation page
-
-router.route('/intro-with-kit')
-    .get(siteController.about);
-
-router.route('/contactus')
-    .get(siteController.contact_us);
-
-router.route('/map')
-    .get(siteController.map);
-
-router.route('/pilot-cohort')
-    .get(siteController.photogallery);
-
-router.route('/outreach-form')
-    .get(siteController.outreach_form);
+    //.get(siteCtrl.error_page);
+    .get(siteCtrl.class_interest);
 
 router.route('/yesi')
-    .get(siteController.june_showcase);
+    .get(siteCtrl.june_showcase);
 
-    router.route('/login')
-    .get(siteController.login)
-    .post(siteController.login);
+
+// ----------INDEX------------
+router.route('/')
+    .get(siteCtrl.index)
+    .post(siteCtrl.index);
+// confirmation page
+
+router.route('/index/course-register')
+    .get(siteCtrl.class_reg)
+
+//-----CLIENT RELATIONS/OUTREACH-----
+router.route('/index/client-relations')
+    .get(siteCtrl.client_relations);
+
+router.route('/index/contactus')
+    .get(siteCtrl.contact_us);
+
+router.route('/index/outreach-form')
+    .get(siteCtrl.outreach_form);
+
+router.route('/index/dev-updates')
+    .get(siteCtrl.dev_updates)
+
+// ----------DEV UPDATES------------
+
+router.route('/dev-updates/mentor-features')
+    .get(siteCtrl.mentor_features);
+
+router.route('/dev-updates/intro-with-kit')
+    .get(siteCtrl.about);
+
+//-------STUDENTS---------
+router.route('/index/student-directory')
+    .get(siteCtrl.student_directory)
+
+//-------CURRENT STUDENT DIRECTORIES------
+router.route('/student-directory/jan-23-photogallery')
+    .get(siteCtrl.jan_cohort_pics);
+
+router.route('/student-directory/map')
+    .get(siteCtrl.map);
+
+router.route('/student-directory/pilot-cohort')
+    .get(siteCtrl.photogallery);
+
+//------PROJECTS----------
+router.route('/index/project-directory')
+    .get(siteCtrl.project_directory)
+
+//-------CURRENT PROJECT DIRECTORIES------
+router.route('/project-directory/intermediate-projects')
+    .get(siteCtrl.intermediate_projects)
+
+router.route('/project-directory/capstone-projects')
+    .get(siteCtrl.capstone_projects);
+
+router.route('/project-directory/grad-projects')
+    .get(siteCtrl.grad_projects);
+
+// ----------AUTH------------
+router.route('/login')
+    .get(siteCtrl.login)
+    .post(siteCtrl.login);
     // PURPOSE: To allow Users to log in and see the admin-console
 
 router.route('/logout')
 // PURPOSE: Logs the user out if signed in
-    .get(siteController.logout);   
+    .get(siteCtrl.logout);   
 
 router.route('/register')
 // PURPOSE: To see a register for and to create a new User
-    .get(siteController.register_get)
-    .post(siteController.register_post);
+    .get(siteCtrl.register_get)
+    .post(siteCtrl.register_post);
 
 router.route('/auth/google')
 // PURPOSE: initiates Google authentication 
-    .get(siteController.google_get);
+    .get(siteCtrl.google_get);
 
 router.route('/auth/google/admin')
-    .get(siteController.google_redirect_get); 
+    .get(siteCtrl.google_redirect_get); 
 // PURPOSE: Redirect back to your site if successful or fails
-// NAME: tj-practitioner-directory ---> CYCLIC- Nov 2022
 
 //Deprecated Routes 
 /*
 
 router.route('/tj-quiz')
-    .get(siteController.error_page);    
-// .get(siteController.tj_quiz);
+    .get(siteCtrl.error_page);    
+// .get(siteCtrl.tj_quiz);
 
 router.route('/tj-answers')
-    .get(siteController.error_page);    
-// .get(siteController.tj_answers); 
+    .get(siteCtrl.error_page);    
+// .get(siteCtrl.tj_answers); 
 
 
 router.route('/early-access')
-    .get(siteController.error_page);
-    // .get(siteController.early_access);
+    .get(siteCtrl.error_page);
+    // .get(siteCtrl.early_access);
 
 router.route('/new-year')
-    .get(siteController.new_year)
+    .get(siteCtrl.new_year)
 
 router.route('/holiday-feature')
-    .get(siteController.holiday_features);
+    .get(siteCtrl.holiday_features);
 */
     
 module.exports = router;
-
-
-
-
- 
-
-
