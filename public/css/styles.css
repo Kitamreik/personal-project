@@ -849,6 +849,18 @@ a.menu {
     padding: 0.5rem 1rem;
 }
 
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: var(--medium-champagne);
+    color: var(--rich-black);
+    text-align: center;
+    transform: rotateY(180deg);
+    font-size: 1rem;
+}
+
 /* Mobile Responsiveness for large items, use with content-container-2 */
 .side-scroll-mobile {
     display: flex;
@@ -929,6 +941,17 @@ a.menu {
     position: relative;
     display: none; 
     }
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: var(--medium-champagne);
+    color: var(--rich-black);
+    text-align: center;
+    transform: rotateY(180deg);
+    font-size: 1.3rem;
+}
 }
 
 
