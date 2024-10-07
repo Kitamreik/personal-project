@@ -1,0 +1,38 @@
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+    <title>Webmaster Register</title>
+<%- include('../partials/admin-nav') -%> 
+<!-- Insert nav.ejs -->
+<div class="content-container">
+    <section class="content-container-2 naples-yellow">
+    <h1>Webmaster Register Page</h1>
+    </section>
+    <section class="content-container-2 medium-purple">
+        <p class="bold">Please note that only authorized users (A.P. Students, Teacher Assistants and the Instructor) are allowed to register to this page, for learning purposes.</p>
+    </section>
+    <!-- DO NOT USE FORM UNTIL CONTROLLERS STAGED 10/24 -->
+    <section class="form-container medium-purple">
+        <form action="/" method="POST">
+            <legend>
+                <fieldset>
+                    <label for="Username">Username </label>
+                    <input type="text" name="Username" id="Username" placeholder="Username" required />
+                </fieldset>
+                <br>
+                <fieldset>
+                    <label for="Password">Password</label>
+                    <input type="Password" name="Password" id="Password" placeholder="Password" minlength="6" required />
+                </fieldset>
+                <br>
+                <section class= "center-button">
+                    <button class="yellow-button link-styling">
+                        <a href="/webmaster/login" role="button">Submit</a>
+                    </button>
+                </section>
+                <br>
+            </legend>
+        </form>
+    </section>
+</div>
+<!-- Insert admin-footer.ejs -->
+<%- include('../partials/admin-footer.ejs') -%> 
