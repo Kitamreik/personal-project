@@ -345,7 +345,7 @@ input {
     box-shadow: 0 4px 8px 0;
     transition: 0.3s;
     width: 80%;
-    height: 420px;
+    height: 550px;
     padding: 2.5%;
     border-radius: 5px;
     align-content: center;
@@ -353,6 +353,9 @@ input {
     flex-grow: 1;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: auto;
     /* top: 50%;
     left: 50%; */
     transform: translate(0%, 0%);
@@ -364,7 +367,7 @@ input {
     height: 100%;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
-    padding: 0.75%;
+    /* padding: 0.75%; */
 }
 
 .front {
@@ -381,7 +384,7 @@ input {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background: var(--medium-champagne);
+    background-color: var(--medium-champagne);
     color: var(--rich-black);
     text-align: center;
     transform: rotateY(180deg);
