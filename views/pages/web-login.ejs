@@ -1,0 +1,45 @@
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+    <title>Webmaster Login</title>
+<%- include('../partials/admin-nav') -%> 
+<!-- Insert admin-nav.ejs -->
+<div class="content-container">
+    <section class="content-container-2 naples-yellow">
+    <h1>Webmaster Login Page</h1>
+    </section>
+    <section class="content-container-2 gold-crayola">
+        <p class="bold">Please note that only authorized users (A.P. Students, Teacher Assistants and the Instructor) are allowed to login to this page, for learning purposes.</p>
+    </section>
+      <!-- DO NOT USE FORM UNTIL CONTROLLERS STAGED 10/24 -->
+    <section class="form-container gold-crayola">
+        <form action="/webmaster/admin" method="post">
+            <legend>
+                <fieldset>
+                    <label for="Username">Username </label>
+                    <input type="text" name="Username" id="Username" placeholder="Username" required />
+                </fieldset>
+                <br>
+                <fieldset>
+                    <label for="Password">Password</label>
+                    <input type="Password" name="Password" id="Password" placeholder="Password" minlength="6" required />
+                </fieldset>
+                <!-- add a drop down menu/or input to confirm student user -->
+                <br>
+                <section class="center-button">
+                    <button class="yellow-button link-styling">
+                        <a href="/webmaster/admin" role="button" type="submit"
+                        ">Submit</a>
+                    </button>
+                </section>
+                <br>
+                <section class= "center-button">
+                    <button class="yellow-button link-styling">
+                        <a href="/auth/google" role="button">Sign In with Google</a>
+                    </button>
+                </section>
+            </legend>
+        </form>
+    </section>
+</div>
+<!-- Insert admin-footer.ejs -->
+<%- include('../partials/admin-footer.ejs') -%> 
