@@ -11,6 +11,11 @@ const Outreach = require('../models/outreach-model');
 
 module.exports = {
   // add new pages here:
+  intermediate_projects: (request, response, next) => {
+    response.render('pages/inter-projects', {
+        //data: data
+    });
+  },
   questions: (request, response, next) => {
     response.render('pages/faqs', {
         //inform: Inform,
