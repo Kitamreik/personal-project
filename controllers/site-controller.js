@@ -2,7 +2,7 @@
 const User = require('../models/user-model');
 const passport = require('passport');
 const Outreach = require('../models/outreach-model');
-const Inform = require('../data/question-data')
+//const Inform = require('../data/question-data')
 
 // Debug note: the site controller should have the index, register-get, register-post, login-get, login-post, logout
 
@@ -13,7 +13,7 @@ module.exports = {
   // add new pages here:
   questions: (request, response, next) => {
     response.render('pages/faqs', {
-        inform: Inform
+        //inform: Inform,
     });
   },
 

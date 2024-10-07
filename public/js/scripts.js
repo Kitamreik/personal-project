@@ -151,10 +151,82 @@ function topFunction() {
 }
 
 //Oct 2024 - JS for Card Flipping
-const card = document.getElementById("card")
+//Question Code- Hard Coded
+const cardHardCoded = document.getElementById("card-hardcoded")
 
-card.addEventListener("click", flipCard)
+cardHardCoded.addEventListener("click", flipCardMain)
 
-function flipCard() {
-  card.classList.toggle("flipCard")
+function flipCardMain() {
+  cardHardCoded.classList.toggle("flipCard")
+}
+//Question Code- Hard Coded, part 2
+const cardHardCoded2 = document.getElementById("card-hardcoded2")
+
+cardHardCoded2.addEventListener("click", flipCardMain2)
+
+function flipCardMain2() {
+  cardHardCoded2.classList.toggle("flipCard")
+}
+
+//Q1
+const cardQ1 = document.getElementById("cardQ1")
+
+cardQ1.addEventListener("click", flipCardQ1)
+
+function flipCardQ1() {
+  cardQ1.classList.toggle("flipCard")
+}
+
+//Q1, part 2
+const cardQ1B = document.getElementById("cardQ1B")
+
+cardQ1B.addEventListener("click", flipCardQ1B)
+
+function flipCardQ1B() {
+  cardQ1B.classList.toggle("flipCard")
+}
+
+//Q2
+const cardQ2 = document.getElementById("cardQ2")
+
+cardQ2.addEventListener("click", flipCardQ2)
+
+function flipCardQ2() {
+  cardQ2.classList.toggle("flipCard")
+}
+
+//Q2, part 2
+const cardQ2B = document.getElementById("cardQ2B")
+
+cardQ2B.addEventListener("click", flipCardQ2B)
+
+function flipCardQ2B() {
+  cardQ2B.classList.toggle("flipCard")
+}
+
+//Q3
+const cardQ3 = document.getElementById("cardQ3")
+
+cardQ3.addEventListener("click", flipCardQ3)
+
+function flipCardQ3() {
+  cardQ3.classList.toggle("flipCard")
+}
+
+//Q4
+const cardQ4 = document.getElementById("cardQ4")
+
+cardQ4.addEventListener("click", flipCardQ4)
+
+function flipCardQ4() {
+  cardQ4.classList.toggle("flipCard")
+}
+
+//Q4, part 2
+const cardQ4B = document.getElementById("cardQ4B")
+
+cardQ4B.addEventListener("click", flipCardQ4B)
+
+function flipCardQ4B() {
+  cardQ4B.classList.toggle("flipCard")
 }
