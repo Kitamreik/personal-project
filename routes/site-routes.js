@@ -21,9 +21,6 @@ router.route('/class-interest')
     //.get(siteCtrl.error_page);
     .get(siteCtrl.class_interest);
 
-router.route('/yesi')
-    .get(siteCtrl.june_showcase);
-
 
 // ----------INDEX------------
 router.route('/')
@@ -127,6 +124,9 @@ router.route('/new-year')
 
 router.route('/holiday-feature')
     .get(siteCtrl.holiday_features);
+
+router.route('/yesi')
+    .get(siteCtrl.june_showcase);
 */
     
 module.exports = router;
