@@ -15,10 +15,10 @@ ___
 
 * I have added new students to the website, having intermediate students deploy their projects and working on a booking platform attachment.
 
-* One round of class registration has been successful in line with the refinements of the website throughout the year.
+* I have implemented one round of class registration has been successful in line with the refinements of the website throughout the year.
 
 ## Project Status - 2023
-* I am currently working on developing more CRUD based interactions within the app.
+* I have implemented more CRUD based interactions within the app.
 
 * I have implemented a scroll button via Javascript to enhance the user experience, ease and access.
 
@@ -35,17 +35,7 @@ ___
 
 * As of March 23rd, I am working on coding the web pages as well as the Front End Development.
 ___
-## Project Screenshots (still in progress)
-<!-- Screen 1 
-Screen 2  -->
-___
-## Installation and Setup Instructions (still in progress)
-<!-- Clone 
-Install 
-To Run Test Suite 
-To Start Server 
-To Visit App  -->
-___
+
 ## 2023 Insights and Goals
 * Implementing the Google Maps API was relatively easier than anticipated
 * Working on exploring Firebase/React Integration
