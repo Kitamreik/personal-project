@@ -10,6 +10,13 @@
 * Version 2 of the Application
     * The expanded version of this app has been deployed through Cyclic. The app has expanded to include a rotating class cycle application process, showcases of new students joining the cohort as well as students preparing for graduation via their curriculum projects. Futhermore, more context around mentorship, client relations and intake as well as detailing the class structure itself.
 ___
+## Project Status - 2024-2025
+* I am currently working on developing AI integration into my existing codebase.
+
+* I have added new students to the website, having intermediate students deploy their projects and working on a booking platform attachment.
+
+* One round of class registration has been successful in line with the refinements of the website throughout the year.
+
 ## Project Status - 2023
 * I am currently working on developing more CRUD based interactions within the app.
 
