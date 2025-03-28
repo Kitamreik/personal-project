@@ -17,6 +17,11 @@ ___
 
 * I have implemented one round of class registration has been successful in line with the refinements of the website throughout the year.
 
+## 2023 Insights and Goals
+* Implementing the Google Maps API was relatively easier than anticipated
+* Working on exploring Firebase/React Integration
+* Creating more responsive design elements and modifying the site in that manner
+
 ## Project Status - 2023
 * I have implemented more CRUD based interactions within the app.
 
@@ -35,11 +40,6 @@ ___
 
 * As of March 23rd, I am working on coding the web pages as well as the Front End Development.
 ___
-
-## 2023 Insights and Goals
-* Implementing the Google Maps API was relatively easier than anticipated
-* Working on exploring Firebase/React Integration
-* Creating more responsive design elements and modifying the site in that manner
 
 ## 2022 Reflections
 * Context: 
