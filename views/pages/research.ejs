@@ -13,13 +13,13 @@
         
         <table>
             <tr>
-                <th class="hot-pink-text"><strong>Website</strong></th>
                 <th class="hot-pink-text"><strong>Description</strong></th>
+                <th class="hot-pink-text"><strong>Website</strong></th>
             </tr>
             <tr>
                 <% for (entry of researchArray) { %>
-                <td><a href="<%= entry.website %>" class="vivid-sky-blue-text"><%= entry.website %></a></td>
                 <td><%= entry.note %></td>
+                <td><a href="<%= entry.website %>" class="vivid-sky-blue-text link-styling"><%= entry.website %></a></td>
             </tr>
             <% } %>
         </table>

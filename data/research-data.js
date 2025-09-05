@@ -103,13 +103,13 @@ module.exports = [
     },
     {
         _id: uuid(),
-        website: "Scientific American",
-        note: "https://www.scientificamerican.com/"
+        website: "https://www.scientificamerican.com/",
+        note: "Scientific American"
     },
     {
         _id: uuid(),
-        website: "Abolition Science",
-        note: "https://www.abolitionscience.org/"
+        website: "https://www.abolitionscience.org/",
+        note: "Abolition Science"
     },
     {
         _id: uuid(),
