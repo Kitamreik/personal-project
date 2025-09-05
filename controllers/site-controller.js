@@ -2,6 +2,7 @@
 const User = require('../models/user-model');
 const passport = require('passport');
 const Outreach = require('../models/outreach-model');
+const Research = require('../data/research-data');
 //const Inform = require('../data/question-data')
 
 // Debug note: the site controller should have the index, register-get, register-post, login-get, login-post, logout
@@ -11,6 +12,12 @@ const Outreach = require('../models/outreach-model');
 
 module.exports = {
   // add new pages here:
+  research: (request, response, next) => {
+    response.render('pages/research', {
+        researchArray: Research
+    });
+  },
+
   intermediate_projects: (request, response, next) => {
     response.render('pages/inter-projects', {
         //data: data

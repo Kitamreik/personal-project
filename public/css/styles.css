@@ -607,6 +607,12 @@ fa-solid {
     height: 20%;
 }
 
+.photo-image-large {
+    width: 90%;
+    padding: 2.5%;
+    height: 70%;
+}
+
 .photo-image-mini {
     width: 20%;
     padding: 0%;
@@ -931,6 +937,12 @@ a.menu {
 }
 
 }
+
+table, th, td {
+    border:1px solid var(--orchid-crayola);
+    width: 100%;
+    height: auto;
+  }
 
 
   

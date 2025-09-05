@@ -70,6 +70,10 @@ router.route('/student-directory/pilot-cohort')
 router.route('/index/project-directory')
     .get(siteCtrl.project_directory)
 
+//------RESEARCH DATABASE--------
+router.route('/project-directory/research')
+    .get(siteCtrl.research)
+
 //-------CURRENT PROJECT DIRECTORIES------
 router.route('/project-directory/intermediate-projects')
     .get(siteCtrl.intermediate_projects)

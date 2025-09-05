@@ -1,0 +1,30 @@
+<%- include('../partials/head') -%> 
+<!-- Insert header.ejs -->
+    <title>Project Directory</title>
+<%- include('../partials/nav') -%> 
+<!-- Insert nav.ejs -->
+<div class="content-container link-styling">
+    <section class="content-container-2 medium-champagne ">
+        <h1>Research Directory</h1>
+        <br>
+    </section>
+    <section class="content-container-2 cosmic-latte" style="overflow-x:auto">
+        <p>Some descriptions have been provided by students throughout the inception of the course.</p>
+        
+        <table>
+            <tr>
+                <th class="hot-pink-text"><strong>Website</strong></th>
+                <th class="hot-pink-text"><strong>Description</strong></th>
+            </tr>
+            <tr>
+                <% for (entry of researchArray) { %>
+                <td><a href="<%= entry.website %>" class="vivid-sky-blue-text"><%= entry.website %></a></td>
+                <td><%= entry.note %></td>
+            </tr>
+            <% } %>
+        </table>
+        
+    </section>
+</div>
+<!-- Insert footer.ejs -->
+<%- include('../partials/footer') -%> 
