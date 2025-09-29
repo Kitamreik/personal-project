@@ -12,6 +12,16 @@ const Research = require('../data/research-data');
 
 module.exports = {
   // add new pages here:
+  curr_accept_students: (request, response, next) => {
+    response.render('pages/accepted-students', {
+        //data: data
+    });
+  },
+  cohort_24_25_pics: (request, response, next) => {
+    response.render('pages/cohort-24-25', {
+        //data: data
+    });
+  },
   research: (request, response, next) => {
     response.render('pages/research', {
         researchArray: Research

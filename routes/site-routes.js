@@ -57,6 +57,12 @@ router.route('/index/student-directory')
     .get(siteCtrl.student_directory)
 
 //-------CURRENT STUDENT DIRECTORIES------
+router.route('/student-directory/accepted-students')
+    .get(siteCtrl.curr_accept_students);
+
+router.route('/student-directory/cohort-24-25')
+    .get(siteCtrl.cohort_24_25_pics);
+
 router.route('/student-directory/jan-23-photogallery')
     .get(siteCtrl.jan_cohort_pics);
 
