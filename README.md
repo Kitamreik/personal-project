@@ -43,10 +43,10 @@ ___
 
 ## 2022 Reflections
 * Context: 
-    * I am a Global Restorative and Transformative Justice Practitioner as well as an instructor in my daily work. The folks involved  are from a small cohort that I currently teach outside of class time for almost a year, as the test base.
+    * I am a Global Restorative and Transformative Justice Practitioner as well as an instructor in my daily work. The folks involved  are from a small cohort that I currently teach outside of class time for the past five years.
 
 * Set out to build 
-    * The website that I have designed has come together really well and my students and I will be contributing here over the next few months to a year, connecting with folks as we traverse through the Advanced Semester capstone.
+    * The website that I have designed has come together really well and my students and I will be contributing here indefinitely, connecting with folks as we traverse through the semester cycles.
 
 * Project Challenges:
     * I think a challenge for me was the map component because it takes time to implement, however, the payoff and knowledge will be worth it!
