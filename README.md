@@ -7,7 +7,7 @@
 * Explain Premise of Application:  
     * The premise of this application is to create a visual network of Practitioners across the United States showcased via a map interface and being able to click on the marker that the person has to find their information. In turn, this will allow the user to be able to reach out to a trained & mentored Practitioner for assistance in conflict resolution.
 
- Version 3 of the Application
+* Version 3 of the Application
     * The current version of this app has been deployed through Render. The app's project status is below. There is a booking platform that will be connected to this application for student practice.
     
 * Version 2 of the Application (2024)
