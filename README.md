@@ -1,14 +1,17 @@
 ## Project Name & Pitch: Transformative Justice Practitioner Directory
 
-#### Synopsis- as of January 9, 2023
+#### Synopsis- as of January 9, 2023 - October 24, 2025
 * Name of Project:
     * Transformative Justice Practitioner Directory
 
 * Explain Premise of Application:  
     * The premise of this application is to create a visual network of Practitioners across the United States showcased via a map interface and being able to click on the marker that the person has to find their information. In turn, this will allow the user to be able to reach out to a trained & mentored Practitioner for assistance in conflict resolution.
 
-* Version 2 of the Application
-    * The expanded version of this app has been deployed through Cyclic. The app has expanded to include a rotating class cycle application process, showcases of new students joining the cohort as well as students preparing for graduation via their curriculum projects. Futhermore, more context around mentorship, client relations and intake as well as detailing the class structure itself.
+ Version 3 of the Application
+    * The current version of this app has been deployed through Render. The app's project status is below. There is a booking platform that will be connected to this application for student practice.
+    
+* Version 2 of the Application (2024)
+    * The expanded version of this app has been deployed through Cyclic. The app has expanded to include a rotating class cycle application process, showcases of new students joining the cohort as well as students preparing for graduation via their curriculum projects. Furthermore, more context around mentorship, client relations and intake as well as detailing the class structure itself.
 ___
 ## Project Status - 2024-2025
 * I am currently working on developing AI integration into my existing codebase.
