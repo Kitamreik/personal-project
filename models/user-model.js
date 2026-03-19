@@ -61,7 +61,7 @@ passport.use(new GoogleStrategy({
     // process.env. instead of GOOGLE
 
     // THE MOST recent deployed site
-    callbackURL: "https://tj-practitioner-directory.cyclic.app/auth/google/admin",
+    callbackURL: "https://tj-practitioner-directory.onrender.com/auth/google/admin",
     // put in place of this --> "http://www.example.com/auth/google/callback"
   },
   // change profile to email
